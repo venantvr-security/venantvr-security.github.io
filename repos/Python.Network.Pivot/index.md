@@ -54,6 +54,7 @@ Avant de plonger dans le code, visualisons l'infrastructure que nous allons cré
 Le diagramme ci-dessous montre les trois réseaux et les machines qui les composent. Remarquez que l'attaquant (en rouge) ne peut **pas** accéder directement au serveur interne (en vert) : il doit passer par la DMZ.
 
 <div class="mermaid">
+%%{init: {'flowchart': {'nodeSpacing': 30, 'rankSpacing': 60, 'subGraphTitleMargin': {'top': 10, 'bottom': 10}}}}%%
 flowchart TB
     subgraph INTERNET["🌐 RÉSEAU INTERNET<br/><i>Zone externe - accessible à tous</i>"]
         ATK["🔴 Attaquant<br/>172.18.0.2<br/><i>Point de départ</i>"]
