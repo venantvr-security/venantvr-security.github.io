@@ -37,6 +37,10 @@
     color: #bac2de;
 }
 
+.password-modal .text-muted {
+    color: #a6adc8 !important;
+}
+
 .password-modal input[type="password"]:focus {
     background-color: #1e1e2e;
     color: #cdd6f4;
