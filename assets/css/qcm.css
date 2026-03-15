@@ -30,7 +30,11 @@
 }
 
 .password-modal input[type="password"]::placeholder {
-    color: #6c7086;
+    color: #a6adc8;
+}
+
+.password-modal p {
+    color: #bac2de;
 }
 
 .password-modal input[type="password"]:focus {
