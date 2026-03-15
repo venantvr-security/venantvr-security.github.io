@@ -1,0 +1,610 @@
+---
+layout: qcm
+title: "QCM - Javascript.TOR.Workflow"
+repo_name: "Javascript.TOR.Workflow"
+description: "Visualisations interactives des workflows TOR"
+readme_url: "../"
+generated_at: "2026-03-14 10:54:37"
+questions: [
+  {
+    "question": "Qu'est-ce que le routage en oignon ?",
+    "options": [
+      "DNS over HTTPS",
+      "Routage direct",
+      "VPN simple",
+      "Chiffrement multi-couches via relais"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Combien de relais Tor utilise-t-il typiquement ?",
+    "options": [
+      "3 (guard, middle, exit)",
+      "5",
+      "2",
+      "1"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce qu'un guard node ?",
+    "options": [
+      "Relais central",
+      "Dernier relais",
+      "Premier relais, choisi pour la stabilité",
+      "Serveur DNS"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Qu'est-ce qu'un exit node ?",
+    "options": [
+      "Serveur d'annuaire",
+      "Premier relais",
+      "Relais qui contacte la destination finale",
+      "Relais du milieu"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel protocole Tor utilise-t-il pour le transport ?",
+    "options": [
+      "UDP",
+      "TLS sur TCP",
+      "DTLS",
+      "QUIC"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment Tor gère-t-il les clés de chiffrement ?",
+    "options": [
+      "Clé pre-shared",
+      "Clé unique partagée",
+      "Négociation de clé avec chaque relais",
+      "Pas de chiffrement"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Qu'est-ce qu'un service onion (.onion) ?",
+    "options": [
+      "Site normal",
+      "Service accessible uniquement via Tor",
+      "CDN",
+      "DNS spécial"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Combien de caractères a une adresse .onion v3 ?",
+    "options": [
+      "32",
+      "64",
+      "56",
+      "16"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel algorithme de chiffrement Tor utilise-t-il ?",
+    "options": [
+      "DES",
+      "3DES",
+      "RC4",
+      "AES-128-CTR"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Qu'est-ce que le circuit Tor ?",
+    "options": [
+      "Chemin de relais établi pour la communication",
+      "Câble physique",
+      "Route IP",
+      "Tunnel VPN"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle bibliothèque JavaScript anime les visualisations ?",
+    "options": [
+      "D3.js ou Three.js",
+      "Angular",
+      "jQuery",
+      "React"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment représenter le chiffrement en couches visuellement ?",
+    "options": [
+      "Points",
+      "Lignes droites",
+      "Carrés",
+      "Cercles concentriques ou pelures d'oignon"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Qu'est-ce que le hidden service protocol ?",
+    "options": [
+      "Protocole pour services .onion bidirectionnels",
+      "Proxy",
+      "Cache",
+      "VPN"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment Tor protège-t-il contre l'analyse de trafic ?",
+    "options": [
+      "Timestamps",
+      "Rien",
+      "Taille de cellule fixe, padding",
+      "Compression"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Qu'est-ce qu'un Directory Authority ?",
+    "options": [
+      "Serveur DNS",
+      "Load balancer",
+      "Serveur qui distribue l'état du réseau",
+      "CDN"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment fonctionne le rendezvous point ?",
+    "options": [
+      "Point de rencontre pour services onion",
+      "Proxy",
+      "Serveur central",
+      "Cache"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle est la taille d'une cellule Tor ?",
+    "options": [
+      "512 bytes",
+      "4096 bytes",
+      "256 bytes",
+      "1024 bytes"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment visualiser le flux de données chiffrées ?",
+    "options": [
+      "Animation de paquets à travers les relais",
+      "Graphique en barres",
+      "Texte statique",
+      "Camembert"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le consensus Tor ?",
+    "options": [
+      "Accord entre utilisateurs",
+      "Document décrivant l'état du réseau",
+      "Protocole de vote",
+      "Configuration"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Combien de clés sont utilisées dans un circuit Tor ?",
+    "options": [
+      "10",
+      "1",
+      "5",
+      "3 (une par relais)"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Qu'est-ce que le bridge relay ?",
+    "options": [
+      "Gateway",
+      "Firewall",
+      "Relais non listés pour contourner la censure",
+      "Pont réseau"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment fonctionne le pluggable transport ?",
+    "options": [
+      "Compression",
+      "Accélération",
+      "Obfuscation du trafic Tor",
+      "Routage"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quelle courbe elliptique Tor utilise-t-il ?",
+    "options": [
+      "P-256",
+      "Curve25519",
+      "secp256k1",
+      "P-384"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment les introduction points fonctionnent-ils ?",
+    "options": [
+      "Points d'entrée pour contacter un service onion",
+      "Sortie",
+      "Backup",
+      "Cache"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que Tor Browser ?",
+    "options": [
+      "Firefox modifié pour Tor",
+      "Safari",
+      "Chrome",
+      "Edge"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment Tor empêche-t-il le fingerprinting ?",
+    "options": [
+      "Configurations standardisées",
+      "VPN",
+      "Proxy",
+      "Rien"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que NoScript dans Tor Browser ?",
+    "options": [
+      "Framework",
+      "API",
+      "Extension bloquant JavaScript",
+      "Protocole"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment visualiser la latence du réseau Tor ?",
+    "options": [
+      "Graphiques temps réel des temps de réponse",
+      "Logs texte",
+      "Fichiers",
+      "Email"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le stem dans l'écosystème Tor ?",
+    "options": [
+      "Service",
+      "Relais",
+      "Bibliothèque Python pour contrôler Tor",
+      "Navigateur"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment représenter visuellement l'anonymat ?",
+    "options": [
+      "Tailles",
+      "Masquage progressif de l'identité à travers les relais",
+      "Formes",
+      "Couleurs"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle attaque exploite la corrélation de trafic sur Tor ?",
+    "options": [
+      "Traffic analysis attack par timing correlation",
+      "SQL injection",
+      "XSS",
+      "CSRF"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le Sybil attack sur le réseau Tor ?",
+    "options": [
+      "DDoS",
+      "Contrôle de multiples nœuds malveillants pour désanonymiser",
+      "Injection de code",
+      "Vol de cookies"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle CVE a affecté Tor Browser via une faille Firefox (2016) ?",
+    "options": [
+      "CVE-2016-9079 (UAF dans SVG)",
+      "CVE-2020-1234",
+      "CVE-2018-0001",
+      "CVE-2015-9999"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment se protéger contre les exit nodes malveillants ?",
+    "options": [
+      "Utiliser uniquement HTTPS end-to-end",
+      "Désactiver JavaScript",
+      "Utiliser HTTP",
+      "Ignorer les certificats"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle bonne pratique évite le fingerprinting sur Tor Browser ?",
+    "options": [
+      "Ne pas modifier la taille de fenêtre par défaut",
+      "Installer des extensions",
+      "Activer Flash",
+      "Utiliser des polices personnalisées"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le website fingerprinting attack ?",
+    "options": [
+      "Identifier les sites visités via patterns de trafic",
+      "Vol de credentials",
+      "Injection SQL",
+      "Phishing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel mécanisme de défense Tor utilise contre le traffic shaping ?",
+    "options": [
+      "Circuit padding et cellules de taille fixe",
+      "Compression",
+      "Accélération",
+      "Cache"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Pourquoi les services onion v2 sont-ils dépréciés ?",
+    "options": [
+      "Utilisation de SHA1/RSA1024 vulnérables",
+      "Trop rapides",
+      "Trop sécurisés",
+      "Incompatibilité navigateur"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment les autorités ont-elles compromis des hidden services (Silk Road) ?",
+    "options": [
+      "Erreurs OPSEC et corrélation de données externes",
+      "Cassage du chiffrement Tor",
+      "Attaque DDoS",
+      "Social engineering sur les relais"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle défense protège contre le DNS leak sur Tor ?",
+    "options": [
+      "Résolution DNS via le réseau Tor uniquement",
+      "DNS public",
+      "Cache DNS local",
+      "DNS over UDP"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment Tor empêche-t-il la corrélation entre l'entrée et la sortie ?",
+    "options": [
+      "Chiffrement unique",
+      "Relais multiples et indépendants",
+      "Compression des données",
+      "Utilisation de VPN"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un bridge dans Tor ?",
+    "options": [
+      "Relais caché pour contourner la censure",
+      "Relais de sortie",
+      "Serveur DNS",
+      "Proxy HTTP"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel est le rôle d'un middle relay ?",
+    "options": [
+      "Relais intermédiaire pour le chiffrement",
+      "Relais de sortie",
+      "Serveur DNS",
+      "Proxy HTTP"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment Tor gère-t-il les attaques par analyse temporelle ?",
+    "options": [
+      "Padding et délais aléatoires",
+      "Compression des données",
+      "Chiffrement RSA",
+      "Utilisation de VPN"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce qu'un HSDir dans Tor ?",
+    "options": [
+      "Répertoire des services cachés",
+      "Relais de sortie",
+      "Serveur DNS",
+      "Proxy HTTP"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel est l'objectif principal de Tor ?",
+    "options": [
+      "Accélérer la navigation",
+      "Fournir l'anonymat et la confidentialité",
+      "Bloquer les publicités",
+      "Améliorer la qualité vidéo"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment Tor protège-t-il contre les attaques de type man-in-the-middle ?",
+    "options": [
+      "Chiffrement de bout en bout",
+      "Relais multiples et indépendants",
+      "Compression des données",
+      "Utilisation de VPN"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce qu'un circuit éphémère dans Tor ?",
+    "options": [
+      "Circuit temporaire pour une seule connexion",
+      "Circuit permanent",
+      "Relais de sortie",
+      "Serveur DNS"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment Tor gère-t-il les connexions lentes ?",
+    "options": [
+      "Compression des données",
+      "Relais rapides",
+      "Répartition de charge",
+      "Utilisation de VPN"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Qu'est-ce qu'un fallback directory ?",
+    "options": [
+      "Répertoire de secours pour l'état du réseau",
+      "Relais de sortie",
+      "Serveur DNS",
+      "Proxy HTTP"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment Tor gère-t-il les erreurs de connexion ?",
+    "options": [
+      "Reconnexion automatique",
+      "Compression des données",
+      "Chiffrement RSA",
+      "Utilisation de VPN"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce qu'un onion service ?",
+    "options": [
+      "Service accessible uniquement via Tor",
+      "Relais de sortie",
+      "Serveur DNS",
+      "Proxy HTTP"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment Tor gère-t-il les attaques par déni de service ?",
+    "options": [
+      "Limitation de bande passante",
+      "Compression des données",
+      "Chiffrement RSA",
+      "Utilisation de VPN"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce qu'un rendezvous point dans Tor ?",
+    "options": [
+      "Point de rencontre pour services onion",
+      "Relais de sortie",
+      "Serveur DNS",
+      "Proxy HTTP"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment Tor gère-t-il les attaques par corrélation de trafic ?",
+    "options": [
+      "Relais multiples et indépendants",
+      "Compression des données",
+      "Chiffrement RSA",
+      "Utilisation de VPN"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce qu'un directory authority dans Tor ?",
+    "options": [
+      "Serveur qui distribue l'état du réseau",
+      "Relais de sortie",
+      "Serveur DNS",
+      "Proxy HTTP"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment Tor gère-t-il les attaques par analyse de trafic ?",
+    "options": [
+      "Taille de cellule fixe, padding",
+      "Compression des données",
+      "Chiffrement RSA",
+      "Utilisation de VPN"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce qu'un bridge dans Tor ?",
+    "options": [
+      "Relais caché pour contourner la censure",
+      "Relais de sortie",
+      "Serveur DNS",
+      "Proxy HTTP"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel est le rôle d'un middle relay ?",
+    "options": [
+      "Relais intermédiaire pour le chiffrement",
+      "Relais de sortie",
+      "Serveur DNS",
+      "Proxy HTTP"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment Tor protège-t-il contre les attaques par analyse temporelle ?",
+    "options": [
+      "Padding et délais aléatoires",
+      "Compression des données",
+      "Chiffrement RSA",
+      "Utilisation de VPN"
+    ],
+    "answer": 0
+  }  
+]
+---

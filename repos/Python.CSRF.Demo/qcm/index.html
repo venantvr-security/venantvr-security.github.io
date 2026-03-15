@@ -1,0 +1,410 @@
+---
+layout: qcm
+title: "QCM - Python.CSRF.Demo"
+repo_name: "Python.CSRF.Demo"
+description: "Démonstration de CSRF et Analyse de Cookies HttpOnly"
+readme_url: "../"
+generated_at: "2026-03-14 14:31:40"
+questions: [
+  {
+    "question": "Que signifie CSRF ?",
+    "options": [
+      "Cross-Site Request Forgery",
+      "Cross-Site Resource Format",
+      "Client-Side Request Failure",
+      "Cookie Security Request Filter"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment fonctionne une attaque CSRF ?",
+    "options": [
+      "Vol de mot de passe",
+      "Forcer le navigateur de la victime à exécuter une action non désirée",
+      "Injection SQL",
+      "Déni de service"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Pourquoi le cookie de la victime est-il envoyé lors d'une attaque CSRF ?",
+    "options": [
+      "L'attaquant le vole",
+      "Le navigateur envoie automatiquement les cookies au domaine cible",
+      "La victime le copie",
+      "Le serveur le demande"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un fichier HAR ?",
+    "options": [
+      "Un fichier de configuration",
+      "HTTP Archive - capture des échanges HTTP",
+      "Un fichier de hash",
+      "Un fichier de log serveur"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment vérifier si un cookie est HttpOnly via le navigateur ?",
+    "options": [
+      "Console JavaScript",
+      "DevTools > Application > Cookies",
+      "Fichier de configuration",
+      "Ligne de commande"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un token CSRF ?",
+    "options": [
+      "Un mot de passe",
+      "Une valeur unique vérifiée par le serveur pour chaque requête",
+      "Un cookie",
+      "Un header HTTP"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Où place-t-on généralement le token CSRF ?",
+    "options": [
+      "Dans l'URL uniquement",
+      "Dans un champ hidden du formulaire",
+      "Dans le cookie uniquement",
+      "Dans le localStorage"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Que fait Flask-WTF pour la protection CSRF ?",
+    "options": [
+      "Chiffre les formulaires",
+      "Génère et vérifie automatiquement les tokens CSRF",
+      "Bloque les requêtes POST",
+      "Ajoute un CAPTCHA"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Que fait l'attribut SameSite sur un cookie ?",
+    "options": [
+      "Chiffre le cookie",
+      "Contrôle quand le cookie est envoyé en cross-site",
+      "Compresse le cookie",
+      "Expire le cookie"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle valeur de SameSite offre la meilleure protection ?",
+    "options": [
+      "None",
+      "Lax",
+      "Strict",
+      "Disabled"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Pourquoi vérifier le header Referer ?",
+    "options": [
+      "Pour le cache",
+      "Pour détecter les requêtes provenant d'autres sites",
+      "Pour la compression",
+      "Pour le routage"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le Double Submit Cookie ?",
+    "options": [
+      "Envoyer le cookie deux fois",
+      "Envoyer le token dans un cookie ET dans le corps/header de la requête",
+      "Utiliser deux cookies",
+      "Doubler la taille du cookie"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Pourquoi les requêtes GET ne devraient pas modifier l'état ?",
+    "options": [
+      "Pour la performance",
+      "Pour éviter les CSRF via des images ou liens",
+      "Par convention",
+      "Pour le cache"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment analyser les cookies dans un fichier HAR avec Python ?",
+    "options": [
+      "Avec requests",
+      "Avec json.load() puis parcourir entries > response > cookies",
+      "Avec BeautifulSoup",
+      "Avec Selenium"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le risque si un cookie n'est pas HttpOnly ?",
+    "options": [
+      "Pas de risque",
+      "Il peut être volé via XSS (JavaScript)",
+      "Il expire plus vite",
+      "Il est plus lent"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle CVE historique concerne une vulnérabilité CSRF majeure ?",
+    "options": [
+      "CVE-2019-18426 (WhatsApp CSRF) parmi d'autres",
+      "CVE-2020-1234",
+      "CVE-2018-0001",
+      "CVE-2021-9999"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment la valeur SameSite=Lax protège-t-elle contre CSRF ?",
+    "options": [
+      "Cookie envoyé uniquement pour navigation top-level GET",
+      "Bloque tous les cookies",
+      "Chiffre le cookie",
+      "Expire le cookie"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Pourquoi les requêtes AJAX cross-origin ne suffisent pas pour CSRF ?",
+    "options": [
+      "Bloquées par SOP, mais formulaires HTML ne le sont pas",
+      "Trop lentes",
+      "Requièrent authentification",
+      "Impossibles"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle bonne pratique complète le token CSRF ?",
+    "options": [
+      "Vérifier Origin/Referer + SameSite cookie",
+      "Uniquement HTTPS",
+      "Compression",
+      "Cache"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment fonctionne le Synchronizer Token Pattern ?",
+    "options": [
+      "Token unique par session comparé à chaque requête",
+      "Cookie seul",
+      "IP check",
+      "User-Agent check"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle attaque combine CSRF et clickjacking ?",
+    "options": [
+      "Inciter la victime à cliquer sur un bouton dans une iframe cachée",
+      "SQL injection",
+      "XSS",
+      "Path traversal"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment le header X-Frame-Options protège-t-il indirectement contre CSRF ?",
+    "options": [
+      "Empêche l'embedding iframe pour le clickjacking CSRF",
+      "Bloque les cookies",
+      "Chiffre les données",
+      "Compresse les réponses"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Pourquoi les API REST sont-elles aussi vulnérables au CSRF ?",
+    "options": [
+      "Si elles utilisent des cookies pour l'auth sans token CSRF",
+      "JSON est vulnérable",
+      "HTTPS ne protège pas",
+      "API = pas de CSRF"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment implémenter un token CSRF stateless ?",
+    "options": [
+      "HMAC du session ID avec clé secrète serveur",
+      "Random sans vérification",
+      "Timestamp seul",
+      "IP hash"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle défense moderne remplace progressivement les tokens CSRF ?",
+    "options": [
+      "SameSite cookies avec valeur Strict ou Lax",
+      "Captcha",
+      "2FA uniquement",
+      "Rate limiting"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle est la différence entre CSRF et XSS ?",
+    "options": [
+      "CSRF exploite la confiance du serveur envers le navigateur, XSS exploite la confiance du navigateur envers le serveur",
+      "CSRF et XSS sont identiques",
+      "CSRF vole des données, XSS exécute des actions",
+      "XSS nécessite JavaScript, CSRF non"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Pourquoi les requêtes preflight CORS protègent-elles contre certains CSRF ?",
+    "options": [
+      "Les requêtes préflight vérifient les permissions avant d'envoyer la vraie requête",
+      "CORS bloque tous les cookies",
+      "Les préflight sont plus rapides",
+      "CORS chiffre les requêtes"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le login CSRF ?",
+    "options": [
+      "Forcer la victime à se connecter avec le compte de l'attaquant pour capturer ses actions",
+      "Voler les credentials de login",
+      "Bloquer le login",
+      "Chiffrer le formulaire de login"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment le Content-Type peut-il aider contre CSRF ?",
+    "options": [
+      "Exiger application/json que les formulaires HTML ne peuvent pas envoyer directement",
+      "Content-Type chiffre les données",
+      "Content-Type bloque les cookies",
+      "Content-Type compresse les requêtes"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle CVE concerne une faille CSRF dans WordPress permettant la prise de contrôle ?",
+    "options": [
+      "CVE-2020-8417",
+      "CVE-2021-1234",
+      "CVE-2019-0001",
+      "CVE-2022-9999"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Pourquoi les tokens CSRF doivent-ils être imprévisibles ?",
+    "options": [
+      "Un token prévisible permettrait à l'attaquant de le deviner et forger des requêtes valides",
+      "Pour améliorer la performance",
+      "Pour faciliter le debugging",
+      "Pour compresser les données"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le BREACH attack en relation avec CSRF ?",
+    "options": [
+      "Attaque exploitant la compression HTTP pour extraire les tokens CSRF via timing",
+      "Attaque par force brute",
+      "Attaque par injection SQL",
+      "Attaque par déni de service"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment Django protège-t-il contre CSRF par défaut ?",
+    "options": [
+      "Middleware CsrfViewMiddleware avec token dans cookie et formulaire",
+      "Blocage de toutes les requêtes POST",
+      "Chiffrement des formulaires",
+      "Authentification obligatoire"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Pourquoi le token CSRF doit-il être différent du session ID ?",
+    "options": [
+      "Le session ID est envoyé automatiquement par le navigateur, le token CSRF doit être explicitement inclus",
+      "Le session ID est plus court",
+      "Le token CSRF est chiffré",
+      "Le session ID expire plus vite"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le CSRF via JSON avec Flash ou Silverlight historiquement ?",
+    "options": [
+      "Contournement de SOP via plugins pour envoyer des requêtes cross-origin avec Content-Type JSON",
+      "Utilisation de Flash pour le chiffrement",
+      "Animation de formulaires",
+      "Compression JSON"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment tester une vulnérabilité CSRF de manière éthique ?",
+    "options": [
+      "Créer une page HTML avec formulaire ciblant l'endpoint et tester en environnement autorisé",
+      "Attaquer des sites en production",
+      "Utiliser des botnets",
+      "Ignorer les autorisations"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle est la recommandation OWASP pour la longueur minimale d'un token CSRF ?",
+    "options": [
+      "Au moins 128 bits d'entropie",
+      "8 caractères",
+      "16 caractères",
+      "4 caractères"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment le header Custom X-Requested-With protège-t-il contre CSRF ?",
+    "options": [
+      "Les formulaires HTML ne peuvent pas définir de headers personnalisés, seul AJAX le peut",
+      "Le header chiffre les données",
+      "Le header bloque les cookies",
+      "Le header compresse les requêtes"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Pourquoi SameSite=None nécessite-t-il le flag Secure ?",
+    "options": [
+      "Les navigateurs modernes exigent Secure avec None pour éviter les fuites sur HTTP",
+      "None est obsolète",
+      "Secure est plus rapide",
+      "None chiffre les cookies"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle est la différence entre un token CSRF par requête et par session ?",
+    "options": [
+      "Par requête offre une meilleure protection mais plus de complexité, par session est plus simple mais vulnérable au vol de token",
+      "Aucune différence de sécurité",
+      "Par session est toujours plus sécurisé",
+      "Par requête est obsolète"
+    ],
+    "answer": 0
+  }
+]
+---

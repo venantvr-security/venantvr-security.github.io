@@ -1,0 +1,410 @@
+---
+layout: qcm
+title: "QCM - Python.HAR.ZAP"
+repo_name: "Python.HAR.ZAP"
+description: "DAST Security Platform avec OWASP ZAP"
+readme_url: "../"
+generated_at: "2026-03-14 10:54:37"
+questions: [
+  {
+    "question": "Que signifie DAST dans le contexte de la sécurité applicative ?",
+    "options": [
+      "Database Application Security Test",
+      "Data Analysis Security Tool",
+      "Direct Access Security Testing",
+      "Dynamic Application Security Testing"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel est le port par défaut de OWASP ZAP en mode proxy ?",
+    "options": [
+      "3128",
+      "8080",
+      "9090",
+      "8443"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un fichier HAR ?",
+    "options": [
+      "Header Analysis Report",
+      "Hypertext Application Response",
+      "HTML Archive Resource",
+      "HTTP Archive Record"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quelle attaque Red Team teste si les endpoints sont accessibles sans authentification ?",
+    "options": [
+      "CSRF Attack",
+      "XSS Injection",
+      "Unauthenticated Replay",
+      "Mass Assignment"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel payload est typiquement utilisé pour le Mass Assignment ?",
+    "options": [
+      "{\"token\": null}",
+      "{\"debug\": true}",
+      "{\"rôle\": \"admin\"}",
+      "{\"password\": \"test\"}"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quelle métrique est utilisée pour évaluer la prévisibilité des tokens de session ?",
+    "options": [
+      "Indice de Gini",
+      "Coefficient de Pearson",
+      "Entropie de Shannon",
+      "Score Z"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel header HTTP protège contre le clickjacking ?",
+    "options": [
+      "Content-Type",
+      "X-Frame-Options",
+      "X-XSS-Protection",
+      "Cache-Control"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Que signifie IDOR ?",
+    "options": [
+      "Input Data Override Request",
+      "Indirect Directory Object Reference",
+      "Insecure Direct Object Reference",
+      "Internal Data Object Request"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel format d'export est compatible avec GitHub Security ?",
+    "options": [
+      "SARIF",
+      "TXT",
+      "CSV",
+      "JUnit"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle directive CSP est considérée comme dangereuse ?",
+    "options": [
+      "script-src",
+      "default-src",
+      "img-src",
+      "unsafe-inline"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Combien de sessions HAR sont nécessaires pour la détection IDOR ?",
+    "options": [
+      "4",
+      "3",
+      "1",
+      "2"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel attribut de cookie empêche l'accès JavaScript ?",
+    "options": [
+      "SameSite",
+      "Secure",
+      "HttpOnly",
+      "Path"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quelle vulnérabilité Race Condition cible-t-elle principalement ?",
+    "options": [
+      "SQL Injection",
+      "TOCTOU",
+      "XSS",
+      "Buffer Overflow"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel outil est utilisé pour l'orchestration Docker de ZAP ?",
+    "options": [
+      "container_handler.py",
+      "docker_zap.py",
+      "docker_manager.py",
+      "zap_manager.py"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quelle interface web utilisé Streamlit ?",
+    "options": [
+      "localhost:3000",
+      "localhost:8501",
+      "localhost:5000",
+      "localhost:8080"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel paramètre CLI échoue le build si des alertes critiques sont trouvées ?",
+    "options": [
+      "--error-on-high",
+      "--strict",
+      "--abort",
+      "--fail-fast"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel type de scan ne modifie pas l'application ciblée ?",
+    "options": [
+      "Injection",
+      "Fuzzing",
+      "Scan passif",
+      "Scan actif"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quelle technique détecte les paramètres cachés comme ?debug=true ?",
+    "options": [
+      "Hidden Parameter Discovery",
+      "Debug Injection",
+      "Path Traversal",
+      "Parameter Mining"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel header indique l'utilisation de HTTPS strict ?",
+    "options": [
+      "Strict-Transport-Security",
+      "X-HTTPS-Only",
+      "TLS-Required",
+      "Secure-Connection"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel regex pattern détecte les clés AWS ?",
+    "options": [
+      "AWS-KEY-*",
+      "aws_[a-z]{20}",
+      "arn:aws:*",
+      "AKIA[0-9A-Z]{16}"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quelle bibliothèque Python est utilisée pour le parallélisme des attaques ?",
+    "options": [
+      "multiprocessing",
+      "celery",
+      "ThreadPoolExecutor",
+      "asyncio"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel seuil de content-length ratio indique un bypass d'authentification ?",
+    "options": [
+      "> 90%",
+      "> 50%",
+      "> 25%",
+      "> 75%"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel format est utilisé pour Jenkins/GitLab CI ?",
+    "options": [
+      "JSON",
+      "SARIF",
+      "JUnit XML",
+      "HTML"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quelle méthode HTTP est typiquement ciblée par Mass Assignment ?",
+    "options": [
+      "DELETE",
+      "POST/PUT/PATCH",
+      "OPTIONS",
+      "GET"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel onglet Streamlit gère les critères de pass/fail CI/CD ?",
+    "options": [
+      "Config",
+      "Acceptance",
+      "Results",
+      "Settings"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Combien d'onglets possède l'interface Streamlit de l'outil ?",
+    "options": [
+      "9",
+      "5",
+      "7",
+      "12"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle entropie minimale est recommandée pour les tokens de session ?",
+    "options": [
+      "4.0 bits",
+      "2.0 bits",
+      "6.0 bits",
+      "8.0 bits"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel module gère l'import OpenAPI/Swagger ?",
+    "options": [
+      "openapi_importer.py",
+      "spec_reader.py",
+      "api_loader.py",
+      "swagger_parser.py"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle attaque exploite les différences de timing entre requêtes ?",
+    "options": [
+      "Time-based SQLi",
+      "Timing Attack",
+      "Slow DoS",
+      "Race Condition"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel est l'objectif principal du PayloadReconstructor ?",
+    "options": [
+      "Validation de schémas",
+      "Reconstruction de requêtes",
+      "Parsing de réponses",
+      "Génération de payloads d'attaque"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quelle est la différence principale entre un scan passif et un scan actif dans ZAP ?",
+    "options": [
+      "Le scan passif est plus lent",
+      "Le scan actif envoie des payloads d'attaque, le passif analyse seulement le trafic",
+      "Le scan passif nécessite plus de privilèges",
+      "Il n'y a pas de différence"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'une Spider dans le contexte de ZAP ?",
+    "options": [
+      "Un malware",
+      "Un crawler qui découvre automatiquement les URLs d'une application",
+      "Un outil de chiffrement",
+      "Un analyseur de logs"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le rôle d'un contexte dans OWASP ZAP ?",
+    "options": [
+      "Définir la portée du scan et les règles d'authentification",
+      "Stocker les résultats",
+      "Générer des rapports",
+      "Configurer le proxy"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment ZAP gère-t-il l'authentification pour scanner des zones protégées ?",
+    "options": [
+      "Il ne peut pas scanner les zones protégées",
+      "Via la configuration de scripts d'authentification ou de sessions",
+      "En contournant l'authentification",
+      "Par brute force uniquement"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un script NSE dans le contexte de ZAP ?",
+    "options": [
+      "NSE est spécifique à Nmap, ZAP utilise des scripts Zest ou JavaScript",
+      "Un script de scan actif",
+      "Un plugin officiel",
+      "Un fichier de configuration"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel type de vulnérabilité le header X-Content-Type-Options: nosniff prévient-il ?",
+    "options": [
+      "XSS",
+      "MIME type sniffing",
+      "SQL Injection",
+      "CSRF"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment identifier une vulnérabilité de type Open Redirect ?",
+    "options": [
+      "Injection SQL dans les paramètres",
+      "Paramètre de redirection acceptant des URLs externes",
+      "Headers manquants",
+      "Cookies non sécurisés"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le fuzzing dans le contexte des tests de sécurité ?",
+    "options": [
+      "Analyse statique du code",
+      "Envoi de données aléatoires ou malformées pour trouver des bugs",
+      "Scan de ports",
+      "Enumération de sous-domaines"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel header HTTP permet de contrôler quelles ressources peuvent être chargées ?",
+    "options": [
+      "X-Frame-Options",
+      "Content-Security-Policy",
+      "X-XSS-Protection",
+      "Referrer-Policy"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment ZAP peut-il être intégré dans un pipeline DevSecOps ?",
+    "options": [
+      "Il ne peut pas être automatisé",
+      "Via son API REST et le mode daemon headless",
+      "Uniquement via l'interface graphique",
+      "Par envoi d'emails manuels"
+    ],
+    "answer": 1
+  }
+]
+---

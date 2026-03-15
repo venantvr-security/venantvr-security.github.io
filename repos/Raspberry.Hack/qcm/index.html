@@ -1,0 +1,410 @@
+---
+layout: qcm
+title: "QCM - Raspberry.Hack"
+repo_name: "Raspberry.Hack"
+description: "Analyse Pédagogique d'un Worm Raspberry Pi"
+readme_url: "../"
+generated_at: "2026-03-14 14:31:40"
+questions: [
+  {
+    "question": "Quelle est la cible principale de ce worm IoT ?",
+    "options": [
+      "Serveurs Windows",
+      "Raspberry Pi avec SSH et mot de passe par défaut",
+      "Routeurs Cisco",
+      "Smartphones Android"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quels sont les credentials par défaut exploités ?",
+    "options": [
+      "admin:admin",
+      "root:root",
+      "pi:raspberry",
+      "user:password"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quels outils sont utilisés pour la propagation ?",
+    "options": [
+      "Metasploit",
+      "zmap + sshpass",
+      "Nmap + Hydra",
+      "Shodan API"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel canal IRC est utilisé pour le C2 ?",
+    "options": [
+      "#malware",
+      "#botnet",
+      "#biret",
+      "#attack"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Où le worm se copie-t-il pour la persistance ?",
+    "options": [
+      "/home/pi/",
+      "/tmp/",
+      "/opt/",
+      "/var/www/"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment le worm assure-t-il sa persistance au reboot ?",
+    "options": [
+      "Crontab",
+      "Modification de rc.local",
+      "Service systemd",
+      "Init.d script"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Pourquoi le worm tue-t-il d'autres processus comme 'minerd' ?",
+    "options": [
+      "Pour libérer de la mémoire",
+      "Pour éliminer les malwares concurrents",
+      "Pour cacher ses traces",
+      "Par erreur de code"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment le worm sécurise-t-il son accès futur ?",
+    "options": [
+      "VPN",
+      "Tunnel SSH",
+      "Ajout de clé SSH attaquant dans authorized_keys",
+      "Création d'un nouvel utilisateur"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment les commandes C2 sont-elles authentifiées ?",
+    "options": [
+      "Mot de passe",
+      "Token",
+      "Signature RSA",
+      "Pas d'authentification"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Combien d'IPs le worm scanne-t-il par cycle ?",
+    "options": [
+      "1000",
+      "10000",
+      "100000",
+      "1000000"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel port est scanné pour trouver des cibles SSH ?",
+    "options": [
+      "21",
+      "22",
+      "23",
+      "80"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment se protéger contre ce worm ?",
+    "options": [
+      "Firewall seul",
+      "Changer le mot de passe + désactiver auth par password + fail2ban",
+      "Antivirus",
+      "VPN"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel fichier indique une infection ?",
+    "options": [
+      "/tmp/infected",
+      "/opt/.infected",
+      "/var/infected",
+      "/home/infected"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Sur quel réseau IRC le worm se connecte-t-il ?",
+    "options": [
+      "Freenode",
+      "EFnet",
+      "Undernet",
+      "QuakeNet"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Pourquoi ce worm est-il documenté ?",
+    "options": [
+      "Pour l'utiliser",
+      "Pour comprendre les menaces IoT et mieux se défendre",
+      "Pour le vendre",
+      "Par curiosité"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que Mirai botnet ?",
+    "options": [
+      "Antivirus",
+      "Botnet IoT exploitant les credentials par défaut",
+      "Firewall",
+      "IDS"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Pourquoi les devices IoT sont-ils des cibles privilégiées ?",
+    "options": [
+      "Puissance de calcul",
+      "Souvent mal configurés avec credentials par défaut",
+      "Bonne sécurité",
+      "Mises à jour fréquentes"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment le worm évite-t-il d'infecter deux fois le même système ?",
+    "options": [
+      "Base de données",
+      "Fichier marqueur /opt/.infected",
+      "Cookie",
+      "Registry"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le credential stuffing ?",
+    "options": [
+      "Chiffrement",
+      "Test massif de couples login/password connus",
+      "Compression",
+      "Hashing"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment détecter une infection par ce type de worm ?",
+    "options": [
+      "Performance",
+      "Processus suspects, connexions IRC, fichiers dans /opt",
+      "Couleur LED",
+      "Son"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un C2 (Command and Control) ?",
+    "options": [
+      "Compilateur",
+      "Serveur de contrôle des bots infectés",
+      "Container",
+      "Cache"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Pourquoi IRC est-il utilisé pour le C2 ?",
+    "options": [
+      "Moderne",
+      "Protocole simple, difficile à filtrer, temps réel",
+      "Sécurisé",
+      "Rapide"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment nettoyer un Raspberry Pi infecté ?",
+    "options": [
+      "Reboot",
+      "Réinstallation complète et changement de credentials",
+      "Attendre",
+      "Ignorer"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que l'authentification par clé SSH ?",
+    "options": [
+      "Mot de passe",
+      "Paire de clés cryptographiques publique/privée",
+      "PIN",
+      "Biométrie"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment empêcher les attaques par force brute SSH ?",
+    "options": [
+      "Port 22 ouvert",
+      "fail2ban, clés SSH, port non-standard",
+      "Pas de password",
+      "Root login"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle CVE a affecté les Raspberry Pi via OpenSSL faible ?",
+    "options": [
+      "CVE-2008-0166 (Debian weak keys affectant les clés SSH générées)",
+      "CVE-2020-1234",
+      "CVE-2019-0001",
+      "CVE-2021-9999"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le botnet Hajime ciblant les IoT ?",
+    "options": [
+      "Worm IoT P2P qui fermait les ports vulnérables pour 'protéger' les devices",
+      "Ransomware IoT",
+      "Antivirus IoT",
+      "Firewall IoT"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment le worm BrickerBot opérait-il ?",
+    "options": [
+      "Destruction permanente des devices IoT vulnérables (PDoS)",
+      "Vol de données",
+      "Minage de cryptomonnaie",
+      "Envoi de spam"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que l'attaque par supply chain sur les images Raspberry Pi ?",
+    "options": [
+      "Images OS pré-compromises distribuées via des sources non officielles",
+      "Attaque physique",
+      "Modification du hardware",
+      "Interception du colis"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment sécuriser le boot du Raspberry Pi ?",
+    "options": [
+      "Activer le secure boot avec clé personnalisée quand disponible",
+      "Désactiver le boot",
+      "Utiliser une carte SD rapide",
+      "Augmenter la RAM"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le port knocking pour sécuriser SSH ?",
+    "options": [
+      "Séquence de connexions sur des ports spécifiques pour ouvrir le port SSH",
+      "Changer le port SSH",
+      "Bloquer le port SSH",
+      "Chiffrer le port SSH"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment le Raspberry Pi peut-il être utilisé comme honeypot ?",
+    "options": [
+      "Simuler un système vulnérable pour étudier les attaques",
+      "Attaquer d'autres systèmes",
+      "Miner des cryptomonnaies",
+      "Héberger un site web"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que Shodan et son lien avec les Raspberry Pi exposés ?",
+    "options": [
+      "Moteur de recherche d'appareils connectés exposant les Pi mal configurés",
+      "Antivirus en ligne",
+      "Firewall cloud",
+      "VPN gratuit"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment détecter si un Raspberry Pi est compromis ?",
+    "options": [
+      "Vérifier les processus, connexions réseau, fichiers modifiés, crontabs",
+      "Regarder les LEDs",
+      "Ecouter le ventilateur",
+      "Mesurer la température"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le cryptojacking sur Raspberry Pi ?",
+    "options": [
+      "Utilisation non autorisée du CPU pour miner des cryptomonnaies",
+      "Vol de Bitcoin stocké",
+      "Chiffrement des fichiers",
+      "Achat de cryptomonnaies"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment le worm Linux.Darlloz ciblait-il les systèmes embarqués ?",
+    "options": [
+      "Exploitation de la vulnérabilité PHP-CGI sur les architectures ARM/MIPS",
+      "Attaque par force brute",
+      "Injection SQL",
+      "XSS"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle bonne pratique réseau protège les Raspberry Pi ?",
+    "options": [
+      "Segmentation réseau avec VLAN dédié aux IoT",
+      "Connexion directe à Internet",
+      "WiFi ouvert",
+      "IP publique fixe"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment automatiser les mises à jour de sécurité sur Raspberry Pi OS ?",
+    "options": [
+      "Installer et configurer unattended-upgrades",
+      "Jamais mettre à jour",
+      "Réinstaller chaque semaine",
+      "Utiliser une ancienne version"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que l'attaque BadUSB appliquee au Raspberry Pi Zero ?",
+    "options": [
+      "Utiliser le Pi Zero comme périphérique USB malveillant émulant clavier/réseau",
+      "Infecter une clé USB",
+      "Voler des fichiers USB",
+      "Bloquer les ports USB"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le projet P4wnP1 pour Raspberry Pi Zero ?",
+    "options": [
+      "Framework transformant le Pi Zero en outil de pentest USB polyvalent",
+      "Système d'exploitation pour gaming",
+      "Serveur web léger",
+      "Outil de sauvegarde"
+    ],
+    "answer": 0
+  }
+]
+---

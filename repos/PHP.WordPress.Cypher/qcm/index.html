@@ -1,0 +1,410 @@
+---
+layout: qcm
+title: "QCM - PHP.WordPress.Cypher"
+repo_name: "PHP.WordPress.Cypher"
+description: "Utilitaires de chiffrement pour WordPress"
+readme_url: "../"
+generated_at: "2026-03-14 10:54:37"
+questions: [
+  {
+    "question": "Quel algorithme de hachage WordPress utilise-t-il par défaut ?",
+    "options": [
+      "bcrypt (via phpass)",
+      "SHA1",
+      "MD5",
+      "SHA256"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que phpass ?",
+    "options": [
+      "Bibliothèque de hachage de mots de passe PHP",
+      "Framework PHP",
+      "Extension MySQL",
+      "Plugin WordPress"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment vérifier un mot de passe WordPress ?",
+    "options": [
+      "check_pass()",
+      "password_verify()",
+      "wp_check_password()",
+      "verify_password()"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quelle fonction WordPress hashe un mot de passe ?",
+    "options": [
+      "password_hash()",
+      "wp_hash_password()",
+      "hash_password()",
+      "wp_encrypt()"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel préfixe indique un hash bcrypt ?",
+    "options": [
+      "$1$",
+      "$5$",
+      "$6$",
+      "$2y$ ou $2a$"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Qu'est-ce que le salt en cryptographie ?",
+    "options": [
+      "Valeur aléatoire ajoutée avant hachage",
+      "Algorithme de chiffrement",
+      "Clé de chiffrement",
+      "Mode de chiffrement"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Où WordPress stocke-t-il les clés de chiffrement ?",
+    "options": [
+      ".htaccess",
+      "wp-config.php",
+      "wp-content/",
+      "database"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle constante contient la clé AUTH ?",
+    "options": [
+      "SECRET_KEY",
+      "WP_KEY",
+      "AUTH_KEY",
+      "SECURE_KEY"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment générer des clés WordPress sécurisées ?",
+    "options": [
+      "openssl rand",
+      "Toutes les réponses",
+      "random_bytes()",
+      "api.wordpress.org/secret-key/"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel algorithme symétrique est courant en PHP ?",
+    "options": [
+      "RC4",
+      "DES",
+      "AES-256",
+      "Blowfish"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quelle extension PHP gère le chiffrement moderne ?",
+    "options": [
+      "mcrypt",
+      "hash",
+      "crypt",
+      "OpenSSL ou Sodium"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment chiffrer avec OpenSSL en PHP ?",
+    "options": [
+      "cipher()",
+      "ssl_encrypt()",
+      "encrypt()",
+      "openssl_encrypt()"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel mode de chiffrement est recommandé ?",
+    "options": [
+      "GCM ou CBC avec HMAC",
+      "CFB seul",
+      "ECB",
+      "OFB seul"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que l'IV (Initialization Vector) ?",
+    "options": [
+      "Index vectoriel",
+      "Vecteur d'intégrité",
+      "Identifiant de version",
+      "Valeur aléatoire pour le premier bloc"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment stocker l'IV avec les données chiffrées ?",
+    "options": [
+      "Header HTTP",
+      "Fichier séparé",
+      "Préfixer les données chiffrées avec l'IV",
+      "Base de données séparée"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quelle fonction PHP génère des octets aléatoires ?",
+    "options": [
+      "random_bytes()",
+      "mt_rand()",
+      "openssl_random()",
+      "rand()"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment sécuriser les cookies WordPress ?",
+    "options": [
+      "LOGGED_IN_KEY + LOGGED_IN_SALT",
+      "md5() simple",
+      "serialize()",
+      "base64_encode()"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le HMAC ?",
+    "options": [
+      "Hash MAC",
+      "Hash-based Message Authentication Code",
+      "Hybrid MAC",
+      "HTTP MAC"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle fonction calcule un HMAC en PHP ?",
+    "options": [
+      "mac()",
+      "hmac()",
+      "compute_hmac()",
+      "hash_hmac()"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment valider l'intégrité des données chiffrées ?",
+    "options": [
+      "Taille du fichier",
+      "HMAC ou mode authentifié (GCM)",
+      "CRC32",
+      "Checksum MD5"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle attaque cible les implémentations crypto faibles ?",
+    "options": [
+      "Timing attack, padding oracle",
+      "CSRF",
+      "XSS",
+      "SQL injection"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment comparer des hashes de manière sécurisée ?",
+    "options": [
+      "strcmp()",
+      "compare()",
+      "hash_equals()",
+      "== ou ==="
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Qu'est-ce que libsodium ?",
+    "options": [
+      "Bibliothèque crypto moderne (NaCl)",
+      "Framework",
+      "Plugin WordPress",
+      "Extension PHP"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle fonction sodium chiffré des données ?",
+    "options": [
+      "sodium_encrypt()",
+      "sodium_crypto_secretbox()",
+      "sodium_seal()",
+      "sodium_cipher()"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment migrer de MD5 vers bcrypt pour les passwords ?",
+    "options": [
+      "Convertir directement",
+      "Double hash",
+      "Re-hasher à la prochaine connexion",
+      "Impossible"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel cost factor bcrypt est recommandé ?",
+    "options": [
+      "20",
+      "5",
+      "1",
+      "10-12 (ajuster selon performance)"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment protéger wp-config.php ?",
+    "options": [
+      "Permissions 400 et/ou hors webroot",
+      "Chiffrer le fichier",
+      "Laisser par défaut",
+      "chmod 777"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le key stretching ?",
+    "options": [
+      "Compresser la clé",
+      "Allonger la clé",
+      "Diviser la clé",
+      "Rendre le hash plus coûteux à calculer"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment WordPress protège-t-il les nonces ?",
+    "options": [
+      "Session ID",
+      "wp_create_nonce() avec timestamp",
+      "Cookie",
+      "IP"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle durée de vie ont les nonces WordPress ?",
+    "options": [
+      "Session",
+      "24 heures par défaut",
+      "Permanent",
+      "1 heure"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle CVE a exposé des vulnérabilités dans xmlrpc.php de WordPress ?",
+    "options": [
+      "CVE-2015-5622 et multiples attaques par amplification",
+      "CVE-2020-1234",
+      "CVE-2018-9999",
+      "CVE-2021-0001"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment se protéger contre les attaques de bruteforce sur wp-login.php ?",
+    "options": [
+      "Limiter les tentatives, 2FA, renommer l'URL",
+      "Désactiver HTTPS",
+      "Supprimer wp-admin",
+      "Utiliser MD5"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle vulnérabilité permet l'injection d'objets PHP sérialisés ?",
+    "options": [
+      "PHP Object Injection via unserialize()",
+      "SQL Injection",
+      "XSS",
+      "CSRF"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Pourquoi éviter mcrypt en PHP moderne ?",
+    "options": [
+      "Déprécié, non maintenu, utiliser OpenSSL ou Sodium",
+      "Trop sécurisé",
+      "Trop rapide",
+      "Incompatible Windows"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle attaque cible les cookies WordPress mal protégés ?",
+    "options": [
+      "Session hijacking si pas Secure/HttpOnly",
+      "DDoS",
+      "Defacement",
+      "SEO spam"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment détecter des plugins WordPress vulnérables ?",
+    "options": [
+      "WPScan, analyse des CVE connues",
+      "Google Search",
+      "Manuel seul",
+      "Ping"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle bonne pratique protège les clés dans wp-config.php ?",
+    "options": [
+      "Permissions restrictives 400/440 et hors webroot si possible",
+      "chmod 777",
+      "Partager publiquement",
+      "Laisser par défaut"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le padding oracle attack ?",
+    "options": [
+      "Exploitation du padding CBC pour déchiffrer sans clé",
+      "Attaque par force brute",
+      "Injection SQL",
+      "XSS stored"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment sécuriser les uploads WordPress ?",
+    "options": [
+      "Valider le type MIME, désactiver l'exécution PHP dans uploads/",
+      "Autoriser tous les fichiers",
+      "Pas de validation",
+      "chmod 777"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle fonction PHP compare les hashes en temps constant ?",
+    "options": [
+      "hash_equals() pour éviter le timing attack",
+      "strcmp()",
+      "md5() == md5()",
+      "strpos()"
+    ],
+    "answer": 0
+  }
+]
+---

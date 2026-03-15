@@ -1,0 +1,410 @@
+---
+layout: qcm
+title: "QCM - Python.Usb.Test"
+repo_name: "Python.Usb.Test"
+description: "Test de sécurité USB"
+readme_url: "../"
+generated_at: "2026-03-14 10:54:37"
+questions: [
+  {
+    "question": "Qu'est-ce qu'un BadUSB ?",
+    "options": [
+      "USB défectueux",
+      "Stockage lent",
+      "Hub USB",
+      "USB malveillant émulant clavier/souris"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel danger pose un USB inconnu ?",
+    "options": [
+      "Injection de commandes, malware, exfiltration",
+      "Incompatibilité",
+      "Lenteur",
+      "Aucun"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment détecter un nouveau périphérique USB ?",
+    "options": [
+      "udev, pyudev, polling",
+      "Firewall",
+      "Manuel",
+      "Antivirus"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que udev ?",
+    "options": [
+      "Gestionnaire de périphériques Linux",
+      "Antivirus",
+      "Service",
+      "Firewall"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment logger les connexions USB ?",
+    "options": [
+      "Manuel",
+      "Hook udev + logging",
+      "Fichier",
+      "Email"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le HID (Human Interface Device) ?",
+    "options": [
+      "Vidéo",
+      "Classe USB pour claviers/souris",
+      "Stockage",
+      "Audio"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Pourquoi HID est-il dangereux ?",
+    "options": [
+      "Lent",
+      "Exécution automatique de frappes",
+      "Bruyant",
+      "Gros"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que Rubber Ducky ?",
+    "options": [
+      "Stockage",
+      "Canard",
+      "Outil d'injection de frappes via USB",
+      "Jouet"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment analyser le comportement USB ?",
+    "options": [
+      "Ping",
+      "Scanner",
+      "Surveiller les descripteurs et trafic",
+      "Démonter"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Qu'est-ce qu'un descripteur USB ?",
+    "options": [
+      "Firmware",
+      "Software",
+      "Métadonnées décrivant le périphérique",
+      "Driver"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment un USB peut-il être un clavier ET stockage ?",
+    "options": [
+      "Impossible",
+      "Descripteurs multiples (composite device)",
+      "Firmware",
+      "Driver spécial"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment bloquer les USB non autorisés ?",
+    "options": [
+      "Antivirus",
+      "Rien",
+      "Firewall",
+      "Whitelist par VID/PID, USBGuard"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Qu'est-ce que VID/PID ?",
+    "options": [
+      "Version",
+      "Vendor ID / Product ID",
+      "Driver",
+      "Protocol"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment USBGuard fonctionne-t-il ?",
+    "options": [
+      "IDS",
+      "Firewall",
+      "Antivirus",
+      "Politique d'autorisation des USB"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Qu'est-ce que l'USB Killer ?",
+    "options": [
+      "BadUSB",
+      "Stockage",
+      "USB qui détruit physiquement le port",
+      "Malware"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment se protéger de l'USB Killer ?",
+    "options": [
+      "Antivirus",
+      "Firewall",
+      "Rien",
+      "Protection électrique, ne pas brancher d'inconnus"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment analyser un USB suspect ?",
+    "options": [
+      "Machine isolée / VM avec USB passthrough",
+      "Production",
+      "Cloud",
+      "Réseau"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le USB mass storage ?",
+    "options": [
+      "Audio",
+      "Video",
+      "Classe USB pour stockage",
+      "HID"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment empêcher l'autorun ?",
+    "options": [
+      "Désactiver autorun/autoplay",
+      "Rien",
+      "Antivirus",
+      "Firewall"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que l'exfiltration USB ?",
+    "options": [
+      "Import",
+      "Backup",
+      "Vol de données via USB",
+      "Sync"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment détecter l'exfiltration ?",
+    "options": [
+      "Antivirus",
+      "Firewall",
+      "Rien",
+      "DLP, monitoring des accès fichiers"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Qu'est-ce qu'un USB data blocker ?",
+    "options": [
+      "Switch",
+      "Adaptateur bloquant les data pins",
+      "Hub",
+      "Câble"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment fonctionne un data blocker ?",
+    "options": [
+      "Bloque tout",
+      "Chiffre",
+      "Ne connecte que l'alimentation",
+      "Filtre"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Qu'est-ce que le USB restricted mode (iOS) ?",
+    "options": [
+      "Bloquer le data après verrouillage",
+      "Mode avion",
+      "Silencieux",
+      "Économie batterie"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment tester la sécurité USB d'un système ?",
+    "options": [
+      "Rien",
+      "Théorie",
+      "Brancher des USB avec payloads de test",
+      "Documentation"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Qu'est-ce que pyusb ?",
+    "options": [
+      "OS",
+      "Framework",
+      "Service",
+      "Bibliothèque Python pour USB"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment lister les périphériques USB ?",
+    "options": [
+      "lsusb seul",
+      "usb.core.find() avec pyusb",
+      "cat /dev",
+      "ls -la"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment identifier un USB malveillant ?",
+    "options": [
+      "Taille",
+      "Marque",
+      "Apparence",
+      "Comportement anormal, multiple interfaces"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Qu'est-ce que le USB debugging (Android) ?",
+    "options": [
+      "Jailbreak",
+      "Mode développeur",
+      "Root",
+      "ADB access via USB"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Pourquoi désactiver USB debugging en prod ?",
+    "options": [
+      "Batterie",
+      "Espace",
+      "Lenteur",
+      "Accès complet au device"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Qu'est-ce que le USB Armory ?",
+    "options": [
+      "Clé USB standard",
+      "Plateforme de sécurité USB programmable",
+      "Antivirus USB",
+      "Hub USB"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment fonctionne une attaque Juice Jacking ?",
+    "options": [
+      "Virus par email",
+      "Vol de données via station de charge USB publique",
+      "Phishing",
+      "Malware web"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le DMA attack via USB ?",
+    "options": [
+      "Attaque DNS",
+      "Accès direct à la mémoire via périphériques comme Thunderbolt",
+      "Attaque DoS",
+      "Malware"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment Thunderbolt/USB4 peut-il être exploité ?",
+    "options": [
+      "Lenteur",
+      "Accès DMA direct à la RAM du système",
+      "Incompatibilité",
+      "Surchauffe"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que l'O.MG Cable ?",
+    "options": [
+      "Câble standard",
+      "Câble USB avec implant WiFi pour injection de frappes",
+      "Câble de charge",
+      "Adaptateur"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment détecter un câble USB malveillant ?",
+    "options": [
+      "Couleur",
+      "Analyseur de protocole USB ou comportement anormal",
+      "Poids",
+      "Longueur"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le USB class spoofing ?",
+    "options": [
+      "Copie USB",
+      "Périphérique se déclarant comme autre classe (HID au lieu de storage)",
+      "Clone",
+      "Backup"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment le BIOS/UEFI peut-il être attaqué via USB ?",
+    "options": [
+      "Impossible",
+      "Firmware malveillant flashé via USB",
+      "Par email",
+      "Via réseau"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le Bash Bunny ?",
+    "options": [
+      "Script shell",
+      "Plateforme d'attaque USB multi-payload",
+      "Terminal",
+      "Éditeur"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment sécuriser les ports USB physiquement ?",
+    "options": [
+      "Colle",
+      "Port blockers physiques et politique de sécurité",
+      "Ruban adhésif",
+      "Ignorer"
+    ],
+    "answer": 1
+  }
+]
+---

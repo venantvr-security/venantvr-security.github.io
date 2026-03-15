@@ -1,0 +1,410 @@
+---
+layout: qcm
+title: "QCM - Python.Traversal.Vulnerabilities"
+repo_name: "Python.Traversal.Vulnerabilities"
+description: "Scanner de vulnérabilités path traversal"
+readme_url: "../"
+generated_at: "2026-03-14 10:54:37"
+questions: [
+  {
+    "question": "Qu'est-ce que le path traversal ?",
+    "options": [
+      "Accès à des fichiers hors du répertoire autorisé",
+      "Redirection",
+      "Navigation web",
+      "Routing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle séquence est utilisée pour remonter ?",
+    "options": [
+      "Toutes",
+      "..\\",
+      "../",
+      "%2e%2e/"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment encoder ../ pour contourner les filtres ?",
+    "options": [
+      "ROT13",
+      "Hex",
+      "Base64",
+      "%2e%2e%2f, ..%252f, ....//"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel fichier Unix est souvent ciblé ?",
+    "options": [
+      "/var/log",
+      "/etc/resolv.conf",
+      "/etc/passwd",
+      "/etc/hosts"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel fichier Windows est ciblé ?",
+    "options": [
+      "C:\\Windows\\win.ini",
+      "C:\\config.sys",
+      "Tous",
+      "C:\\boot.ini"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment tester automatiquement ?",
+    "options": [
+      "Rien",
+      "Manuel",
+      "Deviner",
+      "Injecter des payloads traversal dans les paramètres"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel paramètre est souvent vulnérable ?",
+    "options": [
+      "user=",
+      "file=, path=, document=, page=",
+      "name=",
+      "id="
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment valider une vulnérabilité ?",
+    "options": [
+      "Status 200",
+      "Contenu du fichier dans la réponse",
+      "Timeout",
+      "Redirection"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le null byte injection ?",
+    "options": [
+      "Caractère spécial",
+      "Byte vide",
+      "Encodage",
+      "%00 pour tronquer l'extension"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Pourquoi %00 fonctionne-t-il ?",
+    "options": [
+      "Bug",
+      "Standard",
+      "Langages C-based terminent les strings au null",
+      "Feature"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment le serveur devrait-il valider ?",
+    "options": [
+      "Rien",
+      "Blacklist seule",
+      "Regex simple",
+      "Whitelist, canonicalisation, chroot"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Qu'est-ce que la canonicalisation ?",
+    "options": [
+      "Chiffrement",
+      "Compression",
+      "Résoudre le chemin réel avant validation",
+      "Encodage"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment PHP résout-il les chemins ?",
+    "options": [
+      "resolve()",
+      "normalize()",
+      "canonicalize()",
+      "realpath()"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel impact peut avoir le path traversal ?",
+    "options": [
+      "DoS seul",
+      "Lecture fichiers sensibles, parfois RCE",
+      "Rien",
+      "Lenteur"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment combiner avec LFI ?",
+    "options": [
+      "Inclure un fichier après traversal",
+      "Impossible",
+      "Séparément",
+      "Manuel"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le wrapper PHP ?",
+    "options": [
+      "Extension",
+      "Framework",
+      "Module",
+      "php://filter, data://, expect://"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment php://filter aide l'attaque ?",
+    "options": [
+      "Supprimer",
+      "Lire le code source en base64",
+      "Exécuter",
+      "Modifier"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel payload lit le code PHP ?",
+    "options": [
+      "ftp://",
+      "file://",
+      "php://filter/convert.base64-encode/resource=",
+      "http://"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment tester les séquences doubles ?",
+    "options": [
+      "....// si le serveur filtre ../ une fois",
+      ".../",
+      "....\\",
+      "../"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le directory indexing ?",
+    "options": [
+      "LFI",
+      "RFI",
+      "Traversal",
+      "Liste des fichiers si pas d'index"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment combiner avec upload ?",
+    "options": [
+      "Impossible",
+      "Uploader puis inclure via traversal",
+      "Séparément",
+      "Direct"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel outil automatise ces tests ?",
+    "options": [
+      "Wireshark",
+      "tcpdump",
+      "Burp Suite, ffuf, custom scripts",
+      "Nmap"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment générer les payloads ?",
+    "options": [
+      "Manuel",
+      "Fixe",
+      "Aléatoire",
+      "Wordlists + encodages multiples"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Qu'est-ce que le dot-dot-slash filtering ?",
+    "options": [
+      "Serveur supprimant ../",
+      "Validation",
+      "Chiffrement",
+      "Encodage"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment contourner le filtering ?",
+    "options": [
+      "Impossible",
+      "Demander",
+      "Encodage, double-encoding, null bytes",
+      "Brute force"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel framework a eu des vulnérabilités connues ?",
+    "options": [
+      "Aucun",
+      "Java seul",
+      "Tous ont eu des cas",
+      "PHP seul"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment le WAF détecte-t-il ?",
+    "options": [
+      "Header",
+      "Méthode",
+      "Taille",
+      "Patterns ../, encodages suspects"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment contourner le WAF ?",
+    "options": [
+      "Demander",
+      "Encodages alternatifs, double-encoding",
+      "Impossible",
+      "Direct"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le risque maximal ?",
+    "options": [
+      "Lecture seule",
+      "RCE via log poisoning + LFI",
+      "DoS",
+      "Rien"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le log poisoning ?",
+    "options": [
+      "Modifier logs",
+      "Lire logs",
+      "Injecter du code dans les logs puis inclure",
+      "Supprimer logs"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Qu'est-ce que le zip slip vulnerability ?",
+    "options": [
+      "Compression corrompue",
+      "Path traversal via extraction d'archives malveillantes",
+      "Erreur de decompression",
+      "Fichier manquant"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment une archive malveillante exploite-t-elle zip slip ?",
+    "options": [
+      "Virus dans fichier",
+      "Nom de fichier contenant ../../",
+      "Chiffrement",
+      "Compression excessive"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle fonction Python sécurise les chemins ?",
+    "options": [
+      "os.path.basename() et validation du répertoire cible",
+      "eval()",
+      "exec()",
+      "open() direct"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment Java résout les chemins de manière sécurisée ?",
+    "options": [
+      "new File()",
+      "Path.normalize() + startsWith() vérification",
+      "Concatenation String",
+      "URL direct"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le chroot jail ?",
+    "options": [
+      "Prison",
+      "Isolation du système de fichiers visible par un processus",
+      "Container",
+      "VM"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment détecter une tentative de traversal dans les logs ?",
+    "options": [
+      "CPU élevé",
+      "Patterns ../ ou encodages suspects dans URLs",
+      "Mémoire",
+      "Disk full"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle en-tête HTTP peut contenir des tentatives de traversal ?",
+    "options": [
+      "User-Agent",
+      "Cookie avec path ou paramètres de fichier",
+      "Accept",
+      "Host"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment IIS traite-t-il les chemins avec backslash ?",
+    "options": [
+      "Erreur",
+      "Ignore",
+      "Convertit en forward slash, permettant ..\\",
+      "Bloque"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Qu'est-ce que le symlink attack dans le contexte traversal ?",
+    "options": [
+      "Lien web",
+      "Créer un lien symbolique pointant hors du répertoire autorisé",
+      "Shortcut",
+      "Alias"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment prévenir les symlink attacks ?",
+    "options": [
+      "Ignorer",
+      "Vérifier le chemin réel avec realpath() après résolution",
+      "Supprimer les liens",
+      "Tout autoriser"
+    ],
+    "answer": 1
+  }
+]
+---

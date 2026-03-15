@@ -1,0 +1,410 @@
+---
+layout: qcm
+title: "QCM - Python.Dome.SubDomains"
+repo_name: "Python.Dome.SubDomains"
+description: "Énumération de sous-domaines"
+readme_url: "../"
+generated_at: "2026-03-14 10:54:37"
+questions: [
+  {
+    "question": "Qu'est-ce que l'énumération de sous-domaines ?",
+    "options": [
+      "Supprimer des sous-domaines",
+      "Découvrir tous les sous-domaines d'un domaine",
+      "Créer des sous-domaines",
+      "Configurer DNS"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle technique utilise des wordlists ?",
+    "options": [
+      "Zone transfer",
+      "WHOIS",
+      "Bruteforce DNS",
+      "Certificate Transparency"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Qu'est-ce que le Certificate Transparency ?",
+    "options": [
+      "Chiffrement",
+      "TLS",
+      "HTTPS",
+      "Logs publics de certificats SSL"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel service expose les logs CT ?",
+    "options": [
+      "BGP",
+      "DNS",
+      "WHOIS",
+      "crt.sh, censys"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment fonctionne le bruteforce DNS ?",
+    "options": [
+      "Ping",
+      "Scanner les ports",
+      "Résoudre sub.domain.com pour chaque mot",
+      "Deviner les IPs"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel type de record DNS résout les noms ?",
+    "options": [
+      "TXT",
+      "SOA",
+      "A et AAAA",
+      "MX"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Qu'est-ce qu'un wildcard DNS ?",
+    "options": [
+      "*.domain.com résout vers une IP",
+      "Load balancer",
+      "DNS cache",
+      "Round robin"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment détecter un wildcard ?",
+    "options": [
+      "WHOIS",
+      "Ping",
+      "Traceroute",
+      "Tester un sous-domaine aléatoire inexistant"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quelle API donne des sous-domaines ?",
+    "options": [
+      "Google",
+      "Yahoo",
+      "Bing",
+      "VirusTotal, SecurityTrails, Shodan"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment faire une résolution DNS récursive ?",
+    "options": [
+      "Cache local",
+      "Une seule requête",
+      "Suivre les CNAME jusqu'à l'IP finale",
+      "Fichier hosts"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel outil CLI fait de l'énumération ?",
+    "options": [
+      "Sublist3r, Amass, Subfinder",
+      "tcpdump",
+      "Wireshark",
+      "Nmap"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment paralléliser les requêtes DNS ?",
+    "options": [
+      "asyncio / threading",
+      "Séquentiel",
+      "Un par un",
+      "Manuel"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel module Python fait les requêtes DNS ?",
+    "options": [
+      "urllib",
+      "socket",
+      "dnspython",
+      "requests"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment éviter le rate limiting DNS ?",
+    "options": [
+      "Requêtes rapides",
+      "Délais, serveurs DNS multiples",
+      "Ignorer",
+      "VPN"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un DNS zone transfer ?",
+    "options": [
+      "Update DNS",
+      "AXFR - copie de la zone DNS",
+      "Query normale",
+      "Delete zone"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Pourquoi le zone transfer est-il rarement possible ?",
+    "options": [
+      "Trop lent",
+      "Obsolète",
+      "Désactivé pour sécurité",
+      "Trop complexe"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment tester un zone transfer ?",
+    "options": [
+      "nslookup",
+      "ping",
+      "traceroute",
+      "dig axfr domain.com @ns.domain.com"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quelle information révèle un sous-domaine ?",
+    "options": [
+      "Rien",
+      "Mot de passe",
+      "Code source",
+      "Services, environnements, structure interne"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment filtrer les résultats wildcard ?",
+    "options": [
+      "Supprimer tous",
+      "Comparer avec réponse de référence",
+      "Garder tous",
+      "Aléatoire"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel format de sortie est courant ?",
+    "options": [
+      "Word",
+      "XML",
+      "PDF",
+      "JSON, CSV, texte"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment valider qu'un sous-domaine est actif ?",
+    "options": [
+      "DNS seul",
+      "Ping seul",
+      "HTTP request vers le sous-domaine",
+      "WHOIS"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Qu'est-ce que le subdomain takeover ?",
+    "options": [
+      "DNS cache poisoning",
+      "Zone transfer",
+      "Récupérer un sous-domaine abandonné",
+      "Hacking DNS"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quels services sont vulnérables au takeover ?",
+    "options": [
+      "Cloudflare",
+      "Google",
+      "S3, GitHub Pages, Heroku",
+      "AWS"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment détecter un takeover potentiel ?",
+    "options": [
+      "TXT record",
+      "MX record",
+      "À record",
+      "CNAME vers service avec fingerprint"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quelle wordlist est recommandée ?",
+    "options": [
+      "Top 100",
+      "SecLists dns subdomain wordlists",
+      "Common passwords",
+      "Rockyou"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment combiner plusieurs sources ?",
+    "options": [
+      "Aléatoire",
+      "Manuel",
+      "Une seule source",
+      "Merge et deduplicate les résultats"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Qu'est-ce que la permutation de sous-domaines ?",
+    "options": [
+      "Copier",
+      "Générer des variations (dev-, -dev, dev1)",
+      "Renommer",
+      "Supprimer"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment gérer les sous-domaines internationaux ?",
+    "options": [
+      "UTF-8",
+      "Punycode encoding",
+      "Base64",
+      "ASCII"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel est l'intérêt pour le bug bounty ?",
+    "options": [
+      "Aucun",
+      "Élargir la surface d'attaque",
+      "Réduire le scope",
+      "Documentation"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment automatiser l'énumération régulière ?",
+    "options": [
+      "Cron job + stockage des résultats",
+      "Email",
+      "SMS",
+      "Manuel"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle CVE a exploité des sous-domaines S3 non revendiqués ?",
+    "options": [
+      "Multiples cas de subdomain takeover sans CVE spécifique",
+      "CVE-2020-1234",
+      "CVE-2019-0001",
+      "CVE-2021-9999"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment vérifier si un sous-domaine est vulnérable au takeover ?",
+    "options": [
+      "Vérifier CNAME vers services non existants (NoSuchBucket, etc.)",
+      "Ping uniquement",
+      "WHOIS",
+      "Traceroute"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle bonne pratique évite le subdomain takeover ?",
+    "options": [
+      "Supprimer les CNAME vers services abandonnés",
+      "Ajouter plus de sous-domaines",
+      "Utiliser des wildcards",
+      "Ignorer les anciens records"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment Certificate Transparency aide-t-il les attaquants ?",
+    "options": [
+      "Révèle tous les sous-domaines avec certificats SSL",
+      "Chiffre le trafic",
+      "Bloque les attaques",
+      "Cache les domaines"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle technique d'énumération utilise les erreurs DNS ?",
+    "options": [
+      "Analyser NXDOMAIN vs réponses valides pour identifier les wildcards",
+      "Ping flood",
+      "TCP scan",
+      "UDP scan"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment exploiter un takeover sur GitHub Pages ?",
+    "options": [
+      "Créer un repo avec le nom du sous-domaine ciblé",
+      "Brute force",
+      "SQL injection",
+      "XSS"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle information sensible peut révéler un sous-domaine interne ?",
+    "options": [
+      "Environnements dev/staging, outils internes, APIs",
+      "Rien",
+      "Seulement l'IP",
+      "Le propriétaire"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment le DNS rebinding exploite-t-il les sous-domaines ?",
+    "options": [
+      "Changer l'IP résolue pour bypasser SOP",
+      "Créer des sous-domaines",
+      "Supprimer des records",
+      "Modifier le TTL"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle défense protège contre l'énumération de sous-domaines ?",
+    "options": [
+      "Rate limiting DNS, pas de zone transfer, monitoring",
+      "Tout exposer",
+      "Wildcards partout",
+      "DNS public uniquement"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment Amass améliore-t-il l'énumération par rapport aux outils basiques ?",
+    "options": [
+      "Sources multiples, graph analysis, scraping passif",
+      "Brute force seul",
+      "DNS seul",
+      "WHOIS seul"
+    ],
+    "answer": 0
+  }
+]
+---

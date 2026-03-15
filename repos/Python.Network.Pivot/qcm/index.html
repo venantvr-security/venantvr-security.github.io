@@ -1,0 +1,410 @@
+---
+layout: qcm
+title: "QCM - Python.Network.Pivot"
+repo_name: "Python.Network.Pivot"
+description: "Lab de pivot réseau avec Docker"
+readme_url: "../"
+generated_at: "2026-03-14 10:54:37"
+questions: [
+  {
+    "question": "Qu'est-ce que le pivoting réseau ?",
+    "options": [
+      "DNS tunneling",
+      "Load balancing",
+      "Utiliser une machine compromise pour atteindre d'autres réseaux",
+      "Rotation d'IP"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Combien de machines le lab contient-il ?",
+    "options": [
+      "3 (attacker + 2 victims)",
+      "5",
+      "2",
+      "4"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle technologie de conteneurisation est utilisée ?",
+    "options": [
+      "Podman",
+      "rkt",
+      "LXC",
+      "Docker"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel framework Python est mentionné pour le networking ?",
+    "options": [
+      "aiohttp",
+      "Flask",
+      "Tornado",
+      "Twisted"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Qu'est-ce qu'une backdoor dans ce contexte ?",
+    "options": [
+      "Vulnérabilité",
+      "Porte de service",
+      "Point d'accès persistant sur une machine compromise",
+      "API cachée"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment créer un tunnel SSH pour le pivoting ?",
+    "options": [
+      "ssh tunnel",
+      "ssh --pivot",
+      "ssh -T",
+      "ssh -L ou -D pour port forwarding"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel type de proxy permet le pivoting via SSH ?",
+    "options": [
+      "FTP proxy",
+      "HTTPS proxy",
+      "HTTP proxy",
+      "SOCKS proxy (-D)"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quelle commande Docker lance les conteneurs ?",
+    "options": [
+      "docker deploy",
+      "docker compose up",
+      "docker start",
+      "docker run all"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment identifier le réseau interne depuis l'attaquant ?",
+    "options": [
+      "Scanner les routes et interfaces de la machine pivot",
+      "WHOIS",
+      "Traceroute internet",
+      "DNS lookup"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel outil permet de créer des tunnels TCP ?",
+    "options": [
+      "curl",
+      "socat ou netcat",
+      "telnet",
+      "wget"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le double pivoting ?",
+    "options": [
+      "Pivot bidirectionnel",
+      "Deux connexions simultanées",
+      "Pivoter à travers deux machines intermédiaires",
+      "Backup de pivot"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment Metasploit gère-t-il le pivoting ?",
+    "options": [
+      "meterpreter pivot",
+      "pivot module",
+      "route add et autoroute",
+      "network add"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel protocole est souvent utilisé pour le tunneling ?",
+    "options": [
+      "FTP",
+      "SSH, ICMP, DNS",
+      "HTTP uniquement",
+      "SMTP"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment maintenir l'accès après un pivot ?",
+    "options": [
+      "Session keep-alive",
+      "Cookies",
+      "Tokens",
+      "Backdoor persistante"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quelle commande Nmap scanne via un pivot ?",
+    "options": [
+      "Utiliser proxychains + nmap",
+      "nmap --pivot",
+      "nmap --through",
+      "nmap -P"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que proxychains ?",
+    "options": [
+      "Outil pour router le trafic via SOCKS/HTTP proxy",
+      "Tor wrapper",
+      "VPN",
+      "Chaîne de proxies"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment configurer proxychains ?",
+    "options": [
+      "/etc/proxychains.conf",
+      "proxychains.ini",
+      "/var/proxychains",
+      "~/.proxychains"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle technique masque l'origine de l'attaquant ?",
+    "options": [
+      "VPN",
+      "Toutes les réponses",
+      "Tor",
+      "Pivot multi-hop"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment transférer des fichiers via un pivot ?",
+    "options": [
+      "scp via tunnel SSH ou HTTP server",
+      "ftp direct",
+      "usb",
+      "email"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel est l'avantage du lab Docker ?",
+    "options": [
+      "Plus sécurisé",
+      "Gratuit",
+      "Plus rapide",
+      "Environnement isolé et reproductible"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment identifier les services internes ?",
+    "options": [
+      "Toutes les réponses",
+      "DNS zone transfer",
+      "SNMP walk",
+      "Port scanning depuis le pivot"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce qu'un reverse shell ?",
+    "options": [
+      "Backup shell",
+      "Shell inversé",
+      "La cible initie la connexion vers l'attaquant",
+      "Shell chiffré"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment Twisted facilite-t-il le pivoting ?",
+    "options": [
+      "Logging",
+      "Parsing",
+      "Framework async pour serveurs/clients TCP",
+      "GUI"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quelle commande netcat crée un listener ?",
+    "options": [
+      "nc -s port",
+      "nc -lvp port",
+      "nc -c port",
+      "nc --listen port"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment encoder un reverse shell pour éviter la détection ?",
+    "options": [
+      "Base64, XOR, ou obfuscation",
+      "Chiffrement AES",
+      "Compression",
+      "Steganographie"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le port forwarding local (-L) ?",
+    "options": [
+      "NAT traversal",
+      "Exposer un port local à distance",
+      "Exposer un port distant localement",
+      "Tunneling DNS"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Qu'est-ce que le port forwarding distant (-R) ?",
+    "options": [
+      "Exposer un port distant",
+      "Port mirroring",
+      "Exposer un port local sur la machine distante",
+      "Reverse tunneling"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment tester la connectivité entre conteneurs ?",
+    "options": [
+      "ping ou curl entre IP internes",
+      "traceroute internet",
+      "nslookup",
+      "DNS lookup"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel fichier définit les réseaux Docker ?",
+    "options": [
+      "Dockerfile",
+      "network.conf",
+      "docker-compose.yml",
+      "docker.json"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment nettoyer le lab après utilisation ?",
+    "options": [
+      "docker compose down",
+      "docker rm all",
+      "docker stop",
+      "docker clean"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le lateral movement ?",
+    "options": [
+      "Mouvement vertical entre niveaux de privilèges",
+      "Déplacement horizontal entre machines du même réseau",
+      "Connexion externe",
+      "Mouvement de fichiers"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment chisel permet-il le pivoting ?",
+    "options": [
+      "Par VPN",
+      "Tunneling HTTP/HTTPS avec client/serveur TCP",
+      "Via SSH uniquement",
+      "Par DNS"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le port forwarding dynamique (-D) ?",
+    "options": [
+      "Forwarding vers un port spécifique",
+      "Création d'un proxy SOCKS permettant de router tout trafic",
+      "NAT automatique",
+      "Load balancing"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment un attaquant maintient-il la persistance après un pivot ?",
+    "options": [
+      "En restant connecté",
+      "Via crontab, services, clés SSH autorisées",
+      "Par mot de passe seul",
+      "Via cookies"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le pivoting via Meterpreter ?",
+    "options": [
+      "Utilisation de routes pour accéder aux réseaux via une session compromise",
+      "Simple scan de ports",
+      "Connexion directe",
+      "Brute force"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment détecter une tentative de pivoting sur le réseau ?",
+    "options": [
+      "Surveiller les connexions internes inhabituelles entre segments",
+      "Analyser les logs web",
+      "Vérifier les certificats SSL",
+      "Scanner les ports externes"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que ligolo-ng ?",
+    "options": [
+      "Un scanner de vulnérabilités",
+      "Un outil de tunneling léger pour le pivoting",
+      "Un framework d'exploitation",
+      "Un IDS"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Pourquoi le pivoting est-il critique dans un pentest ?",
+    "options": [
+      "Pour accéder aux systèmes internes non exposés depuis Internet",
+      "Pour scanner plus rapidement",
+      "Pour éviter les logs",
+      "Pour chiffrer le trafic"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment sshuttle facilite-t-il le pivoting ?",
+    "options": [
+      "Via SOCKS5",
+      "Création d'un VPN transparent via SSH sans configuration serveur",
+      "Par tunneling DNS",
+      "Via proxy HTTP"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le credential dumping dans le contexte du pivoting ?",
+    "options": [
+      "Création de nouveaux comptes",
+      "Extraction des identifiants pour se déplacer vers d'autres machines",
+      "Changement de mots de passe",
+      "Chiffrement des credentials"
+    ],
+    "answer": 1
+  }
+]
+---

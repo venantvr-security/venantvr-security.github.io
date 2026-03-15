@@ -1,0 +1,410 @@
+---
+layout: qcm
+title: "QCM - Python.Sqli.Détection"
+repo_name: "Python.Sqli.Détection"
+description: "Scanner d'injections SQL"
+readme_url: "../"
+generated_at: "2026-03-14 10:54:37"
+questions: [
+  {
+    "question": "Que signifie SQL Injection ?",
+    "options": [
+      "Génération automatique de SQL",
+      "Insertion de code SQL malveillant dans les entrées",
+      "Compression de requêtes",
+      "Optimisation SQL"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle technique détecte les injections SQL aveugles ?",
+    "options": [
+      "Boolean-based blind",
+      "Union-based",
+      "Error-based",
+      "Stacked queries"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel payload teste une injection de base ?",
+    "options": [
+      "' OR '1'='1",
+      "DROP TABLE",
+      "SELECT *",
+      "CREATE USER"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment fonctionne le tampering ?",
+    "options": [
+      "Accélération des tests",
+      "Chiffrement des requêtes",
+      "Compression des données",
+      "Modification des payloads pour contourner les WAF"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quelle méthode compare les réponses pour détecter l'injection ?",
+    "options": [
+      "Calcul de hash",
+      "Status code uniquement",
+      "Timing",
+      "Différence HTTP (diff)"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel outil est référencé pour les payloads SQL ?",
+    "options": [
+      "sqlmap",
+      "burp-payloads",
+      "sql-payloads-db",
+      "payloadbox/sql-injection-payload-list"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment détecter une injection time-based ?",
+    "options": [
+      "Compter les résultats",
+      "Vérifier les redirections",
+      "Analyser les erreurs",
+      "Mesurer le délai de réponse avec SLEEP()"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quelle fonction SQL cause un délai ?",
+    "options": [
+      "DELAY()",
+      "SLEEP() ou WAITFOR",
+      "PAUSE()",
+      "HOLD()"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que l'injection UNION-based ?",
+    "options": [
+      "Fusion de requêtes",
+      "Union de tables",
+      "Jointure automatique",
+      "Utilisation de UNION pour extraire des données"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment contourner un filtre sur les guillemets ?",
+    "options": [
+      "Les supprimer",
+      "Encodage hexadécimal ou double encoding",
+      "Les doubler",
+      "Utiliser des backticks"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel caractère commente en SQL ?",
+    "options": [
+      "%%",
+      "//",
+      "-- ou #",
+      "/* uniquement"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Qu'est-ce que le stacked queries ?",
+    "options": [
+      "Sous-requêtes",
+      "Batch processing",
+      "Requêtes imbriquées",
+      "Exécution de multiples requêtes avec ;"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment l'outil fuzze les endpoints ?",
+    "options": [
+      "Injection de payloads dans les query strings",
+      "Modification des headers",
+      "Envoi de fichiers",
+      "Changement de méthode HTTP"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel type d'injection permet l'exécution de commandes OS ?",
+    "options": [
+      "xp_cmdshell (SQL Server)",
+      "INTO OUTFILE",
+      "EXEC",
+      "LOAD_FILE"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment détecter le SGBD ciblé ?",
+    "options": [
+      "Version TLS",
+      "Analyse des messages d'erreur ou fingerprinting",
+      "Header HTTP",
+      "Port utilisé"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle fonction MySQL lit un fichier ?",
+    "options": [
+      "READ_FILE()",
+      "FILE_GET()",
+      "LOAD_FILE()",
+      "GET_FILE()"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment extraire des données avec UNION ?",
+    "options": [
+      "UNION FETCH",
+      "UNION SELECT column FROM table--",
+      "UNION EXTRACT",
+      "UNION GET data"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel est l'impact d'une injection SQL réussie ?",
+    "options": [
+      "Redirection",
+      "Lenteur du site",
+      "Accès aux données, modification, voire contrôle du serveur",
+      "Affichage d'erreurs"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment se protéger contre SQL Injection ?",
+    "options": [
+      "Limiter la longueur des entrées",
+      "Requêtes préparées (prepared statements)",
+      "HTTPS",
+      "Filtrer les mots-clés SQL"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que l'ORM ?",
+    "options": [
+      "Object Request Model",
+      "Object-Relational Mapping - abstraction SQL",
+      "Online Resource Manager",
+      "Optimized Request Module"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle classification OWASP concerne SQL Injection ?",
+    "options": [
+      "A03:2021 Injection",
+      "A02:2021 Cryptographic Failures",
+      "A01:2021 Broken Access Control",
+      "A07:2021 XSS"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment tester l'injection sur une authentification ?",
+    "options": [
+      "admin OR 1=1",
+      "Toutes les réponses",
+      "'; DROP TABLE users;--",
+      "admin'--"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel outil automatise les tests SQL injection ?",
+    "options": [
+      "Wireshark",
+      "Nmap",
+      "sqlmap",
+      "Burp Suite uniquement"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment l'outil récupère les query strings d'applications PHP ?",
+    "options": [
+      "Projet Python.QueryStringsFromPhp",
+      "Interception proxy",
+      "Crawling",
+      "Analyse statique"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle méthode HTTP est la plus ciblée ?",
+    "options": [
+      "PATCH",
+      "GET et POST",
+      "PUT uniquement",
+      "DELETE"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment fonctionne l'injection error-based ?",
+    "options": [
+      "Corruption de la base",
+      "Denial of Service",
+      "Génération d'erreurs HTTP",
+      "Extraction de données via messages d'erreur SQL"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel payload contourne souvent les filtres basiques ?",
+    "options": [
+      "1' AND '1'='1' /*",
+      "AND",
+      "OR",
+      "SELECT"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment encoder les payloads pour contourner les WAF ?",
+    "options": [
+      "Chiffrement",
+      "URL encoding, double encoding, Unicode",
+      "Compression",
+      "Base64"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle table système MySQL contient les métadonnées ?",
+    "options": [
+      "information_schema",
+      "mysql.tables",
+      "metadata",
+      "sys.tables"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel dictionnaire est utilisé pour les noms de paramètres ?",
+    "options": [
+      "fuzz-params.dic",
+      "common-params.lst",
+      "params.txt",
+      "well-known-parameter-names-brute-force.txt"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Qu'est-ce que le second-order SQL injection ?",
+    "options": [
+      "Injection exécutée immédiatement",
+      "Injection stockée puis exécutée plus tard",
+      "Double injection",
+      "Injection sur deux colonnes"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle technique permet d'extraire des données caractère par caractère ?",
+    "options": [
+      "UNION-based",
+      "Error-based",
+      "Blind extraction avec SUBSTRING/ASCII",
+      "Stacked queries"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment un WAF peut-il être contourné avec des commentaires ?",
+    "options": [
+      "/* */",
+      "Insertion de commentaires inline: SEL/**/ECT",
+      "-- seul",
+      "# uniquement"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que l'Out-of-Band SQL injection ?",
+    "options": [
+      "Injection hors connexion",
+      "Exfiltration via DNS ou HTTP vers serveur attaquant",
+      "Injection offline",
+      "Injection par email"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle fonction Oracle permet l'exfiltration DNS ?",
+    "options": [
+      "UTL_HTTP.REQUEST",
+      "UTL_INADDR.GET_HOST_ADDRESS",
+      "DBMS_DNS",
+      "SYS.DNS_LOOKUP"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment détecter si une application est vulnérable sans voir d'erreur ?",
+    "options": [
+      "Impossible",
+      "Time-based blind avec SLEEP ou BENCHMARK",
+      "Deviner",
+      "Demander au développeur"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le parameterized query binding ?",
+    "options": [
+      "Concatenation de strings",
+      "Séparation des données et de la structure SQL",
+      "Chiffrement SQL",
+      "Compression des requêtes"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel risque pose l'utilisation de ORDER BY avec input utilisateur ?",
+    "options": [
+      "Aucun risque",
+      "Lenteur",
+      "Injection possible car non paramétrisable facilement",
+      "Erreur de syntaxe"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment fonctionne BENCHMARK() en injection MySQL ?",
+    "options": [
+      "Mesure la vitesse",
+      "Exécute une expression N fois pour créer un délai",
+      "Benchmark hardware",
+      "Test de performance"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle bonne pratique limite l'impact d'une injection réussie ?",
+    "options": [
+      "Utiliser root pour la connexion DB",
+      "Principe du moindre privilège pour le compte DB",
+      "Désactiver les logs",
+      "Autoriser toutes les commandes"
+    ],
+    "answer": 1
+  }
+]
+---

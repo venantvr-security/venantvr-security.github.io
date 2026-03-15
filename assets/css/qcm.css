@@ -1,0 +1,65 @@
+/* QCM Specific Styles for Bootstrap */
+
+.password-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 30, 46, 0.98);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.password-modal {
+    background: #2d2d3d;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    border: 1px solid #45475a;
+}
+
+.password-modal input[type="password"] {
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+    border: 1px solid #45475a;
+}
+
+.password-modal input[type="password"]::placeholder {
+    color: #6c7086;
+}
+
+.password-modal input[type="password"]:focus {
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(108, 92, 231, 0.25);
+}
+
+.qcm-stats {
+    background-color: rgba(45, 45, 61, 0.85);
+    border: 1px solid var(--dark-border);
+}
+
+.option {
+    transition: all 0.2s ease;
+    background-color: rgba(30, 30, 46, 0.6);
+}
+
+.option:hover:not(.answered) {
+    border-color: var(--primary-color) !important;
+    background-color: rgba(26, 115, 232, 0.1) !important;
+}
+
+.option input[type="radio"] {
+    accent-color: var(--primary-color);
+}
+
+.correct-answer {
+    color: #34a853;
+    font-weight: 500;
+}

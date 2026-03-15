@@ -1,0 +1,410 @@
+---
+layout: qcm
+title: "QCM - Python.Network.Connections"
+repo_name: "Python.Network.Connections"
+description: "Monitoring des connexions réseau"
+readme_url: "../"
+generated_at: "2026-03-14 10:54:37"
+questions: [
+  {
+    "question": "Quel module Python liste les connexions ?",
+    "options": [
+      "os",
+      "socket",
+      "sys",
+      "psutil"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment obtenir les connexions actives ?",
+    "options": [
+      "netstat()",
+      "os.connections()",
+      "socket.getconnections()",
+      "psutil.net_connections()"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quels états TCP existent ?",
+    "options": [
+      "ON, OFF",
+      "OPEN, CLOSE",
+      "ESTABLISHED, LISTEN, TIME_WAIT, CLOSE_WAIT...",
+      "UP, DOWN"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment identifier le processus d'une connexion ?",
+    "options": [
+      "Fichier",
+      "Nom seul",
+      "PID dans la connexion + psutil.Process()",
+      "Impossible"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel outil CLI montre les connexions ?",
+    "options": [
+      "ps",
+      "top",
+      "netstat, ss",
+      "ifconfig"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment filtrer les connexions ESTABLISHED ?",
+    "options": [
+      "conn.active",
+      "conn.state",
+      "conn.status == 'ESTABLISHED'",
+      "conn.open"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quelles informations une connexion contient-elle ?",
+    "options": [
+      "Nom seul",
+      "IP seule",
+      "Port seul",
+      "Local/remote addr, port, status, pid"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment surveiller en temps réel ?",
+    "options": [
+      "Bouclé avec sleep et refresh",
+      "Fichier",
+      "Une fois",
+      "Manuel"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel port indique une connexion web ?",
+    "options": [
+      "80, 443",
+      "22",
+      "53",
+      "25"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment détecter les connexions suspectes ?",
+    "options": [
+      "Tout est suspect",
+      "Rien",
+      "Ports/IPs inhabituels, processus inconnus",
+      "Taille"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Qu'est-ce qu'une connexion LISTEN ?",
+    "options": [
+      "Client connecté",
+      "Fermé",
+      "Erreur",
+      "Serveur attendant des connexions"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment obtenir le nom du processus ?",
+    "options": [
+      "sys.process()",
+      "psutil.Process(pid).name()",
+      "proc.name",
+      "os.getname()"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quels protocoles sont listés ?",
+    "options": [
+      "TCP, UDP",
+      "FTP",
+      "HTTP",
+      "SSH"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment afficher en tableau formaté ?",
+    "options": [
+      "print()",
+      "tabulate, prettytable",
+      "Texte brut",
+      "JSON"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que TIME_WAIT ?",
+    "options": [
+      "Erreur",
+      "Active",
+      "Timeout",
+      "Connexion fermée, attente de cleanup"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment détecter les reverse shells ?",
+    "options": [
+      "Connexions entrantes",
+      "LISTEN",
+      "UDP",
+      "Connexions sortantes vers ports suspects"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel état indique une connexion entrante ?",
+    "options": [
+      "CLOSE_WAIT",
+      "TIME_WAIT",
+      "ESTABLISHED vers un port LISTEN local",
+      "SYN_SENT"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment exporter les résultats ?",
+    "options": [
+      "Rien",
+      "JSON, CSV, log file",
+      "Papier",
+      "Email"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que SYN_SENT ?",
+    "options": [
+      "Tentative de connexion en cours",
+      "Fermé",
+      "Erreur",
+      "Connecté"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment identifier une attaque de type C2 ?",
+    "options": [
+      "DHCP",
+      "DNS",
+      "Connexions régulières vers IPs/ports suspects",
+      "Trafic web normal"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel outil graphique visualise les connexions ?",
+    "options": [
+      "Netdata, Grafana",
+      "PowerPoint",
+      "Excel",
+      "Word"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment corréler avec les IOCs ?",
+    "options": [
+      "Ignorer",
+      "Comparer IPs/domains avec listes de menaces",
+      "Tout bloquer",
+      "Rien"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le CLOSE_WAIT ?",
+    "options": [
+      "Attente fermeture côté application",
+      "Ouvert",
+      "Actif",
+      "Timeout"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment surveiller une interface spécifique ?",
+    "options": [
+      "Filtrer par adresse locale",
+      "Aléatoire",
+      "Toutes",
+      "Aucune"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel privilège est requis pour voir tous les PIDs ?",
+    "options": [
+      "Aucun",
+      "Guest",
+      "Root/Admin",
+      "User normal"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment détecter le port scanning ?",
+    "options": [
+      "Nombreuses connexions SYN_RECV",
+      "LISTEN",
+      "ESTABLISHED",
+      "CLOSE"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que FIN_WAIT ?",
+    "options": [
+      "Erreur",
+      "Ouvert",
+      "Actif",
+      "Fermeture initiée, attente confirmation"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment alerter sur anomalies ?",
+    "options": [
+      "Log seul",
+      "Rien",
+      "Rapport",
+      "Seuils + notifications"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel delta montre de nouvelles connexions ?",
+    "options": [
+      "Historique",
+      "Cache",
+      "Une mesure",
+      "Comparer snapshots successifs"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment intégrer avec un SIEM ?",
+    "options": [
+      "Papier",
+      "SMS",
+      "Email",
+      "Envoyer logs en syslog/JSON"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Qu'est-ce qu'une connexion ephemère (ephemeral port) ?",
+    "options": [
+      "Un port réservé aux serveurs",
+      "Un port temporaire alloué dynamiquement pour les connexions sortantes",
+      "Un port chiffré",
+      "Un port bloqué par le firewall"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment détecter une exfiltration de données via le réseau ?",
+    "options": [
+      "Analyser les connexions sortantes vers des destinations inhabituelles",
+      "Vérifier les fichiers locaux",
+      "Scanner les ports ouverts",
+      "Analyser les logs Apache"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le beaconing dans le contexte C2 ?",
+    "options": [
+      "Scan de ports régulier",
+      "Communications périodiques vers un serveur de commande et contrôle",
+      "Broadcast réseau",
+      "Synchronisation NTP"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment psutil différencie-t-il les connexions IPv4 et IPv6 ?",
+    "options": [
+      "Par le protocole TCP/UDP",
+      "Par le champ family (AF_INET vs AF_INET6)",
+      "Par le port utilisé",
+      "C'est impossible"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle technique permet de masquer une connexion malveillante ?",
+    "options": [
+      "DNS tunneling ou utilisation de ports légitimes (80, 443)",
+      "Utilisation de ports élevés",
+      "Connexion UDP uniquement",
+      "Utilisation d'IPv6"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment identifier un processus sans PID visible dans les connexions ?",
+    "options": [
+      "C'est impossible",
+      "Utiliser lsof ou ss avec privilèges root",
+      "Redémarrer le système",
+      "Analyser les fichiers"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un socket RAW ?",
+    "options": [
+      "Socket standard TCP",
+      "Socket permettant d'accéder aux paquets bruts au niveau réseau",
+      "Socket chiffré",
+      "Socket local uniquement"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment détecter le DNS tunneling via l'analyse des connexions ?",
+    "options": [
+      "Connexions fréquentes vers le port 53 avec trafic inhabituel",
+      "Connexions HTTPS",
+      "Analyse des ports hauts",
+      "Vérification des certificats"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que la baseline de connexions réseau ?",
+    "options": [
+      "Le nombre maximum de connexions",
+      "Le profil normal des connexions pour détecter les anomalies",
+      "La vitesse de connexion",
+      "Le protocole par défaut"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment corréler les connexions avec les menaces connues ?",
+    "options": [
+      "Analyser manuellement chaque IP",
+      "Comparer avec des feeds de Threat Intelligence (IP/domaines malveillants)",
+      "Scanner tous les ports",
+      "Bloquer toutes les connexions sortantes"
+    ],
+    "answer": 1
+  }
+]
+---

@@ -1,0 +1,410 @@
+---
+layout: qcm
+title: "QCM - Rust.Nmap.Network"
+repo_name: "Rust.Nmap.Network"
+description: "Laboratoire IDS avec Snort, Suricata et Zeek"
+readme_url: "../"
+generated_at: "2026-03-14 10:54:37"
+questions: [
+  {
+    "question": "Quels sont les trois IDS testés dans ce laboratoire ?",
+    "options": [
+      "Snort, Ossec, Fail2ban",
+      "Zeek, Snort, ModSecurity",
+      "Snort, Suricata, Zeek",
+      "Suricata, Tripwire, AIDE"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel langage est utilisé pour développer le Commander ?",
+    "options": [
+      "C++",
+      "Python",
+      "Go",
+      "Rust"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Combien de niveaux de sécurité sont disponibles ?",
+    "options": [
+      "4",
+      "3",
+      "5",
+      "6"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel niveau détecte uniquement les attaques évidentes ?",
+    "options": [
+      "Minimal (1)",
+      "Moderate (3)",
+      "Basic (2)",
+      "Strict (4)"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel port utilise le dashboard Commander ?",
+    "options": [
+      "3000",
+      "9000",
+      "5000",
+      "8080"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel port utilise EveBox pour Suricata ?",
+    "options": [
+      "8080",
+      "5636",
+      "9200",
+      "5601"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle technique Nmap utilise -f pour l'évasion ?",
+    "options": [
+      "Fragmentation IP",
+      "Decoys",
+      "Timing lent",
+      "Source port"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle option Nmap utilise des leurres aléatoires ?",
+    "options": [
+      "-T0",
+      "-f",
+      "-D RND:10",
+      "--source-port"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel timing Nmap est le plus lent ?",
+    "options": [
+      "-T5",
+      "-T0",
+      "-T2",
+      "-T1"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel port source est souvent autorisé par les firewalls ?",
+    "options": [
+      "443 (HTTPS)",
+      "53 (DNS)",
+      "22 (SSH)",
+      "8080 (Proxy)"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel outil Python manipule les paquets IP ?",
+    "options": [
+      "Socket",
+      "Scapy",
+      "Requests",
+      "Twisted"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel script démarre tous les labs ?",
+    "options": [
+      "start_all_labs.sh",
+      "init_labs.sh",
+      "launch.sh",
+      "run_all.sh"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle commande Docker compose démarre les conteneurs ?",
+    "options": [
+      "docker compose up -d",
+      "docker run -d",
+      "docker-compose start",
+      "docker compose run"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel type de scan XMAS active tous les flags TCP ?",
+    "options": [
+      "PSH, ACK",
+      "SYN, ACK",
+      "RST, FIN",
+      "FIN, PSH, URG"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel niveau de sécurité détecte la fragmentation ?",
+    "options": [
+      "Moderate (3)",
+      "Basic (2)",
+      "Strict (4)",
+      "Minimal (1)"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le niveau 'Paranoid' ?",
+    "options": [
+      "5",
+      "3",
+      "6",
+      "4"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel outil de visualisation est intégré pour Suricata ?",
+    "options": [
+      "Kibana",
+      "Splunk",
+      "Grafana",
+      "EveBox"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel éditeur web permet de modifier les règles ?",
+    "options": [
+      "Theia",
+      "VSCode Web",
+      "Cloud9",
+      "Filebrowser"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel script teste un lab rapidement ?",
+    "options": [
+      "verify.sh",
+      "test.sh",
+      "quick_test.sh",
+      "check.sh"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment ajouter l'utilisateur au groupe Docker ?",
+    "options": [
+      "sudo usermod -aG docker $USER",
+      "useradd docker",
+      "sudo docker group add",
+      "docker adduser $USER"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel scan Nmap utilise des paquets NULL ?",
+    "options": [
+      "-sS",
+      "-sT",
+      "-sU",
+      "-sN"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel réseau Docker est créé pour Snort ?",
+    "options": [
+      "snort_net",
+      "network_snort",
+      "ids_snort",
+      "snort_network"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel serveur web est utilisé comme cible ?",
+    "options": [
+      "apache",
+      "caddy",
+      "nginx",
+      "lighttpd"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quelle option Nmap définit le MTU ?",
+    "options": [
+      "--fragment-size",
+      "-f",
+      "--mtu",
+      "--ip-options"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel fichier contient les règles Suricata ?",
+    "options": [
+      "suricata.yaml",
+      "config.rules",
+      "rules/*.rules",
+      "alerts.conf"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel niveau est recommandé pour tester l'évasion ?",
+    "options": [
+      "Strict (4)",
+      "Moderate (3)",
+      "Paranoid (5)",
+      "Minimal (1)"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel protocole Zeek analyse principalement ?",
+    "options": [
+      "TCP uniquement",
+      "Tous les protocoles réseau",
+      "DNS uniquement",
+      "HTTP uniquement"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle commande rafraîchit les groupes utilisateur ?",
+    "options": [
+      "docker refresh",
+      "refresh groups",
+      "reload docker",
+      "newgrp docker"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel script scanne tous les niveaux de sécurité ?",
+    "options": [
+      "scan_all_levels.sh",
+      "multi_scan.sh",
+      "level_test.sh",
+      "full_scan.sh"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel type de log Suricata génère-t-il ?",
+    "options": [
+      "Syslog",
+      "EVE JSON",
+      "CSV",
+      "XML"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le mode IPS vs IDS ?",
+    "options": [
+      "Identique",
+      "IPS bloque activement, IDS détecte seulement",
+      "IDS bloque",
+      "IPS détecte"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment Snort détecte les menaces ?",
+    "options": [
+      "IA seule",
+      "Règles de signature et analyse de protocoles",
+      "Antivirus",
+      "Firewall"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que Zeek scripting language ?",
+    "options": [
+      "Python",
+      "Langage spécifique pour définir des analyses réseau",
+      "Bash",
+      "Lua"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment un attaquant peut-il évader un IDS avec fragmentation ?",
+    "options": [
+      "Plus rapide",
+      "Diviser le payload sur plusieurs fragments",
+      "Chiffrement",
+      "Compression"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le protocol anomaly détection ?",
+    "options": [
+      "Signature",
+      "Détection de déviations par rapport au comportement normal",
+      "Firewall",
+      "Antivirus"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment tester la détection de scan FIN ?",
+    "options": [
+      "Ping",
+      "nmap -sF pour envoyer des paquets FIN",
+      "Telnet",
+      "SSH"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'une règle Suricata avec flow ?",
+    "options": [
+      "Débit",
+      "Direction du trafic (to_server, established)",
+      "Bandwidth",
+      "QoS"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment le decoy scan fonctionne-t-il ?",
+    "options": [
+      "Leurre",
+      "Envoie des paquets avec IPs sources multiples",
+      "VPN",
+      "Proxy"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le service détection de Nmap ?",
+    "options": [
+      "Scan de ports",
+      "Identification des services et versions (-sV)",
+      "Ping",
+      "Traceroute"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment Suricata gère-t-il le multi-threading ?",
+    "options": [
+      "Single thread",
+      "Architecture multi-thread native pour performance",
+      "Fork",
+      "Async"
+    ],
+    "answer": 1
+  }
+]
+---

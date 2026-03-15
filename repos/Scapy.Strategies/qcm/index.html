@@ -1,0 +1,410 @@
+---
+layout: qcm
+title: "QCM - Scapy.Strategies"
+repo_name: "Scapy.Strategies"
+description: "Manipulation de Paquets IP pour Tests IDS"
+readme_url: "../"
+generated_at: "2026-03-14 14:31:40"
+questions: [
+  {
+    "question": "Qu'est-ce que Scapy ?",
+    "options": [
+      "Un IDS",
+      "Un firewall",
+      "Une bibliothèque Python de manipulation de paquets réseau",
+      "Un scanner de ports"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Pourquoi les scripts Scapy nécessitent-ils des privilèges root ?",
+    "options": [
+      "Pour accéder aux fichiers système",
+      "Pour créer des raw sockets",
+      "Pour modifier la configuration réseau",
+      "Par convention"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Que signifie le flag 🟠 dans ce projet ?",
+    "options": [
+      "Code obsolète",
+      "Script en développement",
+      "Prudence - manipulation active, autorisation requise",
+      "Script testé"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Que signifie le flag 🔴 ?",
+    "options": [
+      "Erreur de code",
+      "Technique dangereuse, strictement contrôlée",
+      "Version bêta",
+      "Nécessite mise à jour"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que la fragmentation IP ?",
+    "options": [
+      "Compression de paquets",
+      "Division d'un paquet en plusieurs fragments",
+      "Chiffrement de paquets",
+      "Duplication de paquets"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Pourquoi la fragmentation peut-elle évader les IDS ?",
+    "options": [
+      "Les fragments sont chiffrés",
+      "Les IDS peuvent avoir du mal à réassembler correctement",
+      "Les fragments sont plus rapides",
+      "La fragmentation est un protocole différent"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le Christmas Tree scan ?",
+    "options": [
+      "Scan pendant Noël",
+      "Scan avec tous les flags TCP activés",
+      "Scan festif",
+      "Scan de décoration"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que l'évasion temporelle (timing evasion) ?",
+    "options": [
+      "Scan plus rapide",
+      "Scan lent avec délais variables pour éviter la détection",
+      "Changement de fuseau horaire",
+      "Planification de scan"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un jitter en contexte de scan ?",
+    "options": [
+      "Erreur réseau",
+      "Variation aléatoire du timing entre paquets",
+      "Fragmentation",
+      "Compression"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que l'exfiltration DNS ?",
+    "options": [
+      "Blocage DNS",
+      "Transfert de données via requêtes DNS",
+      "Configuration DNS",
+      "Cache DNS"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un covert channel (canal caché) ?",
+    "options": [
+      "VPN",
+      "Communication cachée dans du trafic légitime",
+      "Tunnel SSH",
+      "Proxy"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Que permet la manipulation du TTL ?",
+    "options": [
+      "Augmenter la vitesse",
+      "Faire expirer les paquets avant/après les IDS",
+      "Chiffrer les données",
+      "Compresser les paquets"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment intégrer ces scripts avec Rust.Nmap.Network ?",
+    "options": [
+      "Par API REST",
+      "En démarrant le lab Docker et en ciblant les IPs internes",
+      "Via SSH",
+      "Par email"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel port est utilisé par EveBox pour visualiser les alertes Suricata ?",
+    "options": [
+      "80",
+      "443",
+      "5636",
+      "8080"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Pour quelle raison ces techniques sont-elles documentées ?",
+    "options": [
+      "Pour attaquer des systèmes",
+      "Pour tester et améliorer les capacités de détection IDS",
+      "Pour vendre des outils",
+      "Par curiosité"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment créer un paquet TCP SYN avec Scapy ?",
+    "options": [
+      "TCP()",
+      "IP(dst='x')/TCP(flags='S')",
+      "SYN()",
+      "Packet()"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le IP ID manipulation ?",
+    "options": [
+      "Changement d'adresse",
+      "Modification du champ ID pour évasion ou fingerprinting",
+      "MAC spoofing",
+      "DNS"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment Scapy envoie des paquets sur le réseau ?",
+    "options": [
+      "HTTP",
+      "send() pour layer 3, sendp() pour layer 2",
+      "POST",
+      "GET"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le TCP RST injection ?",
+    "options": [
+      "Reset normal",
+      "Envoi de faux RST pour couper des connexions",
+      "Restart service",
+      "Reboot"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment capturer des paquets avec Scapy ?",
+    "options": [
+      "capture()",
+      "sniff(filter='tcp', count=10)",
+      "listen()",
+      "receive()"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que l'ARP spoofing avec Scapy ?",
+    "options": [
+      "DNS spoofing",
+      "Envoi de fausses réponses ARP pour MITM",
+      "IP spoofing",
+      "MAC filtering"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment analyser un pcap avec Scapy ?",
+    "options": [
+      "open()",
+      "rdpcap('file.pcap')",
+      "read()",
+      "load()"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le TCP session hijacking ?",
+    "options": [
+      "Login",
+      "Prediction de séquence numbers pour prendre le contrôle",
+      "Logout",
+      "Reset"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment forger une réponse ICMP avec Scapy ?",
+    "options": [
+      "ping()",
+      "IP()/ICMP(type=0)/payload",
+      "echo()",
+      "reply()"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le traceroute avec manipulation TTL ?",
+    "options": [
+      "Ping",
+      "Incrémenter TTL pour découvrir le chemin réseau",
+      "DNS lookup",
+      "Port scan"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle CVE concerne une vulnérabilité de fragmentation IP exploitable ?",
+    "options": [
+      "CVE-2018-5391 (FragmentSmack - DoS Linux)",
+      "CVE-2020-1234",
+      "CVE-2019-0001",
+      "CVE-2021-9999"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le Ping of Death ?",
+    "options": [
+      "Envoi de paquets ICMP malformés dépassant 65535 octets",
+      "Ping très rapide",
+      "Ping chiffré",
+      "Ping compressé"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment Scapy peut-il détecter un OS via fingerprinting ?",
+    "options": [
+      "Analyser les réponses TCP/IP (TTL initial, window size, options)",
+      "Lire le fichier système",
+      "Demander au serveur",
+      "Utiliser DNS"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le SYN flood attack ?",
+    "options": [
+      "Envoyer massivement des paquets SYN sans compléter le handshake",
+      "Connexion normale",
+      "Scan de ports",
+      "Transfert de fichiers"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment un IDS détecte-t-il les scans de ports ?",
+    "options": [
+      "Pattern de connexions multiples vers différents ports en peu de temps",
+      "Analyse du contenu HTTP",
+      "Verification des certificats",
+      "Inspection DNS"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le TCP séquence number prediction ?",
+    "options": [
+      "Deviner les numéros de séquence pour injecter des paquets dans une session",
+      "Compter les paquets",
+      "Ordonner les fichiers",
+      "Numérotation automatique"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment fonctionne l'attaque Teardrop ?",
+    "options": [
+      "Fragments IP avec offsets se chevauchant causant un crash au réassemblage",
+      "Gouttes de pluie numériques",
+      "Larmes de crocodile",
+      "Effet visuel"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le NULL scan en TCP ?",
+    "options": [
+      "Paquet TCP sans aucun flag activé",
+      "Scan vide",
+      "Scan invisible",
+      "Pas de scan"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment Scapy permet-il le fuzzing de protocoles ?",
+    "options": [
+      "Générer des paquets avec des valeurs aléatoires ou invalides",
+      "Compresser les protocoles",
+      "Chiffrer les paquets",
+      "Accélérer le réseau"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le IP source routing ?",
+    "options": [
+      "Spécifier le chemin que doit prendre un paquet via options IP",
+      "Routage automatique",
+      "DNS routing",
+      "Load balancing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment détecter un MITM avec analyse de paquets ?",
+    "options": [
+      "Changements d'adresses MAC, TTL anormaux, duplications ARP",
+      "Vitesse du réseau",
+      "Couleur des cables",
+      "Température du switch"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le Smurf attack ?",
+    "options": [
+      "Amplification ICMP via broadcast avec IP source spoofée",
+      "Attaque par de petits personnages bleus",
+      "Compression de paquets",
+      "Chiffrement ICMP"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment fonctionne l'évasion IDS par fragmentation overlapping ?",
+    "options": [
+      "Envoyer des fragments qui se chevauchent avec des données différentes",
+      "Fragmenter plus petit",
+      "Fragmenter plus grand",
+      "Ne pas fragmenter"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le LAND attack ?",
+    "options": [
+      "Paquet SYN avec source et destination identiques causant une boucle",
+      "Attaque terrestre",
+      "Scan de terrain",
+      "Mapping géographique"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le FIN scan et pourquoi est-il utilisé pour l'évasion ?",
+    "options": [
+      "Paquet avec uniquement le flag FIN, certains firewalls ne bloquent pas les paquets sans SYN",
+      "Scan final du réseau",
+      "Fin de session TCP normale",
+      "Scan de finition"
+    ],
+    "answer": 0
+  }
+]
+---

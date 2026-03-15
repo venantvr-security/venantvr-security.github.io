@@ -1,0 +1,410 @@
+---
+layout: qcm
+title: "QCM - Python.QueryStringsFromPhp"
+repo_name: "Python.QueryStringsFromPhp"
+description: "Extracteur de query strings depuis PHP"
+readme_url: "../"
+generated_at: "2026-03-14 10:54:37"
+questions: [
+  {
+    "question": "Qu'est-ce qu'une query string ?",
+    "options": [
+      "Cookie",
+      "Corps de requête",
+      "Header",
+      "Paramètres dans l'URL après ?"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quelles variables PHP contiennent les paramètres ?",
+    "options": [
+      "$_ENV",
+      "$_GET, $_POST, $_REQUEST",
+      "$_SERVER",
+      "$_SESSION"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment extraire les paramètres d'un code PHP ?",
+    "options": [
+      "Parser et chercher $_GET['param']",
+      "Regex simple",
+      "Deviner",
+      "Exécuter le code"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel est l'intérêt pour le pentesting ?",
+    "options": [
+      "Identifier les endpoints à tester",
+      "Debugging",
+      "Documentation",
+      "Performance"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment parser du code PHP en Python ?",
+    "options": [
+      "tree-sitter ou php-parser",
+      "split()",
+      "Regex",
+      "eval()"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel format de sortie est généré ?",
+    "options": [
+      "XML",
+      "CSV",
+      "JSON avec liste des paramètres",
+      "Texte"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment scanner récursivement un projet ?",
+    "options": [
+      "Aléatoire",
+      "os.walk() sur les fichiers .php",
+      "Un fichier",
+      "Manuel"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que l'AST PHP ?",
+    "options": [
+      "Analysis",
+      "Abstract Syntax Tree du code",
+      "Array String",
+      "Audit"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment identifier $_POST['param'] ?",
+    "options": [
+      "Grep",
+      "Recherche texte",
+      "Regex",
+      "Pattern matching dans l'AST"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quels paramètres sont potentiellement vulnérables ?",
+    "options": [
+      "Aucun",
+      "Ceux passés aux fonctions sensibles",
+      "Tous",
+      "Aléatoire"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment enrichir les résultats ?",
+    "options": [
+      "Rien",
+      "Type seul",
+      "Ajouter le contexte d'utilisation",
+      "Nom seul"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel outil utilisé ces résultats ?",
+    "options": [
+      "IDE",
+      "Scanners de vulnérabilités",
+      "Navigateur",
+      "Éditeur"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment détecter filter_input() ?",
+    "options": [
+      "Manuel",
+      "Chercher dans l'AST",
+      "Impossible",
+      "Regex"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que filter_input en PHP ?",
+    "options": [
+      "Fonction de validation d'entrée",
+      "Cache",
+      "Filtre réseau",
+      "Firewall"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment différencier GET et POST ?",
+    "options": [
+      "Type",
+      "$_GET vs $_POST dans le code",
+      "Taille",
+      "Extension"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment gérer les variables dynamiques ?",
+    "options": [
+      "Simple",
+      "Erreur",
+      "Ignorer",
+      "$$var ou extract() sont complexes"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel est l'output attendu ?",
+    "options": [
+      "HTML",
+      "Booléen",
+      "Nombre",
+      "Liste de paramètres avec fichier/ligne"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment intégrer avec sqlmap ?",
+    "options": [
+      "Impossible",
+      "Manuel",
+      "Fournir les paramètres à tester",
+      "Direct"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Qu'est-ce que $_REQUEST ?",
+    "options": [
+      "COOKIE seul",
+      "GET seul",
+      "POST seul",
+      "Combine GET, POST, COOKIE"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment gérer les frameworks PHP ?",
+    "options": [
+      "Universel",
+      "Manuel",
+      "Patterns spécifiques (Laravel, Symfony)",
+      "Impossible"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel pattern Laravel utilise les paramètres ?",
+    "options": [
+      "$request->input()",
+      "$_POST",
+      "params()",
+      "$_GET"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment exclure les faux positifs ?",
+    "options": [
+      "Tout garder",
+      "Aléatoire",
+      "Vérifier le contexte d'utilisation",
+      "Tout supprimer"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment gérer les fichiers inclus ?",
+    "options": [
+      "Manuel",
+      "Erreur",
+      "Ignorer",
+      "Suivre les include/require"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel est le workflow typique ?",
+    "options": [
+      "Direct scan",
+      "Manuel",
+      "Extract -> Review -> Feed to scanner",
+      "Rien"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment détecter les paramètres de fichiers ?",
+    "options": [
+      "$_REQUEST",
+      "$_POST",
+      "$_GET",
+      "$_FILES dans le code"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Qu'est-ce que $_SERVER ?",
+    "options": [
+      "Cookies",
+      "Variables serveur et requête",
+      "Session",
+      "Paramètres GET"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment exporter vers un outil de scan ?",
+    "options": [
+      "JSON ou format compatible",
+      "Manuel",
+      "Email",
+      "Copier-coller"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel paramètre $_SERVER est dangereux ?",
+    "options": [
+      "Tous",
+      "PHP_SELF",
+      "DOCUMENT_ROOT",
+      "HTTP_HOST, REQUEST_URI si non validés"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment automatiser l'extraction ?",
+    "options": [
+      "Script en ligne de commande",
+      "GUI",
+      "Web",
+      "API"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel est l'objectif final ?",
+    "options": [
+      "Alimenter les tests de sécurité",
+      "Refactoring",
+      "Documentation",
+      "Performance"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment identifier les paramètres utilisés dans des requêtes SQL ?",
+    "options": [
+      "Tracer le flux de données depuis $_GET vers les fonctions query",
+      "Analyser les logs",
+      "Scanner les ports",
+      "Vérifier les sessions"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le paramètre pollution (HPP) ?",
+    "options": [
+      "Envoi de plusieurs valeurs pour le même paramètre pour bypasser les filtres",
+      "Trop de paramètres",
+      "Paramètres chiffrés",
+      "Compression de paramètres"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment détecter les paramètres de type tableau en PHP ?",
+    "options": [
+      "Chercher la syntaxe $_GET['param'][] ou $_GET['param']['key']",
+      "Analyser les cookies",
+      "Scanner les formulaires",
+      "Vérifier les headers"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Pourquoi $_REQUEST est-il considéré dangereux ?",
+    "options": [
+      "Il combine GET/POST/COOKIE, l'origine des données n'est pas claire",
+      "Il est plus lent",
+      "Il ne fonctionne pas",
+      "Il est deprecated"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment les paramètres extraits peuvent alimenter Burp Suite ?",
+    "options": [
+      "En générant une liste pour Intruder ou le scanner actif",
+      "Connexion directe",
+      "Via email",
+      "Par copier-coller manuel uniquement"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le path paramètre dans les APIs REST ?",
+    "options": [
+      "Paramètre dans l'URL de type /users/{id} vs query string ?id=",
+      "Cookie",
+      "Header",
+      "Body paramètre"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment identifier les paramètres sensibles comme password ou token ?",
+    "options": [
+      "Pattern matching sur les noms de variables courants",
+      "Analyse des logs",
+      "Scanner réseau",
+      "Impossible à automatiser"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le hidden paramètre discovery ?",
+    "options": [
+      "Découverte de paramètres non documentés acceptés par l'application",
+      "Paramètres chiffrés",
+      "Variables de session",
+      "Cookies cachés"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment les extracteurs de paramètres aident au fuzzing ?",
+    "options": [
+      "En fournissant la liste des points d'entrée à tester",
+      "En exécutant le fuzzing",
+      "En analysant les résultats",
+      "En bloquant les attaques"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le IDOR et comment les paramètres extraits aident à le détecter ?",
+    "options": [
+      "Identifier les paramètres de type ID pour tester l'accès à d'autres ressources",
+      "Scanner les ports",
+      "Analyser le DNS",
+      "Vérifier les certificats"
+    ],
+    "answer": 0
+  }
+]
+---

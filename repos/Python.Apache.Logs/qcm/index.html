@@ -1,0 +1,410 @@
+---
+layout: qcm
+title: "QCM - Python.Apache.Logs"
+repo_name: "Python.Apache.Logs"
+description: "Analyseur de logs Apache avec ML"
+readme_url: "../"
+generated_at: "2026-03-14 10:54:37"
+questions: [
+  {
+    "question": "Quel algorithme de clustering est utilisé ?",
+    "options": [
+      "SVM",
+      "K-Means et DBSCAN",
+      "Neural Network",
+      "Random Forest"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel format de log Apache est analysé ?",
+    "options": [
+      "Binary",
+      "XML",
+      "Combined ou Common Log Format",
+      "JSON"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quels patterns d'attaque sont détectés ?",
+    "options": [
+      "Aucun",
+      "DDoS seul",
+      "SQLi, XSS, Path Traversal, Scanners",
+      "Spam"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment K-Means fonctionne-t-il ?",
+    "options": [
+      "Arbre de décision",
+      "Régression",
+      "Groupement par centroïdes",
+      "Classification"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel avantage DBSCAN a-t-il sur K-Means ?",
+    "options": [
+      "Plus simple",
+      "Détection de clusters de forme arbitraire",
+      "Plus rapide",
+      "Moins de mémoire"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelles features sont extraites des logs ?",
+    "options": [
+      "Texte brut",
+      "IP, User-Agent, URL, Status, Taille",
+      "Aucune",
+      "Binary"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment détecter un scan de vulnérabilités ?",
+    "options": [
+      "User-Agent",
+      "IP unique",
+      "Referer",
+      "Rafales de requêtes vers chemins suspects"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel User-Agent indique souvent un scanner ?",
+    "options": [
+      "Nikto, sqlmap, Nmap, w3af",
+      "Safari",
+      "Chrome",
+      "Firefox"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment normaliser les données pour ML ?",
+    "options": [
+      "Pas de normalisation",
+      "Sqrt",
+      "StandardScaler, MinMaxScaler",
+      "Log"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quelle bibliothèque Python fait le ML ?",
+    "options": [
+      "scikit-learn",
+      "PyTorch",
+      "Keras",
+      "TensorFlow"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment visualiser les clusters ?",
+    "options": [
+      "Matplotlib, Seaborn, PCA",
+      "Texte",
+      "HTML",
+      "PDF"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que PCA dans ce contexte ?",
+    "options": [
+      "Réduction de dimensions pour visualisation",
+      "Parsing",
+      "Clustering",
+      "Analyse"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment identifier les anomalies ?",
+    "options": [
+      "Points éloignés des centroïdes / outliers DBSCAN",
+      "Premier point",
+      "Aléatoire",
+      "Manuellement"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quels champs du log contiennent l'URL ?",
+    "options": [
+      "request / request_uri",
+      "status",
+      "size",
+      "ip"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment détecter une attaque de force brute ?",
+    "options": [
+      "200 OK",
+      "Redirection",
+      "Timeout",
+      "Nombreuses requêtes 401/403 depuis une IP"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel status HTTP indique une tentative bloquée ?",
+    "options": [
+      "500",
+      "403 Forbidden",
+      "200 OK",
+      "301"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment parser les logs Apache en Python ?",
+    "options": [
+      "Binary reader",
+      "XML parser",
+      "JSON.parse",
+      "Regex ou apache-log-parser"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Qu'est-ce que le 'silhouette score' ?",
+    "options": [
+      "Index de log",
+      "Score de sécurité",
+      "Métrique de performance",
+      "Mesure de qualité du clustering"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment détecter les requêtes SQL injection ?",
+    "options": [
+      "POST vide",
+      "HEAD",
+      "GET simple",
+      "Patterns SELECT, UNION, --, OR 1=1"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quelles IPs sont généralement malveillantes ?",
+    "options": [
+      "Aucune",
+      "Toutes",
+      "Locales",
+      "Celles dans les clusters d'attaque"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment enrichir les données avec GeoIP ?",
+    "options": [
+      "Ping",
+      "WHOIS",
+      "DNS",
+      "Ajouter pays/ville par IP"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quelle bibliothèque fait le GeoIP ?",
+    "options": [
+      "requests",
+      "socket",
+      "geoip2, maxminddb",
+      "dns"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment détecter les path traversal ?",
+    "options": [
+      "Extensions",
+      "Status",
+      "Taille",
+      "Patterns ../, %2e%2e/"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Qu'est-ce qu'un bot crawler légitime ?",
+    "options": [
+      "Nikto",
+      "Googlebot, Bingbot",
+      "w3af",
+      "sqlmap"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment différencier bot légitime et malveillant ?",
+    "options": [
+      "IP seule",
+      "Aléatoire",
+      "Timestamp",
+      "User-Agent + comportement + reverse DNS"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quelle fréquence de requêtes est suspecte ?",
+    "options": [
+      "1 req/heure",
+      "1 req/jour",
+      ">10 req/sec depuis une IP",
+      "1 req/min"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment stocker les résultats d'analyse ?",
+    "options": [
+      "JSON, CSV, Base de données",
+      "Rien",
+      "Papier",
+      "Email"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le 'elbow method' ?",
+    "options": [
+      "Algorithme",
+      "Format de log",
+      "Technique de parsing",
+      "Méthode pour choisir k dans K-Means"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment alerter sur les attaques détectées ?",
+    "options": [
+      "Rien",
+      "Console",
+      "Log seul",
+      "Email, Slack, SIEM"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quelle est la complexité de K-Means ?",
+    "options": [
+      "O(n²)",
+      "O(1)",
+      "O(n)",
+      "O(n*k*i) - n points, k clusters, i iterations"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quelle CVE est souvent détectée via les patterns de log Apache ?",
+    "options": [
+      "CVE-2021-41773 (Path traversal Apache 2.4.49)",
+      "CVE-2020-1234",
+      "CVE-2019-0001",
+      "CVE-2018-9999"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment détecter Log4Shell (CVE-2021-44228) dans les logs ?",
+    "options": [
+      "Patterns ${jndi:ldap:// ou ${jndi:rmi://",
+      "Erreurs 500",
+      "GET requests",
+      "Redirections"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle signature indique une tentative Shellshock dans les logs ?",
+    "options": [
+      "() { :; }; dans User-Agent ou headers",
+      "SELECT * FROM",
+      "<script>",
+      "../"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle bonne pratique protège les fichiers de logs Apache ?",
+    "options": [
+      "Permissions restrictives, rotation, centralisation SIEM",
+      "chmod 777",
+      "Stockage public",
+      "Pas de rotation"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment l'isolation Forest détecte-t-elle les anomalies ?",
+    "options": [
+      "Points isolés rapidement dans les arbres sont des anomalies",
+      "Régression linéaire",
+      "Moyenne simple",
+      "Clustering K-Means"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel pattern indique une attaque par directory traversal ?",
+    "options": [
+      "../, ..%2f, %2e%2e%2f, ..%252f",
+      "GET /index.html",
+      "POST /login",
+      "HEAD /"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment détecter un scan nikto dans les logs ?",
+    "options": [
+      "User-Agent contenant 'Nikto' et patterns de requêtes spécifiques",
+      "Adresse IP unique",
+      "Status 200 seul",
+      "Referer header"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle technique ML améliore la détection des attaques zero-day ?",
+    "options": [
+      "Apprentissage non supervisé pour détecter les comportements anormaux",
+      "Règles statiques uniquement",
+      "Blacklist IP",
+      "Whitelist URLs"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment corréler les logs Apache avec d'autres sources ?",
+    "options": [
+      "SIEM, timestamps, IP correlation, session tracking",
+      "Manuellement seul",
+      "Fichiers texte",
+      "Email"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel framework aide à l'analyse de logs en temps réel ?",
+    "options": [
+      "ELK Stack (Elasticsearch, Logstash, Kibana)",
+      "Django",
+      "Flask",
+      "FastAPI"
+    ],
+    "answer": 0
+  }
+]
+---

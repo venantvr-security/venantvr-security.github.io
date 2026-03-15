@@ -1,0 +1,410 @@
+---
+layout: qcm
+title: "QCM - Python.Arping"
+repo_name: "Python.Arping"
+description: "Scanner réseau ARP avec Scapy"
+readme_url: "../"
+generated_at: "2026-03-14 10:54:37"
+questions: [
+  {
+    "question": "Que fait le protocole ARP ?",
+    "options": [
+      "DNS",
+      "Routage",
+      "Résolution IP vers MAC",
+      "Résolution MAC vers IP"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quelle couche OSI utilise ARP ?",
+    "options": [
+      "Couche 2 (Liaison)",
+      "Couche 7 (Application)",
+      "Couche 4 (Transport)",
+      "Couche 3 (Réseau)"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment créer un paquet ARP avec Scapy ?",
+    "options": [
+      "Ether()/ARP()",
+      "TCP()/ARP()",
+      "IP()/ARP()",
+      "ARP()"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle adresse MAC broadcast est utilisée ?",
+    "options": [
+      "ff:ff:ff:ff:ff:ff",
+      "aa:aa:aa:aa:aa:aa",
+      "11:11:11:11:11:11",
+      "00:00:00:00:00:00"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment envoyer un ARP request ?",
+    "options": [
+      "srp() avec Ether/ARP",
+      "transmit()",
+      "send()",
+      "sr()"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que l'ARP spoofing ?",
+    "options": [
+      "Fausse réponse ARP pour intercepter le trafic",
+      "Scan ARP",
+      "Découverte réseau",
+      "DNS poisoning"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment détecter les machines sur un réseau local ?",
+    "options": [
+      "WHOIS",
+      "DNS lookup",
+      "Traceroute",
+      "ARP scan sur la plage IP"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel champ ARP contient l'IP recherchée ?",
+    "options": [
+      "pdst (protocol destination)",
+      "hwsrc",
+      "hwdst",
+      "psrc"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment scanner un subnet /24 ?",
+    "options": [
+      "Boucler sur 254 IPs avec ARP request",
+      "DNS zone transfer",
+      "SNMP walk",
+      "Ping broadcast"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle est la différence entre sr() et srp() ?",
+    "options": [
+      "srp() opère au niveau 2 (Ethernet)",
+      "Aucune",
+      "srp() est deprecated",
+      "sr() est plus rapide"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment obtenir l'adresse MAC depuis une réponse ARP ?",
+    "options": [
+      "response.mac",
+      "response.hardware",
+      "response.ethernet",
+      "response[ARP].hwsrc"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Pourquoi les privilèges root sont-ils nécessaires ?",
+    "options": [
+      "Configuration",
+      "Accès aux raw sockets",
+      "Réseau",
+      "Écriture fichiers"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle bibliothèque gère les adresses réseau ?",
+    "options": [
+      "struct",
+      "socket",
+      "array",
+      "ipaddress ou netaddr"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment gérer les timeouts ARP ?",
+    "options": [
+      "While loop",
+      "Retry manuel",
+      "Paramètre timeout dans srp()",
+      "Try/except"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Qu'est-ce que l'ARP cache ?",
+    "options": [
+      "Table de correspondances IP-MAC",
+      "Cache web",
+      "Cache DNS",
+      "Buffer réseau"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment afficher l'ARP cache système ?",
+    "options": [
+      "netstat",
+      "arp -a ou ip neigh",
+      "ifconfig",
+      "route"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel outil CLI fait de l'arping ?",
+    "options": [
+      "nmap",
+      "traceroute",
+      "arping",
+      "ping"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment identifier le fabricant depuis une MAC ?",
+    "options": [
+      "DNS",
+      "Ping",
+      "OUI lookup (premiers 3 octets)",
+      "WHOIS"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Qu'est-ce que le GARP (Gratuitous ARP) ?",
+    "options": [
+      "ARP reply",
+      "ARP request",
+      "ARP probe",
+      "ARP annonçant sa propre IP (failover, etc.)"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment se protéger contre l'ARP spoofing ?",
+    "options": [
+      "VPN",
+      "ARP statique, DAI, 802.1X",
+      "Antivirus",
+      "Firewall"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le format d'une adresse MAC ?",
+    "options": [
+      "XX:XX:XX:XX:XX:XX (6 octets hex)",
+      "4 octets",
+      "IP format",
+      "8 octets"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment Scapy représente les réponses multiples ?",
+    "options": [
+      "Dictionnaire",
+      "String",
+      "Liste de tuples (sent, received)",
+      "Integer"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quelle option Scapy désactive la verbosité ?",
+    "options": [
+      "no_output=True",
+      "silent=True",
+      "quiet=True",
+      "verbose=0 ou conf.verb=0"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment filtrer les réponses dans srp() ?",
+    "options": [
+      "Pre-filter",
+      "Lambda",
+      "Regex",
+      "Paramètre filter ou analyse post-réception"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Qu'est-ce que le DAI (Dynamic ARP Inspection) ?",
+    "options": [
+      "Service",
+      "Protection switch contre ARP spoofing",
+      "Protocole",
+      "Outil"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment optimiser le scan de grands réseaux ?",
+    "options": [
+      "Threading, réduction timeout, batching",
+      "Lentement",
+      "Séquentiel",
+      "Un par un"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle interface Scapy utilise par défaut ?",
+    "options": [
+      "lo",
+      "wlan0",
+      "eth0 toujours",
+      "conf.iface (interface par défaut)"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment spécifier une interface dans srp() ?",
+    "options": [
+      "interface='eth0'",
+      "nic='eth0'",
+      "iface='eth0'",
+      "dev='eth0'"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Qu'est-ce que le ARP probe ?",
+    "options": [
+      "ARP normal",
+      "ARP gratuit",
+      "ARP reply",
+      "ARP pour vérifier si une IP est utilisée"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment formater la sortie du scan ?",
+    "options": [
+      "XML",
+      "Binaire",
+      "JSON",
+      "Tableau avec IP et MAC"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quelle CVE concerne les attaques ARP cache poisoning ?",
+    "options": [
+      "Pas de CVE spécifique, vulnérabilité inhérente au protocole ARP",
+      "CVE-2020-1234",
+      "CVE-2019-0001",
+      "CVE-2021-9999"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment l'ARP spoofing permet-il une attaque MITM ?",
+    "options": [
+      "Associer son MAC aux IPs de la gateway et victime",
+      "DNS poisoning",
+      "SSL stripping",
+      "Port scanning"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel outil permet de détecter l'ARP spoofing en temps réel ?",
+    "options": [
+      "arpwatch, XArp, ou scripts de monitoring",
+      "nmap",
+      "curl",
+      "wget"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment fonctionne le Dynamic ARP Inspection (DAI) ?",
+    "options": [
+      "Vérifie les paquets ARP contre une table DHCP snooping",
+      "Bloque tout ARP",
+      "Accélère ARP",
+      "Cache ARP"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle commande Linux définit une entrée ARP statique ?",
+    "options": [
+      "arp -s IP MAC ou ip neigh add",
+      "route add",
+      "ifconfig",
+      "netstat"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle attaque combine ARP spoofing et DNS spoofing ?",
+    "options": [
+      "Redirection vers sites malveillants via MITM",
+      "DDoS",
+      "Brute force",
+      "Port scanning"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment 802.1X protège-t-il contre l'ARP spoofing ?",
+    "options": [
+      "Authentification des clients avant accès au réseau",
+      "Chiffrement ARP",
+      "Compression",
+      "Routage"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle bonne pratique limite l'impact de l'ARP spoofing ?",
+    "options": [
+      "Segmentation VLAN, DAI, port security",
+      "Réseau plat unique",
+      "DHCP désactivé",
+      "ARP broadcast"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment Ettercap exploite-t-il ARP pour le MITM ?",
+    "options": [
+      "ARP poisoning automatisé pour intercepter le trafic",
+      "Port scanning",
+      "Brute force",
+      "SQL injection"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle vulnérabilité permet l'ARP spoofing sur les réseaux WiFi ?",
+    "options": [
+      "Même segment L2, pas d'isolation client",
+      "WPA3 uniquement",
+      "Chiffrement fort",
+      "Authentification EAP"
+    ],
+    "answer": 0
+  }
+]
+---

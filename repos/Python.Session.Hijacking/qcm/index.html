@@ -1,0 +1,410 @@
+---
+layout: qcm
+title: "QCM - Python.Session.Hijacking"
+repo_name: "Python.Session.Hijacking"
+description: "Démonstration de Session Hijacking avec Flask"
+readme_url: "../"
+generated_at: "2026-03-14 14:31:40"
+questions: [
+  {
+    "question": "Qu'est-ce que le Session Hijacking ?",
+    "options": [
+      "Création d'un nouveau compte",
+      "Vol et utilisation du cookie de session d'un autre utilisateur",
+      "Blocage d'une session",
+      "Chiffrement de session"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel framework Python est utilisé dans cette démo ?",
+    "options": [
+      "Django",
+      "FastAPI",
+      "Flask",
+      "Pyramid"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment le cookie de session est-il visible dans cette démo ?",
+    "options": [
+      "Via un fichier log",
+      "Affiché sur la page après connexion",
+      "Dans l'URL",
+      "Par email"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment l'attaquant injecte-t-il le cookie volé ?",
+    "options": [
+      "Via un formulaire POST",
+      "Via JavaScript (document.cookie)",
+      "Via l'URL",
+      "Via un header HTTP manuel"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Que se passe-t-il après avoir injecté le cookie volé ?",
+    "options": [
+      "Erreur 403",
+      "Redirection vers /login",
+      "Accès aux pages protégées de la victime",
+      "Déconnexion"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel flag cookie empêche l'accès JavaScript ?",
+    "options": [
+      "Secure",
+      "SameSite",
+      "HttpOnly",
+      "Path"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel flag cookie empêche l'envoi sur HTTP non chiffré ?",
+    "options": [
+      "Secure",
+      "HttpOnly",
+      "SameSite",
+      "Domain"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Que fait l'attribut SameSite=Strict ?",
+    "options": [
+      "Chiffre le cookie",
+      "Empêche l'envoi du cookie depuis d'autres sites",
+      "Raccourcit la durée de vie",
+      "Compresse le cookie"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment vérifier si un cookie est HttpOnly ?",
+    "options": [
+      "Console JavaScript: document.cookie",
+      "DevTools > Application > Cookies",
+      "Fichier de configuration",
+      "Ligne de commande"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Si document.cookie retourne une chaîne vide, que cela signifie-t-il ?",
+    "options": [
+      "Pas de cookies",
+      "Cookies HttpOnly actifs",
+      "Session expirée",
+      "Erreur JavaScript"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Pourquoi utiliser une fenêtre de navigation privée pour l'attaquant ?",
+    "options": [
+      "Pour être plus rapide",
+      "Pour partir d'une session vierge sans cookies",
+      "Pour cacher l'historique",
+      "Pour éviter le cache"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle route permet l'injection de cookie dans cette démo ?",
+    "options": [
+      "/login",
+      "/secret",
+      "/hijack",
+      "/admin"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le format du cookie de session Flask ?",
+    "options": [
+      "UUID",
+      "JWT signé commençant par .eJwl...",
+      "Hash MD5",
+      "Texte brut"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle technique permet de voler un cookie en conditions réelles ?",
+    "options": [
+      "Brute force",
+      "XSS (Cross-Site Scripting)",
+      "SQL Injection",
+      "Buffer overflow"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle protection supplémentaire régénère la session après login ?",
+    "options": [
+      "HttpOnly",
+      "Secure",
+      "Session régénération",
+      "SameSite"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Qu'est-ce que le session fixation ?",
+    "options": [
+      "Forcer une victime à utiliser un session ID connu de l'attaquant",
+      "Réparer une session",
+      "Prolonger une session",
+      "Chiffrer une session"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment prévenir le session fixation ?",
+    "options": [
+      "Régénérer le session ID après authentification",
+      "Utiliser des sessions plus longues",
+      "Désactiver les cookies",
+      "Utiliser HTTP"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le session prediction ?",
+    "options": [
+      "Deviner un session ID valide en exploitant une génération prévisible",
+      "Prolonger les sessions",
+      "Analyser les logs",
+      "Chiffrer les sessions"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Pourquoi lier la session à l'IP peut poser des problèmes ?",
+    "options": [
+      "Les utilisateurs mobiles changent souvent d'IP (NAT, proxies)",
+      "C'est trop sécurisé",
+      "Cela ralentit l'application",
+      "C'est impossible techniquement"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment le User-Agent fingerprinting aide à la détection de hijacking ?",
+    "options": [
+      "Détecter un changement de navigateur/OS en cours de session",
+      "Bloquer tous les utilisateurs",
+      "Chiffrer le trafic",
+      "Analyser le DNS"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le session sidejacking ?",
+    "options": [
+      "Interception de cookies de session sur un réseau non chiffré (sniffing)",
+      "Création de sessions",
+      "Fermeture de sessions",
+      "Chiffrement de sessions"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment HSTS protège contre le session hijacking ?",
+    "options": [
+      "Force HTTPS empêchant l'interception sur HTTP non chiffré",
+      "Chiffre les cookies",
+      "Régénère les sessions",
+      "Bloque les attaquants"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le token binding ?",
+    "options": [
+      "Lier cryptographiquement les tokens de session au client TLS",
+      "Créer des tokens",
+      "Supprimer des tokens",
+      "Chiffrer des tokens"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment implémenter une déconnexion sécurisée ?",
+    "options": [
+      "Invalider le session ID côté serveur et supprimer le cookie",
+      "Fermer le navigateur uniquement",
+      "Vider le cache",
+      "Rediriger vers la page d'accueil"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Pourquoi les sessions courtes améliorent la sécurité ?",
+    "options": [
+      "Réduisent la fenêtre d'exploitation d'un token volé",
+      "Sont plus rapides",
+      "Utilisent moins de mémoire",
+      "Sont plus faciles à gérer"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle CVE concerne une vulnérabilité de session hijacking dans Apache Tomcat ?",
+    "options": [
+      "CVE-2020-17527 (HTTP/2 request mixing)",
+      "CVE-2021-1234",
+      "CVE-2019-0001",
+      "CVE-2022-9999"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le session puzzling ou session variable overloading ?",
+    "options": [
+      "Exploitation de variables de session partagées entre différentes fonctionnalités",
+      "Création de sessions multiples",
+      "Chiffrement de sessions",
+      "Compression de sessions"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment JWT peut-il remplacer les sessions traditionnelles ?",
+    "options": [
+      "Token auto-contenu avec claims signés, stocké côté client",
+      "JWT est identique aux cookies de session",
+      "JWT nécessite une base de données",
+      "JWT n'est pas sécurisé"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel est le risque de stocker le session ID dans l'URL ?",
+    "options": [
+      "Visible dans les logs serveur, historique navigateur, header Referer",
+      "Plus rapide",
+      "Plus sécurisé",
+      "Meilleure compatibilité"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment le Firesheep historique a-t-il démontré le session hijacking ?",
+    "options": [
+      "Extension Firefox capturant les cookies de session sur réseaux WiFi non chiffrés",
+      "Malware Windows",
+      "Attaque serveur",
+      "Injection SQL"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que la session concurrency control ?",
+    "options": [
+      "Limiter le nombre de sessions simultanées par utilisateur",
+      "Accélérer les sessions",
+      "Chiffrer les sessions",
+      "Compresser les sessions"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment détecter une tentative de session hijacking côté serveur ?",
+    "options": [
+      "Changement d'IP, User-Agent, empreinte TLS en cours de session",
+      "Augmentation du trafic",
+      "Erreurs 500",
+      "Lenteur des réponses"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Pourquoi le refresh token est-il plus sécurisé que le long-lived access token ?",
+    "options": [
+      "Accèss token courte durée, refresh token stocké de manière plus sécurisée",
+      "Refresh token est plus court",
+      "Accèss token n'expire jamais",
+      "Refresh token est public"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le cookie jar overflow attack ?",
+    "options": [
+      "Forcer le navigateur à supprimer des cookies légitimes en ajoutant de nombreux cookies",
+      "Voler tous les cookies",
+      "Chiffrer les cookies",
+      "Compresser les cookies"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment le header Sec-Fetch-Site aide-t-il à prévenir les attaques ?",
+    "options": [
+      "Indique l'origine de la requête (same-origin, cross-site) pour filtrage côté serveur",
+      "Chiffre les requêtes",
+      "Compresse les headers",
+      "Accélère les requêtes"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le session riding ?",
+    "options": [
+      "Autre nom pour CSRF - exploiter une session active pour effectuer des actions",
+      "Création de sessions multiples",
+      "Vol de session",
+      "Chiffrement de session"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment implémenter une défense en profondeur pour les sessions ?",
+    "options": [
+      "HTTPS + HttpOnly + Secure + SameSite + régénération + timeout + détection anomalies",
+      "Uniquement HTTPS",
+      "Uniquement cookies",
+      "Uniquement timeout"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le browser fingerprinting dans le contexte de session security ?",
+    "options": [
+      "Identifier de manière unique le navigateur pour détecter les changements suspects",
+      "Prendre les empreintes digitales",
+      "Chiffrer le navigateur",
+      "Compresser les données"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Pourquoi utiliser des tokens de session cryptographiquement aléatoires ?",
+    "options": [
+      "Empêcher la prédiction et le brute-force des session IDs",
+      "Réduire la taille des cookies",
+      "Accélérer les connexions",
+      "Faciliter le debugging"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le session replay attack ?",
+    "options": [
+      "Réutilisation d'un token de session capturé pour rejouer une authentification",
+      "Répéter une session vidéo",
+      "Rejouer un jeu en ligne",
+      "Copier une session de terminal"
+    ],
+    "answer": 0
+  }
+]
+---

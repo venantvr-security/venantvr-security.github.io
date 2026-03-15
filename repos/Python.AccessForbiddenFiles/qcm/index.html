@@ -1,0 +1,410 @@
+---
+layout: qcm
+title: "QCM - Python.AccèssForbiddenFiles"
+repo_name: "Python.AccèssForbiddenFiles"
+description: "Scanner de fichiers sensibles exposés"
+readme_url: "../"
+generated_at: "2026-03-14 10:54:37"
+questions: [
+  {
+    "question": "Quels fichiers sensibles sont couramment recherchés ?",
+    "options": [
+      "images",
+      "html",
+      "css",
+      ".env, .git, backups, config.php"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Pourquoi le fichier .env est-il sensible ?",
+    "options": [
+      "Images",
+      "Code source",
+      "Contient des credentials et secrets",
+      "Styles"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment détecter un dossier .git exposé ?",
+    "options": [
+      "DNS lookup",
+      "WHOIS",
+      "Requête vers /.git/config",
+      "Traceroute"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel status HTTP indique un fichier trouvé ?",
+    "options": [
+      "200 OK",
+      "500",
+      "404",
+      "301"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quels fichiers de backup sont recherchés ?",
+    "options": [
+      "*.md",
+      "*.bak, *.old, *.backup, ~",
+      "*.txt",
+      "*.html"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment exploiter un .git exposé ?",
+    "options": [
+      "curl",
+      "git-dumper pour reconstruire le repo",
+      "ftp",
+      "wget"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quels fichiers de configuration sont ciblés ?",
+    "options": [
+      "app.js",
+      "index.html",
+      "style.css",
+      "wp-config.php, config.ini, settings.py"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment scanner plusieurs chemins en parallèle ?",
+    "options": [
+      "Pas possible",
+      "Boucle séquentielle",
+      "Manuel",
+      "ThreadPoolExecutor ou asyncio"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel header indique un serveur Apache ?",
+    "options": [
+      "Host",
+      "Server: Apache",
+      "Via",
+      "X-Server"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment détecter les fichiers de logs exposés ?",
+    "options": [
+      "WHOIS",
+      "DNS",
+      "Requêtes vers /logs/, /var/log/",
+      "Ping"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quels fichiers IDE sont parfois exposés ?",
+    "options": [
+      "Aucun",
+      "Tous",
+      ".git seulement",
+      ".idea/, .vscode/, .project"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment le scanner gère-t-il les redirections ?",
+    "options": [
+      "Suivre ou ignorer selon configuration",
+      "Erreur",
+      "Jamais suivre",
+      "Toujours suivre"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel fichier révèle la structure du projet ?",
+    "options": [
+      "robots.txt",
+      "favicon.ico",
+      "composer.json, package.json",
+      "index.html"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment éviter la détection par WAF ?",
+    "options": [
+      "Rate limiting, User-Agent rotation",
+      "Aucune technique",
+      "Attaque rapide",
+      "Proxy simple"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quels fichiers de base de données sont recherchés ?",
+    "options": [
+      ".sql, .sqlite, .db, dump.*",
+      ".js",
+      ".css",
+      ".html"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment valider qu'un fichier contient des secrets ?",
+    "options": [
+      "Extension seule",
+      "Parser le contenu et chercher des patterns",
+      "Nom du fichier",
+      "Taille du fichier"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quels secrets sont typiquement dans .env ?",
+    "options": [
+      "Images",
+      "HTML",
+      "CSS",
+      "API keys, DB passwords, secrets"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment scanner des sous-domaines ?",
+    "options": [
+      "Énumération DNS + scan de chaque sous-domaine",
+      "Ping",
+      "Scan IP uniquement",
+      "WHOIS"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel outil automatise ce type de scan ?",
+    "options": [
+      "Dirsearch, Gobuster, ffuf",
+      "tcpdump",
+      "Nmap",
+      "Wireshark"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment générer une wordlist de fichiers ?",
+    "options": [
+      "Manuel",
+      "Aléatoire",
+      "SecLists, création personnalisée",
+      "API"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quels fichiers PHP de debug existent ?",
+    "options": [
+      "admin.php",
+      "phpinfo.php, test.php, debug.php",
+      "index.php",
+      "config.php"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment détecter les archives exposées ?",
+    "options": [
+      "WHOIS",
+      "DNS",
+      "Ping",
+      "Rechercher .zip, .tar.gz, .rar"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel fichier révèle les dépendances Node.js ?",
+    "options": [
+      "package.json, package-lock.json",
+      "app.js",
+      "index.js",
+      "server.js"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment exploiter un fichier de config exposé ?",
+    "options": [
+      "Rapport seul",
+      "Ignorer",
+      "Rien",
+      "Extraire credentials et accéder aux services"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quels fichiers WordPress sont sensibles ?",
+    "options": [
+      "index.php",
+      "wp-config.php, .htaccess, xmlrpc.php",
+      "style.css",
+      "header.php"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment le scanner gère-t-il les timeouts ?",
+    "options": [
+      "Attente infinie",
+      "Abandon total",
+      "Erreur",
+      "Retry avec backoff ou skip"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quels fichiers de versioning sont exposés ?",
+    "options": [
+      "Tous",
+      "Aucun",
+      ".git seul",
+      ".svn, .hg, .bzr en plus de .git"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment prioriser les résultats ?",
+    "options": [
+      "Premier trouvé",
+      "Aléatoire",
+      "Ordre alphabétique",
+      "Scoring par criticité du fichier"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel format de rapport est généré ?",
+    "options": [
+      "Word",
+      "Texte seul",
+      "JSON, HTML, CSV",
+      "PDF"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment éviter les faux positifs ?",
+    "options": [
+      "Accepter tous",
+      "Filtrer par taille",
+      "Vérifier le contenu, pas seulement le status",
+      "Ignorer 200"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quelle CVE concerne l'exposition de .git sur des serveurs web ?",
+    "options": [
+      "Pas de CVE spécifique, mais mauvaise configuration courante",
+      "CVE-2020-1234",
+      "CVE-2019-0001",
+      "CVE-2021-9999"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment l'outil git-dumper exploite-t-il un .git exposé ?",
+    "options": [
+      "Télécharge les objets git et reconstruit le repo",
+      "SQL injection",
+      "Brute force",
+      "XSS"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle directive Apache bloque l'accès aux fichiers cachés ?",
+    "options": [
+      "RedirectMatch 404 /\\. ou FilesMatch",
+      "AllowOverride All",
+      "Options +Indexes",
+      "DirectoryIndex"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle vulnérabilité permet le path traversal via ../ ?",
+    "options": [
+      "Directory traversal / LFI (Local File Inclusion)",
+      "XSS",
+      "CSRF",
+      "Clickjacking"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment se protéger contre l'exposition de fichiers .env ?",
+    "options": [
+      "Bloquer via .htaccess ou nginx config, stocker hors webroot",
+      "Renommer en .env.txt",
+      "chmod 777",
+      "Laisser accessible"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle information sensible phpinfo() expose-t-il ?",
+    "options": [
+      "Variables d'environnement, chemins, modules, config serveur",
+      "Uniquement la version PHP",
+      "Rien de sensible",
+      "Seulement les extensions"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle bonne pratique empêche le listing de répertoires ?",
+    "options": [
+      "Options -Indexes dans Apache ou autoindex off dans Nginx",
+      "Options +Indexes",
+      "AllowOverride None",
+      "DirectoryIndex disabled"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment détecter les backups de base de données exposés ?",
+    "options": [
+      "Rechercher .sql, .sql.gz, dump.sql, backup.sql",
+      "Scanner les ports",
+      "WHOIS lookup",
+      "DNS énumération"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle attaque exploite un fichier .svn/entries exposé ?",
+    "options": [
+      "Récupération du code source et historique SVN",
+      "DDoS",
+      "Injection SQL",
+      "Man-in-the-middle"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment un attaquant peut-il exploiter composer.json/package.json ?",
+    "options": [
+      "Identifier les dépendances vulnérables connues (CVE)",
+      "Modifier le serveur",
+      "Injection directe",
+      "Brute force"
+    ],
+    "answer": 0
+  }
+]
+---

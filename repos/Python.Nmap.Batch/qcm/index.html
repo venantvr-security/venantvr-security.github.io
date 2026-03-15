@@ -1,0 +1,410 @@
+---
+layout: qcm
+title: "QCM - Python.Nmap.Batch"
+repo_name: "Python.Nmap.Batch"
+description: "Scans réseau batch avec dashboard"
+readme_url: "../"
+generated_at: "2026-03-14 10:54:37"
+questions: [
+  {
+    "question": "Quels outils de scan sont intégrés ?",
+    "options": [
+      "Ping",
+      "Traceroute",
+      "Nmap seul",
+      "Nmap, Masscan, Netcat, Hping3"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel framework web affiche le dashboard ?",
+    "options": [
+      "Django",
+      "FastAPI",
+      "Flask",
+      "Bottle"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Qu'est-ce que SSE dans ce contexte ?",
+    "options": [
+      "SSL",
+      "Session",
+      "Server-Sent Events pour temps réel",
+      "Security"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment paralléliser les scans ?",
+    "options": [
+      "Queue",
+      "Multi-threading",
+      "Un par un",
+      "Séquentiel"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel avantage Masscan sur Nmap ?",
+    "options": [
+      "Simplicité",
+      "Précision",
+      "Vitesse (millions de paquets/sec)",
+      "Compatibilité"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment lancer un scan Nmap via Python ?",
+    "options": [
+      "eval()",
+      "os.system() seul",
+      "exec()",
+      "subprocess ou python-nmap"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Qu'est-ce que le mode batch ?",
+    "options": [
+      "Un seul scan",
+      "Exécution de plusieurs scans automatiquement",
+      "Manuel",
+      "Interactif"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment stocker les résultats ?",
+    "options": [
+      "Mémoire seule",
+      "Email",
+      "Papier",
+      "Base de données ou fichiers JSON/XML"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel format Nmap export-t-il ?",
+    "options": [
+      "HTML seul",
+      "XML, JSON, grepable",
+      "Word",
+      "PDF"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment planifier des scans récurrents ?",
+    "options": [
+      "SMS",
+      "Manuel",
+      "Cron ou scheduler Python",
+      "Email"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Qu'est-ce que Netcat dans ce contexte ?",
+    "options": [
+      "Firewall",
+      "Test de connectivité port",
+      "Scanner",
+      "Proxy"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment Hping3 est-il utilisé ?",
+    "options": [
+      "Scan simple",
+      "Craft de paquets personnalisés",
+      "DNS",
+      "DHCP"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel pattern SSE envoie les updates ?",
+    "options": [
+      "data: {json}\n\n",
+      "XML",
+      "Binary",
+      "JSON direct"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment gérer les erreurs de scan ?",
+    "options": [
+      "Try/except avec logging",
+      "Crash",
+      "Retry infini",
+      "Ignorer"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel module Python gère les threads ?",
+    "options": [
+      "multiprocessing seul",
+      "threading ou concurrent.futures",
+      "asyncio seul",
+      "os"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment limiter les scans concurrents ?",
+    "options": [
+      "Illimité",
+      "Un seul",
+      "Aléatoire",
+      "ThreadPoolExecutor(max_workers)"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Qu'est-ce que le rate limiting dans Nmap ?",
+    "options": [
+      "Limiter les paquets/seconde",
+      "Cache",
+      "Buffer",
+      "Bloquer les scans"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment parser la sortie XML Nmap ?",
+    "options": [
+      "Regex",
+      "xml.etree ou python-nmap",
+      "Split",
+      "Manual"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel endpoint Flask sert le dashboard ?",
+    "options": [
+      "/ ou /dashboard",
+      "/api",
+      "/scan",
+      "/results"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment notifier la fin d'un scan ?",
+    "options": [
+      "SSE, webhook, email",
+      "Rien",
+      "Attendre",
+      "Polling"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le scan de vulnérabilités Nmap ?",
+    "options": [
+      "DNS",
+      "Scan port seul",
+      "Ping",
+      "Scripts NSE vuln"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment sécuriser le dashboard ?",
+    "options": [
+      "Authentification, HTTPS, firewall",
+      "Public",
+      "Password simple",
+      "Rien"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel format d'affichage est utilisé ?",
+    "options": [
+      "Console",
+      "PDF",
+      "HTML avec JavaScript",
+      "Word"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment comparer des scans ?",
+    "options": [
+      "Visual",
+      "Diff des résultats",
+      "Rien",
+      "Manuel"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le scan de découverte ?",
+    "options": [
+      "Services",
+      "Versions",
+      "Vulnérabilités",
+      "Identifier les hôtes actifs"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment gérer les grands réseaux ?",
+    "options": [
+      "Ignorer",
+      "Segmentation, parallélisation",
+      "Manuel",
+      "Tout en une fois"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel est l'avantage du dashboard web ?",
+    "options": [
+      "Visualisation et suivi en temps réel",
+      "Plus rapide",
+      "Plus sécurisé",
+      "Plus précis"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment exporter les rapports ?",
+    "options": [
+      "Texte seul",
+      "Image",
+      "Vidéo",
+      "PDF, HTML, JSON, CSV"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Qu'est-ce que le fingerprinting de services ?",
+    "options": [
+      "MACs",
+      "IPs",
+      "Ports seuls",
+      "Identifier versions et applications"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment intégrer avec un SIEM ?",
+    "options": [
+      "SMS",
+      "Papier",
+      "Email",
+      "Export syslog ou API"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quelle option Nmap effectue un scan SYN stealth ?",
+    "options": [
+      "-sT",
+      "-sS",
+      "-sU",
+      "-sA"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment Nmap détecte-t-il les versions des services ?",
+    "options": [
+      "Par le numéro de port uniquement",
+      "Via l'option -sV et l'analyse des réponses",
+      "Par DNS lookup",
+      "Via SNMP"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le timing template T4 dans Nmap ?",
+    "options": [
+      "Scan très lent",
+      "Scan agressif plus rapide mais plus détectable",
+      "Scan normal",
+      "Scan silencieux"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment éviter la détection lors d'un scan Nmap ?",
+    "options": [
+      "Utiliser des techniques d'évasion: fragmentation, timing lent, decoys",
+      "Scanner plus rapidement",
+      "Utiliser uniquement UDP",
+      "Désactiver les logs"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que l'option --script-args dans Nmap ?",
+    "options": [
+      "Arguments pour les scripts NSE",
+      "Configuration du timing",
+      "Définition des ports",
+      "Format de sortie"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment Nmap peut-il détecter les firewalls ?",
+    "options": [
+      "Par les réponses filtered des ports",
+      "Via DNS",
+      "Par ICMP uniquement",
+      "C'est impossible"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle est la différence entre -Pn et -sn ?",
+    "options": [
+      "-Pn désactive la découverte d'hôtes, -sn fait uniquement la découverte",
+      "Ils sont identiques",
+      "-sn est plus rapide",
+      "-Pn scanne plus de ports"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment Masscan atteint-il sa vitesse élevée ?",
+    "options": [
+      "Par multithreading CPU",
+      "Par envoi de paquets asynchrone et pile réseau personnalisée",
+      "Via le cloud",
+      "Par compression"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le scan idle (zombie) de Nmap ?",
+    "options": [
+      "Scan lent",
+      "Scan utilisant une machine tierce pour masquer l'origine",
+      "Scan automatique",
+      "Scan de maintenance"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment prioriser les vulnérabilités trouvées lors d'un scan batch ?",
+    "options": [
+      "Par ordre alphabétique",
+      "Par score CVSS et criticité des assets",
+      "Par date de découverte",
+      "Aléatoirement"
+    ],
+    "answer": 1
+  }
+]
+---

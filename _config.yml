@@ -1,0 +1,28 @@
+title: "venantvr-security - Documentation & QCM"
+description: "Documentation et QCM techniques pour les outils de sécurité"
+baseurl: ""
+url: "https://venantvr-security.github.io"
+
+markdown: kramdown
+highlighter: rouge
+
+plugins:
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - "*.sh"
+  - "*.py"
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+  - scope:
+      path: "repos"
+    values:
+      render_with_liquid: false

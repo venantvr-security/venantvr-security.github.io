@@ -1,0 +1,410 @@
+---
+layout: qcm
+title: "QCM - Raspberry.IpBlocker"
+repo_name: "Raspberry.IpBlocker"
+description: "Blocage automatique d'IP malveillantes"
+readme_url: "../"
+generated_at: "2026-03-14 10:54:37"
+questions: [
+  {
+    "question": "Quel outil Linux gère le firewall ?",
+    "options": [
+      "ufw seul",
+      "firewalld seul",
+      "iptables / nftables",
+      "Rien"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment bloquer une IP avec iptables ?",
+    "options": [
+      "iptables deny IP",
+      "iptables reject IP",
+      "iptables block IP",
+      "iptables -À INPUT -s IP -j DROP"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Qu'est-ce que fail2ban ?",
+    "options": [
+      "Antivirus",
+      "Outil de blocage automatique sur patterns de logs",
+      "Firewall",
+      "IDS"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment fail2ban détecte les attaques ?",
+    "options": [
+      "CPU",
+      "Mémoire",
+      "Regex sur fichiers de logs",
+      "Réseau"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Qu'est-ce qu'un jail dans fail2ban ?",
+    "options": [
+      "Prison",
+      "Container",
+      "Configuration pour un service spécifique",
+      "VM"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment configurer un jail ?",
+    "options": [
+      "/var/fail2ban",
+      "/etc/fail2ban.conf",
+      "~/.fail2ban",
+      "/etc/fail2ban/jail.local"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Qu'est-ce que le ban time ?",
+    "options": [
+      "Latence",
+      "Temps de détection",
+      "Timeout",
+      "Durée du blocage"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Qu'est-ce que le find time ?",
+    "options": [
+      "Ban time",
+      "Timeout",
+      "Max retry",
+      "Fenêtre de temps pour compter les échecs"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Qu'est-ce que max retry ?",
+    "options": [
+      "Connexions max",
+      "Timeout",
+      "Essais totaux",
+      "Nombre d'échecs avant ban"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment lister les IPs bannies ?",
+    "options": [
+      "fail2ban list",
+      "iptables -L",
+      "fail2ban-client status jail_name",
+      "cat /var/log/ban"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment débannir une IP ?",
+    "options": [
+      "fail2ban-client unban IP",
+      "unblock IP",
+      "fail2ban unban",
+      "iptables -D"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelles sources d'IP malveillantes existent ?",
+    "options": [
+      "AbuseIPDB, Shodan, threat feeds",
+      "Yahoo",
+      "Google",
+      "Bing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment automatiser le blocage depuis feeds ?",
+    "options": [
+      "Email",
+      "SMS",
+      "Script + cron + iptables/ipset",
+      "Manuel"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Qu'est-ce que ipset ?",
+    "options": [
+      "Structure efficace pour gérer des listes d'IPs",
+      "firewall",
+      "iptables",
+      "IDS"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Pourquoi ipset vs règles iptables multiples ?",
+    "options": [
+      "Compatibilité",
+      "Performance (O(1) lookup)",
+      "Simplicité",
+      "Standard"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment créer un ipset ?",
+    "options": [
+      "ipset add",
+      "ipset init",
+      "ipset new",
+      "ipset create blacklist hash:ip"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment ajouter une IP à ipset ?",
+    "options": [
+      "ipset push",
+      "ipset insert",
+      "ipset add blacklist IP",
+      "ipset append"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment utiliser ipset avec iptables ?",
+    "options": [
+      "iptables --ipset",
+      "iptables -m set --match-set blacklist src -j DROP",
+      "iptables -s ipset",
+      "iptables -j ipset"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment géolocaliser les IPs bloquées ?",
+    "options": [
+      "Ping",
+      "DNS",
+      "GeoIP database",
+      "WHOIS"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment logger les tentatives bloquées ?",
+    "options": [
+      "iptables -j LOG avant DROP",
+      "Après DROP",
+      "Automatique",
+      "Pas possible"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le rate limiting ?",
+    "options": [
+      "Blocage total",
+      "Limiter les connexions par temps",
+      "Blacklist",
+      "Whitelist"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment implémenter le rate limiting ?",
+    "options": [
+      "Script",
+      "ipset",
+      "iptables -m limit ou hashlimit",
+      "Fail2ban"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment persister les règles iptables ?",
+    "options": [
+      "Automatique",
+      "Fichier",
+      "Database",
+      "iptables-save / iptables-persistent"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment tester le blocage ?",
+    "options": [
+      "Traceroute",
+      "DNS",
+      "Ping",
+      "Connexion depuis IP bloquée"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Qu'est-ce que le tarpit ?",
+    "options": [
+      "Ralentir les connexions au lieu de bloquer",
+      "Bloquer",
+      "Logger",
+      "Rediriger"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment alerter sur les blocages ?",
+    "options": [
+      "Console",
+      "Rien",
+      "Log seul",
+      "Email, Slack, webhook, SIEM"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment whitelister certaines IPs ?",
+    "options": [
+      "Règle ACCEPT avant les règles de blocage",
+      "Séparément",
+      "ipset whitelist",
+      "Après"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce qu'un honeypot dans ce contexte ?",
+    "options": [
+      "Tous",
+      "Leurre",
+      "Faux service pour attirer et identifier les attaquants",
+      "Piège"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment intégrer avec un SIEM ?",
+    "options": [
+      "Rien",
+      "SMS",
+      "Envoyer les logs de blocage en syslog",
+      "Email"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment gérer les faux positifs ?",
+    "options": [
+      "Rien",
+      "Review des logs, whitelist, ajustement seuils",
+      "Ignorer",
+      "Tout bloquer"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que nftables ?",
+    "options": [
+      "Base de données",
+      "Successeur moderne d'iptables pour le filtrage réseau",
+      "Antivirus",
+      "IDS"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle commande affiche les règles nftables ?",
+    "options": [
+      "nft show",
+      "nft list ruleset",
+      "nft rules",
+      "nft -L"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'une threat intelligence feed ?",
+    "options": [
+      "Newsletter",
+      "Flux de données sur les menaces (IPs, domaines malveillants)",
+      "RSS",
+      "Email"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment bloquer un réseau entier avec CIDR ?",
+    "options": [
+      "IP par IP",
+      "iptables -À INPUT -s 192.168.0.0/24 -j DROP",
+      "Impossible",
+      "DNS"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le connection tracking ?",
+    "options": [
+      "GPS",
+      "Suivi de l'état des connexions pour filtrage stateful",
+      "Logs",
+      "Monitoring"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment autoriser les connexions établies ?",
+    "options": [
+      "DROP",
+      "iptables -À INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT",
+      "REJECT",
+      "LOG"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le port knocking ?",
+    "options": [
+      "Scan de ports",
+      "Séquence de connexions pour ouvrir un port",
+      "DDoS",
+      "Brute force"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment implémenter une règle de blocage temporaire ?",
+    "options": [
+      "Permanent seul",
+      "iptables avec timeout ou script cron de nettoyage",
+      "Manuel",
+      "Impossible"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le SYN flood protection ?",
+    "options": [
+      "Antivirus",
+      "Limiter les nouvelles connexions TCP pour contrer les attaques",
+      "Firewall",
+      "VPN"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment logger avec limite pour éviter le log flooding ?",
+    "options": [
+      "Log tout",
+      "iptables -m limit --limit 5/min -j LOG",
+      "Pas de limite",
+      "Désactiver logs"
+    ],
+    "answer": 1
+  }
+]
+---

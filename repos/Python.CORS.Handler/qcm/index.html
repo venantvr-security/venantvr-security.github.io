@@ -1,0 +1,410 @@
+---
+layout: qcm
+title: "QCM - Python.CORS.Handler"
+repo_name: "Python.CORS.Handler"
+description: "Lab de test CORS avec Flask"
+readme_url: "../"
+generated_at: "2026-03-14 10:54:37"
+questions: [
+  {
+    "question": "Que signifie CORS ?",
+    "options": [
+      "Cross-Origin Request Security",
+      "Client Origin Resource System",
+      "Cross-Origin Response Service",
+      "Cross-Origin Resource Sharing"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel header permet les requêtes cross-origin ?",
+    "options": [
+      "Access-Control-Allow-Origin",
+      "Allow-Origin",
+      "Cross-Origin",
+      "X-Origin"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle valeur ACAO autorise tout ?",
+    "options": [
+      "true",
+      "* (wildcard)",
+      "any",
+      "all"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'une requête preflight ?",
+    "options": [
+      "HEAD check",
+      "GET initial",
+      "POST test",
+      "OPTIONS avant la vraie requête"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quand le preflight est-il déclenché ?",
+    "options": [
+      "Jamais",
+      "Toujours",
+      "GET uniquement",
+      "Méthodes non-simple ou headers custom"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quels sont les méthodes simples CORS ?",
+    "options": [
+      "GET, HEAD, POST (limité)",
+      "POST seul",
+      "GET seul",
+      "Toutes"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel header liste les méthodes autorisées ?",
+    "options": [
+      "X-Methods",
+      "Methods",
+      "Access-Control-Allow-Methods",
+      "Allow-Methods"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment autoriser les credentials cross-origin ?",
+    "options": [
+      "X-Credentials",
+      "Allow-Cookies",
+      "Access-Control-Allow-Credentials: true",
+      "Credentials: allow"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Pourquoi * ne fonctionne pas avec credentials ?",
+    "options": [
+      "Performance",
+      "Standard",
+      "Sécurité : origin explicite requise",
+      "Bug"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel framework Python est utilisé ?",
+    "options": [
+      "Tornado",
+      "Flask",
+      "FastAPI",
+      "Django"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment activer CORS dans Flask ?",
+    "options": [
+      "Automatique",
+      "Extension",
+      "flask-cors ou headers manuels",
+      "Middleware"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Qu'est-ce que le header Origin ?",
+    "options": [
+      "User-Agent",
+      "Host",
+      "Origine de la requête (scheme://host:port)",
+      "Referer"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment tester CORS depuis le navigateur ?",
+    "options": [
+      "fetch() cross-origin et observer console",
+      "wget",
+      "telnet",
+      "curl"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle erreur indique un problème CORS ?",
+    "options": [
+      "Timeout",
+      "CORS policy blocked",
+      "404",
+      "500"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel header expose des headers custom ?",
+    "options": [
+      "Access-Control-Expose-Headers",
+      "Show-Headers",
+      "X-Headers",
+      "Expose-Headers"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Combien de temps le preflight est-il cacheable ?",
+    "options": [
+      "1 heure fixe",
+      "Toujours",
+      "Access-Control-Max-Age (secondes)",
+      "Jamais"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment restreindre CORS à un domaine ?",
+    "options": [
+      "ACAO: https://example.com",
+      "X-Domain",
+      "Restrict-Origin",
+      "ACAO: *"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quels risques si CORS mal configuré ?",
+    "options": [
+      "Data exfiltration, CSRF facilité",
+      "Lenteur",
+      "Rien",
+      "Crash"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment logger les requêtes CORS ?",
+    "options": [
+      "Email",
+      "Console",
+      "Fichier",
+      "Middleware Flask ou logging"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Qu'est-ce que le null origin ?",
+    "options": [
+      "Default",
+      "Origin de fichiers locaux ou sandboxed iframes",
+      "Erreur",
+      "Absence d'origin"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Pourquoi ne pas autoriser null origin ?",
+    "options": [
+      "Exploitable pour bypass",
+      "Standard",
+      "Sécurisé",
+      "Performance"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment tester avec curl ?",
+    "options": [
+      "--preflight",
+      "-X CORS",
+      "-H 'Origin: http://evil.com'",
+      "--cors"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel header indique les headers autorisés ?",
+    "options": [
+      "Access-Control-Allow-Headers",
+      "X-Headers",
+      "Permit-Headers",
+      "Allow-Headers"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment le navigateur gère-t-il le preflight ?",
+    "options": [
+      "Jamais",
+      "Automatiquement avant la requête",
+      "Manuellement",
+      "Plugin"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'une simple request CORS ?",
+    "options": [
+      "PUT/DELETE",
+      "OPTIONS",
+      "GET/HEAD/POST avec headers standard",
+      "Toute requête"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment implémenter CORS dynamique ?",
+    "options": [
+      "Refuser tout",
+      "Valider Origin contre whitelist",
+      "Toujours *",
+      "Hardcode"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le status du preflight réussi ?",
+    "options": [
+      "204 No Content ou 200 OK",
+      "201",
+      "301",
+      "404"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment désactiver CORS pour le dev ?",
+    "options": [
+      "Modifier le navigateur",
+      "Extension navigateur ou proxy",
+      "Recompiler",
+      "Pas possible"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le CORB ?",
+    "options": [
+      "CORS Block",
+      "Request Block",
+      "Origin Block",
+      "Cross-Origin Read Blocking (Chrome)"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment sécuriser CORS en production ?",
+    "options": [
+      "Tout autoriser",
+      "Wildcard",
+      "Désactiver",
+      "Whitelist stricte, pas de wildcard avec credentials"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quelle CVE concerne les misconfiguration CORS exploitables ?",
+    "options": [
+      "Pas de CVE spécifique, mais vulnérabilité OWASP top 10",
+      "CVE-2020-1234",
+      "CVE-2019-0001",
+      "CVE-2021-9999"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment exploiter un CORS mal configuré avec credentials ?",
+    "options": [
+      "Exfiltrer des données sensibles via JavaScript cross-origin",
+      "SQL injection",
+      "XSS stored",
+      "CSRF token bypass"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Pourquoi refléter l'Origin sans validation est-il dangereux ?",
+    "options": [
+      "Permet à tout attaquant de faire des requêtes cross-origin",
+      "Performance",
+      "Cache",
+      "SEO"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle bonne pratique valide les origines CORS ?",
+    "options": [
+      "Whitelist explicite avec correspondance exacte",
+      "Regex permissif",
+      "Substring match",
+      "Tout accepter"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment CORS interagit-il avec la Same-Origin Policy ?",
+    "options": [
+      "CORS relaxe SOP de manière contrôlée par le serveur",
+      "CORS remplacé SOP",
+      "SOP ignore CORS",
+      "Indépendants"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle attaque combine CORS misconfiguration et XSS ?",
+    "options": [
+      "XSS pour exécuter du code qui exfiltre via CORS permissif",
+      "DDoS",
+      "Brute force",
+      "Path traversal"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment le header Vary: Origin affecte-t-il le cache ?",
+    "options": [
+      "Cache les réponses séparément par origin pour éviter les fuites",
+      "Désactive le cache",
+      "Accélère le cache",
+      "Ignore l'origin"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle vulnérabilité exploite le null origin autorisé ?",
+    "options": [
+      "Sandboxed iframes peuvent contourner les restrictions",
+      "XSS",
+      "CSRF",
+      "SQLi"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment tester les vulnérabilités CORS automatiquement ?",
+    "options": [
+      "Burp Suite, OWASP ZAP, scripts curl avec headers Origin",
+      "nmap",
+      "Wireshark",
+      "tcpdump"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle défense protège contre le CORS DNS rebinding ?",
+    "options": [
+      "Valider le header Host en plus de l'Origin",
+      "Cache DNS",
+      "DNSSEC",
+      "DNS over HTTPS"
+    ],
+    "answer": 0
+  }
+]
+---

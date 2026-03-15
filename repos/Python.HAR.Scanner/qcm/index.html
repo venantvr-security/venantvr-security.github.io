@@ -1,0 +1,410 @@
+---
+layout: qcm
+title: "QCM - Python.HAR.Scanner"
+repo_name: "Python.HAR.Scanner"
+description: "Analyseur de fichiers HAR pour la sécurité"
+readme_url: "../"
+generated_at: "2026-03-14 10:54:37"
+questions: [
+  {
+    "question": "Quelle bibliothèque Python est utilisée pour parser les fichiers HAR ?",
+    "options": [
+      "har-python",
+      "haralyzer",
+      "httparchive",
+      "harparser"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le format d'un fichier HAR ?",
+    "options": [
+      "JSON",
+      "YAML",
+      "XML",
+      "Binary"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle section du HAR contient les informations de requête ?",
+    "options": [
+      "data.request",
+      "entries[].request",
+      "requests[]",
+      "log.request"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment accéder aux cookies dans une réponse HAR ?",
+    "options": [
+      "entry['response']['cookies']",
+      "har.cookies",
+      "entry['cookies']",
+      "response.getCookies()"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel attribut indique qu'un cookie est accessible uniquement via HTTP ?",
+    "options": [
+      "httpOnly",
+      "secureOnly",
+      "noScript",
+      "httpAccess"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment vérifier si une requête utilise HTTPS dans un HAR ?",
+    "options": [
+      "url.startswith('https')",
+      "protocol == 'https'",
+      "entry.isSecure()",
+      "request.secure == True"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle bibliothèque est recommandée pour l'analyse avancée des données HAR ?",
+    "options": [
+      "numpy",
+      "pandas",
+      "scipy",
+      "matplotlib"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel header de sécurité protège contre le MIME sniffing ?",
+    "options": [
+      "X-MIME-Secure",
+      "Content-Type",
+      "Accept",
+      "X-Content-Type-Options"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quelle valeur du header X-Content-Type-Options empêche le sniffing ?",
+    "options": [
+      "nosniff",
+      "strict",
+      "disable",
+      "none"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment identifier une fuite de stack trace dans une réponse ?",
+    "options": [
+      "Recherche de patterns d'erreur dans le body",
+      "Calcul du checksum",
+      "Vérification du status code",
+      "Analyse des headers"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel module Python charge un fichier JSON ?",
+    "options": [
+      "csv",
+      "json",
+      "yaml",
+      "pickle"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment itérer sur toutes les entrées d'un fichier HAR ?",
+    "options": [
+      "har_data.forEach()",
+      "for entry in har_data.entries()",
+      "for entry in har_data['entries']",
+      "for entry in har_data['log']['entries']"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel attribut de cookie garantit la transmission uniquement sur HTTPS ?",
+    "options": [
+      "TLS",
+      "Secure",
+      "Encrypted",
+      "HttpOnly"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle méthode Python ouvre un fichier en lecture ?",
+    "options": [
+      "read(path)",
+      "load(path)",
+      "File.open(path)",
+      "open(path, 'r')"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel header indique le type de contenu d'une réponse ?",
+    "options": [
+      "Content-Encoding",
+      "Transfer-Encoding",
+      "Content-Type",
+      "Accept"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment détecter une politique CSP dans les headers ?",
+    "options": [
+      "Rechercher 'Content-Security-Policy'",
+      "Vérifier 'X-CSP'",
+      "Parser 'CSP-Header'",
+      "Analyser 'Security-Policy'"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle information le champ 'timings' du HAR contient-il ?",
+    "options": [
+      "Timestamps absolus",
+      "Métriques de performance réseau",
+      "Durée de session",
+      "TTL des cookies"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment identifier les requêtes POST dans un HAR ?",
+    "options": [
+      "entry['request']['method'] == 'POST'",
+      "request.type == 'POST'",
+      "entry.isPost()",
+      "method.equals('POST')"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel champ contient le corps de la requête POST ?",
+    "options": [
+      "request['postData']",
+      "request['body']",
+      "request['payload']",
+      "request['content']"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment détecter les tokens JWT dans les réponses ?",
+    "options": [
+      "Header 'JWT-Token'",
+      "Cookie 'jwt'",
+      "Regex pattern eyJ...",
+      "Field 'token_type'"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel outil génère des fichiers HAR depuis le navigateur ?",
+    "options": [
+      "tcpdump",
+      "curl",
+      "Wireshark",
+      "Chrome DevTools"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quelle est la structure racine d'un fichier HAR ?",
+    "options": [
+      "har",
+      "data",
+      "log",
+      "archive"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment obtenir le status code d'une réponse ?",
+    "options": [
+      "response.code",
+      "entry.getStatus()",
+      "entry['response']['status']",
+      "entry['status']"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel champ contient la taille de la réponse ?",
+    "options": [
+      "response['content']['size']",
+      "content['bytes']",
+      "response['size']",
+      "response['length']"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment détecter les endpoints API dans un HAR ?",
+    "options": [
+      "Les deux méthodes ci-dessus",
+      "Analyser les URLs avec patterns /api/",
+      "Vérifier le Content-Type application/json",
+      "Compter les requêtes GET"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle version de HAR est la plus courante ?",
+    "options": [
+      "2.0",
+      "1.1",
+      "1.2",
+      "1.0"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment extraire tous les domaines uniques d'un HAR ?",
+    "options": [
+      "Parser l'URL de chaque entry et extraire le hostname",
+      "Lire les headers 'Host'",
+      "Utiliser le champ 'domains'",
+      "Utiliser entry.domain"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel champ indique si la requête provient du cache ?",
+    "options": [
+      "cacheHit",
+      "cached",
+      "fromCache",
+      "cache"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment calculer le temps total d'une requête ?",
+    "options": [
+      "response['time']",
+      "Sommer les champs dans 'timings'",
+      "Lire 'totalTime'",
+      "entry['duration']"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle information 'creator' contient-elle dans un HAR ?",
+    "options": [
+      "Timestamp de création",
+      "Nom et version de l'outil qui a généré le HAR",
+      "User-Agent",
+      "Auteur du site web"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle CVE peut être détectée via l'analyse des headers dans un HAR ?",
+    "options": [
+      "Diverses CVE selon les versions serveur exposées (X-Powered-By)",
+      "CVE-2020-1234 uniquement",
+      "Aucune",
+      "Toutes automatiquement"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment détecter les tokens d'authentification exposés dans un HAR ?",
+    "options": [
+      "Regex sur Authorization header, cookies, query params",
+      "Checksum",
+      "Taille du fichier",
+      "Date de création"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle bonne pratique évite les fuites de données dans les HAR partagés ?",
+    "options": [
+      "Sanitizer les tokens, cookies et données sensibles avant partage",
+      "Partager directement",
+      "Compresser",
+      "Renommer"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment identifier les mixed content (HTTP/HTTPS) dans un HAR ?",
+    "options": [
+      "Comparer les URLs HTTP dans un contexte HTTPS",
+      "Taille des réponses",
+      "Status codes",
+      "Timestamps"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle vulnérabilité peut révéler le header Server dans un HAR ?",
+    "options": [
+      "Version du serveur permettant de cibler des CVE connues",
+      "Mot de passe",
+      "Token",
+      "Cookie"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment détecter les cookies sans attribut Secure dans un HAR ?",
+    "options": [
+      "Vérifier l'absence de secure: true dans les cookies",
+      "Taille du cookie",
+      "Nom du cookie",
+      "Valeur du cookie"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle information le header X-Powered-By expose-t-il ?",
+    "options": [
+      "Framework/langage backend (ASP.NET, PHP, etc.)",
+      "Adresse IP",
+      "Certificat SSL",
+      "Firewall"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment analyser les erreurs CORS dans un fichier HAR ?",
+    "options": [
+      "Vérifier les réponses sans Access-Control-Allow-Origin",
+      "Compter les requêtes",
+      "Mesurer la latence",
+      "Analyser les timestamps"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle défense le header Strict-Transport-Security fournit-il ?",
+    "options": [
+      "Force HTTPS et empêche le downgrade vers HTTP",
+      "Bloque les cookies",
+      "Compresse le trafic",
+      "Cache les réponses"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment détecter les API keys exposées dans les URLs d'un HAR ?",
+    "options": [
+      "Regex sur query params comme api_key=, key=, token=",
+      "DNS lookup",
+      "WHOIS",
+      "Ping"
+    ],
+    "answer": 0
+  }
+]
+---

@@ -1,0 +1,609 @@
+---
+layout: qcm
+title: "QCM - Python.PiZero.WiFi"
+repo_name: "Python.PiZero.WiFi"
+description: "Boîte à outils WiFi Raspberry Pi Zero"
+readme_url: "../"
+generated_at: "2026-03-14 10:54:37"
+questions: [
+  {
+    "question": "Quelle bibliothèque Python capture les paquets WiFi ?",
+    "options": [
+      "Scapy / pyshark",
+      "socket",
+      "requests",
+      "urllib"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce qu'une attaque de deauthentification ?",
+    "options": [
+      "Connexion automatique",
+      "Authentification forcée",
+      "Déconnecter un client WiFi de son AP",
+      "Reset routeur"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel mode WiFi permet le sniffing ?",
+    "options": [
+      "Master",
+      "Monitor mode",
+      "Ad-hoc",
+      "Managed mode"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment activer le mode monitor ?",
+    "options": [
+      "iwconfig mode monitor",
+      "ifconfig wlan0 monitor",
+      "airmon-ng start wlan0",
+      "nmcli mon"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Qu'est-ce qu'un handshake WPA ?",
+    "options": [
+      "4-way handshake pour auth WiFi",
+      "DNS query",
+      "SSL handshake",
+      "Connexion TCP"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment capturer un handshake ?",
+    "options": [
+      "Scanner",
+      "Demander",
+      "Sniff pendant connexion ou forcer deauth",
+      "Attendre"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel framework web sert le dashboard ?",
+    "options": [
+      "Django",
+      "PHP",
+      "Flask",
+      "Node.js"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment envoyer des alertes Telegram ?",
+    "options": [
+      "Push",
+      "API Bot Telegram",
+      "SMS",
+      "Email"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que la géolocalisation WiFi ?",
+    "options": [
+      "Localiser via BSSID des APs",
+      "IP geolocation",
+      "GPS",
+      "Cell towers"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle base de données contient les positions WiFi ?",
+    "options": [
+      "WHOIS",
+      "BGP",
+      "Wigle, Google Location",
+      "DNS"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment le Pi Zero se connecte-t-il au réseau ?",
+    "options": [
+      "Bluetooth seul",
+      "Serial",
+      "USB gadget mode ou WiFi",
+      "Ethernet"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel chipset WiFi supporte le monitor mode ?",
+    "options": [
+      "Atheros, Realtek RTL8812AU",
+      "Broadcom standard",
+      "Intel intégré",
+      "Tous"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment afficher les réseaux WiFi détectés ?",
+    "options": [
+      "Fichier",
+      "Dashboard web temps réel",
+      "Email",
+      "Console"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un Evil Twin ?",
+    "options": [
+      "Connexion double",
+      "Mesh node",
+      "Backup WiFi",
+      "Faux AP imitant un réseau légitime"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment alimenter le Pi Zero sur le terrain ?",
+    "options": [
+      "Secteur",
+      "Solaire seul",
+      "Pile",
+      "Batterie USB / powerbank"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel protocole le deauth utilise-t-il ?",
+    "options": [
+      "UDP",
+      "802.11 management frames",
+      "ICMP",
+      "TCP"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment logger les probes requests ?",
+    "options": [
+      "DNS",
+      "ARP",
+      "Capturer et analyser les SSIDs recherchés",
+      "Ping"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Qu'est-ce qu'une probe request ?",
+    "options": [
+      "Connexion",
+      "Déconnexion",
+      "Client cherchant des réseaux connus",
+      "Auth"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment identifier les appareils par MAC ?",
+    "options": [
+      "DNS",
+      "OUI lookup fabricant",
+      "ARP",
+      "DHCP"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel OS est recommandé pour le Pi ?",
+    "options": [
+      "BSD",
+      "Windows",
+      "macOS",
+      "Kali Linux / Raspbian"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment sécuriser le dashboard ?",
+    "options": [
+      "Firewall seul",
+      "Rien",
+      "Auth + HTTPS",
+      "VPN seul"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Qu'est-ce que pyshark ?",
+    "options": [
+      "Framework",
+      "Scanner",
+      "OS",
+      "Wrapper Python pour tshark"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment stocker les données capturées ?",
+    "options": [
+      "SQLite, fichiers pcap",
+      "Cloud",
+      "Email",
+      "Mémoire seule"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le WPS ?",
+    "options": [
+      "WiFi Protected Setup - vulnérable",
+      "Protection WiFi",
+      "Password System",
+      "Security Protocol"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment cracker un PIN WPS ?",
+    "options": [
+      "Dictionary",
+      "Social engineering",
+      "Reaver, Bully",
+      "Bruteforce password"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel outil analyse les paquets capturés ?",
+    "options": [
+      "Netcat",
+      "Wireshark, pyshark",
+      "Nmap",
+      "curl"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment détecter les clients connectés ?",
+    "options": [
+      "Analyse du trafic vers l'AP",
+      "DHCP",
+      "Ping broadcast",
+      "DNS"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le PMKID attack ?",
+    "options": [
+      "Brute force",
+      "Crack WPA sans handshake complet",
+      "Dictionary",
+      "Rainbow"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment le dashboard affiche-t-il la map ?",
+    "options": [
+      "Tableau",
+      "Liste",
+      "Leaflet / Google Maps avec positions",
+      "Texte"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel est l'objectif éducatif de ce projet ?",
+    "options": [
+      "Hacking",
+      "Comprendre la sécurité WiFi",
+      "Espionnage",
+      "Rien"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le KRACK Attack ?",
+    "options": [
+      "Attaque sur WEP",
+      "Attaque sur le 4-way handshake WPA2 permettant de réinstaller des clés",
+      "Brute force de mot de passe",
+      "Déni de service"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment WPA3 améliore-t-il la sécurité par rapport à WPA2 ?",
+    "options": [
+      "Vitesse plus rapide",
+      "SAE (Simultaneous Authentication of Equals) résistant aux attaques offline",
+      "Portée plus grande",
+      "Chiffrement XOR"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le karma attack ?",
+    "options": [
+      "Scan de réseaux",
+      "Répondre aux probe requests pour attirer les clients vers un faux AP",
+      "Brute force WPS",
+      "Déni de service"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment détecter un rogue access point ?",
+    "options": [
+      "Par la force du signal uniquement",
+      "Comparaison BSSID/SSID avec les AP légitimes et analyse du comportement",
+      "Par le nom du réseau",
+      "Impossible à détecter"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le channel hopping dans le sniffing WiFi ?",
+    "options": [
+      "Changer de fréquence pour capturer le trafic sur tous les canaux",
+      "Optimiser la connexion",
+      "Éviter les interférences",
+      "Augmenter la portée"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment le MAC address spoofing aide-t-il lors d'attaques WiFi ?",
+    "options": [
+      "Augmente la vitesse",
+      "Permet de se faire passer pour un client autorisé ou éviter le tracking",
+      "Améliore la portée",
+      "Chiffre le trafic"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que Dragonblood ?",
+    "options": [
+      "Un outil de scan",
+      "Vulnérabilités dans WPA3-SAE permettant des attaques par dictionnaire",
+      "Un firmware malveillant",
+      "Un protocole WiFi"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment les entreprises peuvent-elles sécuriser leur WiFi ?",
+    "options": [
+      "WPA2-Enterprise avec RADIUS, segmentation, monitoring",
+      "WEP avec mot de passe long",
+      "WiFi ouvert avec firewall",
+      "Cacher le SSID uniquement"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le WiFi Direct et ses risques ?",
+    "options": [
+      "Connexion P2P sans AP pouvant exposer des vulnérabilités",
+      "Connexion plus sécurisée",
+      "Protocole de chiffrement",
+      "Standard WiFi 6"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment hashcat peut-il être utilisé après capture d'un handshake ?",
+    "options": [
+      "Pour analyser le trafic",
+      "Pour cracker le mot de passe WPA via attaque par dictionnaire ou brute force",
+      "Pour scanner des réseaux",
+      "Pour créer des faux AP"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment le Pi Zero peut-il détecter les réseaux cachés ?",
+    "options": [
+      "Sniffing des beacons",
+      "Brute force",
+      "Scan actif",
+      "Analyse des frames de management"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Qu'est-ce qu'un BSSID ?",
+    "options": [
+      "Nom du réseau",
+      "Adresse MAC de l'AP",
+      "Protocole WiFi",
+      "Canal WiFi"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment sécuriser un réseau WiFi ?",
+    "options": [
+      "WEP",
+      "WPA2 avec mot de passe fort",
+      "SSID caché",
+      "Canal unique"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel outil peut analyser les paquets capturés ?",
+    "options": [
+      "Wireshark",
+      "Notepad",
+      "Excel",
+      "Photoshop"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce qu'un AP rogue ?",
+    "options": [
+      "AP légitime",
+      "AP malveillant imitant un réseau",
+      "AP de secours",
+      "AP mobile"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment le Pi Zero peut-il envoyer des notifications ?",
+    "options": [
+      "Email",
+      "Telegram",
+      "SMS",
+      "Toutes les réponses"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel est le rôle d'un canal WiFi ?",
+    "options": [
+      "Séparer les réseaux",
+      "Augmenter la vitesse",
+      "Réduire les interférences",
+      "Toutes les réponses"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment détecter un AP Evil Twin ?",
+    "options": [
+      "Analyse des SSIDs",
+      "Analyse des BSSIDs",
+      "Analyse des canaux",
+      "Toutes les réponses"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Qu'est-ce qu'un frame de management ?",
+    "options": [
+      "Frame de données",
+      "Frame de contrôle",
+      "Frame pour gérer les connexions WiFi",
+      "Frame de routage"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment le Pi Zero peut-il être configuré en AP ?",
+    "options": [
+      "hostapd",
+      "dnsmasq",
+      "iptables",
+      "Toutes les réponses"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel est le rôle d'un handshake WPA ?",
+    "options": [
+      "Authentifier le client",
+      "Établir une connexion sécurisée",
+      "Échanger les clés de chiffrement",
+      "Toutes les réponses"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment le Pi Zero peut-il capturer des paquets ?",
+    "options": [
+      "tcpdump",
+      "airodump-ng",
+      "pyshark",
+      "Toutes les réponses"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Qu'est-ce qu'un SSID ?",
+    "options": [
+      "Nom du réseau WiFi",
+      "Adresse MAC",
+      "Protocole WiFi",
+      "Canal WiFi"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment le Pi Zero peut-il détecter les interférences ?",
+    "options": [
+      "Analyse des canaux",
+      "Analyse des frames",
+      "Analyse des signaux",
+      "Toutes les réponses"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel est le rôle d'un frame de données ?",
+    "options": [
+      "Transporter les données utilisateur",
+      "Gérer les connexions",
+      "Contrôler les transmissions",
+      "Régler les interférences"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment le Pi Zero peut-il être alimenté ?",
+    "options": [
+      "USB",
+      "Batterie",
+      "Secteur",
+      "Toutes les réponses"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Qu'est-ce qu'un frame de contrôle ?",
+    "options": [
+      "Frame pour gérer les connexions WiFi",
+      "Frame pour contrôler les transmissions",
+      "Frame pour transporter les données utilisateur",
+      "Frame pour régler les interférences"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment le Pi Zero peut-il analyser les réseaux WiFi ?",
+    "options": [
+      "Sniffing",
+      "Scanning",
+      "Logging",
+      "Toutes les réponses"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel est le rôle d'un frame de beacon ?",
+    "options": [
+      "Annoncer la présence d'un réseau WiFi",
+      "Transporter les données utilisateur",
+      "Contrôler les transmissions",
+      "Régler les interférences"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment le Pi Zero peut-il détecter les attaques ?",
+    "options": [
+      "Analyse des frames",
+      "Analyse des signaux",
+      "Analyse des canaux",
+      "Toutes les réponses"
+    ],
+    "answer": 3
+  }  
+]

@@ -1,0 +1,410 @@
+---
+layout: qcm
+title: "QCM - Python.PHP.Sec.Scan"
+repo_name: "Python.PHP.Sec.Scan"
+description: "Scanner de sécurité PHP par analyse statique"
+readme_url: "../"
+generated_at: "2026-03-14 10:54:37"
+questions: [
+  {
+    "question": "Qu'est-ce que l'analyse statique ?",
+    "options": [
+      "Test manuel",
+      "Fuzzing",
+      "Analyse du code sans exécution",
+      "Exécution du code"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Qu'est-ce que le taint tracking ?",
+    "options": [
+      "Compression",
+      "Cache",
+      "Suivre les données utilisateur jusqu'aux sinks",
+      "Chiffrement"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Qu'est-ce qu'un sink en sécurité ?",
+    "options": [
+      "Cache",
+      "Source de données",
+      "Buffer",
+      "Fonction dangereuse (exec, query, echo)"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Qu'est-ce qu'une source de données ?",
+    "options": [
+      "Entrée utilisateur ($_GET, $_POST)",
+      "Constante",
+      "Variable locale",
+      "Fonction"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel parser PHP est utilisé ?",
+    "options": [
+      "tree-sitter",
+      "nikic/php-parser",
+      "php-parser",
+      "custom"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Combien de types de vulnérabilités sont détectées ?",
+    "options": [
+      "10",
+      "3",
+      "16+",
+      "5"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel format de rapport est généré ?",
+    "options": [
+      "SARIF, HTML",
+      "Excel",
+      "PDF",
+      "Word"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Combien de tests unitaires existent ?",
+    "options": [
+      "200",
+      "10",
+      "89+",
+      "50"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Qu'est-ce que SARIF ?",
+    "options": [
+      "Static Analysis Results Interchange Format",
+      "Security Archive",
+      "Security Analysis Report",
+      "Scan Results File"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelles vulnérabilités PHP sont détectées ?",
+    "options": [
+      "Rien",
+      "SQLi, XSS, RCE, LFI, SSRF...",
+      "XSS seul",
+      "SQLi seul"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que RCE ?",
+    "options": [
+      "Resource Control",
+      "Remote Code Execution",
+      "Remote Connection Error",
+      "Runtime Check"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que LFI ?",
+    "options": [
+      "Link File",
+      "Local File Injection",
+      "Local File Inclusion",
+      "Log File Include"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment tree-sitter parse le PHP ?",
+    "options": [
+      "Regex",
+      "String split",
+      "Génération d'AST (Abstract Syntax Tree)",
+      "Manual"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Qu'est-ce que l'AST ?",
+    "options": [
+      "Array String Table",
+      "Audit System",
+      "Abstract Syntax Tree - représentation structurée du code",
+      "Analysis Structure"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment identifier un sink SQL ?",
+    "options": [
+      "echo",
+      "Fonctions mysql_query, PDO::query, etc.",
+      "file_get",
+      "print"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment identifier un sink XSS ?",
+    "options": [
+      "include",
+      "mysql_query",
+      "echo, print, <?= sans échappement",
+      "exec"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Qu'est-ce que SSRF ?",
+    "options": [
+      "Server Security",
+      "Server-Side Request Forgery",
+      "Secure Service",
+      "System Request"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment détecter une injection de commande ?",
+    "options": [
+      "echo",
+      "exec(), system(), shell_exec() avec input",
+      "print",
+      "include"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment gérer les faux positifs ?",
+    "options": [
+      "Ignorer",
+      "Désactiver",
+      "Supprimer",
+      "Whitelist, annotations, configuration"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Qu'est-ce que le data flow analysis ?",
+    "options": [
+      "Suivre le flux de données dans le code",
+      "Mémoire",
+      "Fichiers",
+      "Réseau"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment scanner un projet entier ?",
+    "options": [
+      "Récursif sur tous les fichiers PHP",
+      "Un fichier",
+      "Aléatoire",
+      "Manuel"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel est l'avantage sur les scanners dynamiques ?",
+    "options": [
+      "Pas besoin d'exécuter le code",
+      "Plus simple",
+      "Plus précis",
+      "Plus rapide"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment intégrer dans CI/CD ?",
+    "options": [
+      "Rapport",
+      "Manuel",
+      "Email",
+      "Script dans pipeline, exit code sur erreurs"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Qu'est-ce que l'échappement de contexte ?",
+    "options": [
+      "Chiffrement",
+      "htmlspecialchars, addslashes selon le contexte",
+      "Suppression",
+      "Compression"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment détecter les includes dangereux ?",
+    "options": [
+      "include statique",
+      "include/require avec variable non sanitisée",
+      "use",
+      "require_once"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que l'object injection PHP ?",
+    "options": [
+      "Instanciation",
+      "Héritage",
+      "Désérialisation non sécurisée",
+      "Creation d'objet"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment détecter l'object injection ?",
+    "options": [
+      "clone",
+      "unserialize() avec input utilisateur",
+      "new Object()",
+      "extend"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le path traversal ?",
+    "options": [
+      "Accès fichiers hors répertoire autorisé via ../",
+      "Redirect",
+      "Navigation web",
+      "Routing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment le scanner rapporte-t-il les résultats ?",
+    "options": [
+      "Booléen",
+      "Texte simple",
+      "Nombre",
+      "Ligne, fichier, type de vuln, sévérité"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quelle sévérité pour RCE ?",
+    "options": [
+      "Medium",
+      "High",
+      "Low",
+      "Critical"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Qu'est-ce que le type juggling en PHP ?",
+    "options": [
+      "Manipulation de fichiers",
+      "Comparaisons laxistes (==) permettant des bypasses de sécurité",
+      "Chiffrement",
+      "Compression de données"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment détecter une vulnérabilité XXE en PHP ?",
+    "options": [
+      "Chercher les utilisations de simplexml_load_string avec input utilisateur",
+      "Analyser les cookies",
+      "Scanner les ports",
+      "Vérifier les headers"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce qu'une vulnérabilité de type PHAR deserialization ?",
+    "options": [
+      "Désérialisation via wrapper phar:// permettant RCE",
+      "Compression de fichiers",
+      "Lecture de fichiers",
+      "Injection SQL"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment sécuriser les fonctions eval() en PHP ?",
+    "options": [
+      "Ajouter des guillemets",
+      "Ne jamais utiliser eval avec des données utilisateur",
+      "Utiliser addslashes",
+      "Chiffrer les données"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le second-order SQL injection ?",
+    "options": [
+      "Injection via deux requêtes",
+      "Données stockées puis utilisées dangereusement plus tard",
+      "Double échappement",
+      "Injection dans les sous-requêtes"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment détecter une vulnérabilité de mass assignment en PHP ?",
+    "options": [
+      "Chercher les assignations directes de $_POST à des objets/modèles",
+      "Analyser les logs",
+      "Scanner les ports",
+      "Vérifier les sessions"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce qu'une vulnérabilité de type race condition en PHP ?",
+    "options": [
+      "Code lent",
+      "Exploitation du timing entre vérification et utilisation (TOCTOU)",
+      "Erreur de syntaxe",
+      "Problème de cache"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment preg_replace avec /e peut être dangereux ?",
+    "options": [
+      "Regexp lente",
+      "Exécute du code PHP dans le remplacement (deprecated)",
+      "Fuite mémoire",
+      "Erreur de format"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le header injection en PHP ?",
+    "options": [
+      "Injection de headers HTTP via des caractères newline non filtrés",
+      "Modification du Content-Type",
+      "Ajout de cookies",
+      "Compression HTTP"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment assert() peut être exploité en PHP ?",
+    "options": [
+      "Pour le debug uniquement",
+      "Avec des strings, assert évalue le code comme eval()",
+      "Pour la validation",
+      "Pour le logging"
+    ],
+    "answer": 1
+  }
+]
+---

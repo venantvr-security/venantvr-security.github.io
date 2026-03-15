@@ -1,0 +1,410 @@
+---
+layout: qcm
+title: "QCM - Tor.Web.Capture"
+repo_name: "Tor.Web.Capture"
+description: "Capture web anonyme via TOR"
+readme_url: "../"
+generated_at: "2026-03-14 10:54:37"
+questions: [
+  {
+    "question": "Quel framework Rust implémente le client Tor ?",
+    "options": [
+      "TorLib",
+      "Tor-rs",
+      "Rust-Tor",
+      "Arti"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel navigateur headless est utilisé pour les captures ?",
+    "options": [
+      "Safari",
+      "Chrome/Chromium",
+      "Firefox",
+      "Edge"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'une capture headless ?",
+    "options": [
+      "Screenshot sans interface graphique",
+      "Capture réseau",
+      "Capture audio",
+      "Capture mémoire"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment Tor assure-t-il l'anonymat ?",
+    "options": [
+      "DNS over HTTPS",
+      "VPN",
+      "Routage en oignon multi-hop",
+      "Proxy simple"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel format d'archive est utilisé pour le HTML ?",
+    "options": [
+      "MHTML ou HTML complet",
+      "ZIP",
+      "PDF",
+      "WARC"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Pourquoi utiliser Tor pour la capture web ?",
+    "options": [
+      "Vitesse",
+      "Anonymat de l'opérateur",
+      "Qualité d'image",
+      "Compression"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un nœud de sortie Tor ?",
+    "options": [
+      "Premier relais",
+      "Dernier relais avant la destination",
+      "Serveur DNS",
+      "Relais du milieu"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment vérifier que le trafic passe par Tor ?",
+    "options": [
+      "Toutes les réponses",
+      "check.torproject.org",
+      "ipinfo.io",
+      "whatismyip.com"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel protocole Tor utilise-t-il principalement ?",
+    "options": [
+      "TCP",
+      "UDP",
+      "ICMP",
+      "SCTP"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment automatiser les captures en batch ?",
+    "options": [
+      "Script avec boucle sur URLs",
+      "API REST",
+      "Cron job",
+      "Toutes les réponses"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel avantage offre Arti sur le C Tor ?",
+    "options": [
+      "Plus rapide",
+      "Écrit en Rust (memory safety)",
+      "Compatible Windows",
+      "Plus de fonctionnalités"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment gérer les timeouts sur Tor ?",
+    "options": [
+      "Retry immédiat",
+      "Timeouts plus longs car latence réseau",
+      "Ignorer",
+      "Réduire les timeouts"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel format de screenshot est généralement utilisé ?",
+    "options": [
+      "GIF",
+      "JPEG",
+      "PNG",
+      "BMP"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment capturer une page complète (pas seulement le viewport) ?",
+    "options": [
+      "PDF export",
+      "scroll + capture",
+      "fullPage: true dans Puppeteer/Playwright",
+      "Zoom out"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Qu'est-ce que le fingerprinting navigateur ?",
+    "options": [
+      "Biométrie",
+      "Empreinte digitale",
+      "Captcha",
+      "Identification unique via caractéristiques browser"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment réduire le fingerprinting ?",
+    "options": [
+      "VPN",
+      "Mode incognito",
+      "Tor Browser avec configs standards",
+      "Proxy"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel header révèle le navigateur utilisé ?",
+    "options": [
+      "User-Agent",
+      "Host",
+      "Referer",
+      "Accept"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment archiver les ressources externes d'une page ?",
+    "options": [
+      "PDF",
+      "Télécharger CSS, JS, images et sauvegarder localement",
+      "Screenshot seulement",
+      "Print"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le DOM ?",
+    "options": [
+      "Document Object Model - structure de la page",
+      "Direct Object Mapping",
+      "Data Object Model",
+      "Document Order Model"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment attendre le chargement complet d'une page ?",
+    "options": [
+      "waitUntil: 'networkidle'",
+      "sleep()",
+      "onload event",
+      "DOMContentLoaded"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel format préserve les liens hypertextes ?",
+    "options": [
+      "PDF (partiellement)",
+      "JPEG",
+      "PNG",
+      "HTML/MHTML"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment gérer les sites avec JavaScript ?",
+    "options": [
+      "Headless browser exécute JS",
+      "curl suffit",
+      "wget suffit",
+      "Pas de JS support"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que Puppeteer ?",
+    "options": [
+      "Testing tool",
+      "Bibliothèque Node.js pour contrôler Chrome",
+      "Framework web",
+      "ORM"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment gérer les CAPTCHAs ?",
+    "options": [
+      "Bypass automatique",
+      "Ignorer",
+      "Toujours bloqué",
+      "Services de résolution ou intervention manuelle"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel est l'intérêt de l'archivage web ?",
+    "options": [
+      "Performance",
+      "Accessibilité",
+      "SEO",
+      "Preuve légale, recherche, backup"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment compresser les captures ?",
+    "options": [
+      "Toutes les réponses",
+      "PNG optimization",
+      "ZIP ou tar.gz des fichiers",
+      "JPEG quality"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que la Wayback Machine ?",
+    "options": [
+      "CDN",
+      "Backup service",
+      "Archive web d'Internet Archive",
+      "Time machine"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment respecter robots.txt lors de captures ?",
+    "options": [
+      "Ignorer toujours",
+      "Bloquer le scraping",
+      "Parser et respecter les directives",
+      "Demander permission"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel outil ligne de commande capture des screenshots ?",
+    "options": [
+      "wget",
+      "Puppeteer CLI ou Playwright CLI",
+      "lynx",
+      "curl"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment horodater les captures ?",
+    "options": [
+      "Log file",
+      "Inclure timestamp dans nom de fichier ou métadonnées",
+      "Base de données",
+      "Fichier séparé"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le circuit building dans Tor ?",
+    "options": [
+      "Hardware",
+      "Construction du chemin à travers les relais",
+      "Cablage",
+      "Electricité"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment Playwright gère-t-il le proxy SOCKS5 ?",
+    "options": [
+      "Impossible",
+      "Option proxy dans le contexte navigateur",
+      "Extension",
+      "Plugin"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le WebRTC leak ?",
+    "options": [
+      "Fuite mémoire",
+      "Révélation de l'IP réelle malgré le proxy",
+      "Bug",
+      "Feature"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment prévenir les WebRTC leaks ?",
+    "options": [
+      "Ignorer",
+      "Désactiver WebRTC dans le navigateur",
+      "VPN seul",
+      "Firewall"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le canvas fingerprinting ?",
+    "options": [
+      "Peinture",
+      "Identification via rendu unique du canvas HTML5",
+      "CSS",
+      "Animation"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment Tor Browser protège-t-il contre le fingerprinting ?",
+    "options": [
+      "VPN",
+      "Uniformisation des caractéristiques navigateur",
+      "Proxy",
+      "Chiffrement"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le format WARC ?",
+    "options": [
+      "Video",
+      "Format d'archivage web standard (Web ARChive)",
+      "Audio",
+      "Image"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment gérer les sites avec authentification ?",
+    "options": [
+      "Impossible",
+      "Cookies de session ou credentials dans le contexte",
+      "Ignorer",
+      "Contourner"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le content security policy (CSP) ?",
+    "options": [
+      "Firewall",
+      "En-tête HTTP restreignant les ressources chargées",
+      "VPN",
+      "Proxy"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment capturer le trafic réseau d'une page ?",
+    "options": [
+      "Screenshot",
+      "Network interception avec Playwright/Puppeteer",
+      "Print",
+      "Export"
+    ],
+    "answer": 1
+  }
+]
+---

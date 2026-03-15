@@ -1,0 +1,410 @@
+---
+layout: qcm
+title: "QCM - Python.Ransomware"
+repo_name: "Python.Ransomware"
+description: "Tutoriel Éducatif - Fonctionnement d'un Ransomware"
+readme_url: "../"
+generated_at: "2026-03-14 14:31:40"
+questions: [
+  {
+    "question": "Quel type de chiffrement utilise ce ransomware éducatif ?",
+    "options": [
+      "Chiffrement symétrique AES seul",
+      "Chiffrement asymétrique RSA seul",
+      "Chiffrement hybride RSA + Fernet (AES)",
+      "Chiffrement XOR simple"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Pourquoi utiliser le chiffrement hybride RSA + Fernet ?",
+    "options": [
+      "RSA est plus rapide que Fernet",
+      "RSA chiffre la clé Fernet (lent), Fernet chiffre les fichiers (rapide)",
+      "Fernet est plus sécurisé que RSA",
+      "C'est obligatoire en Python"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que Fernet en Python ?",
+    "options": [
+      "Un protocole réseau",
+      "Une bibliothèque de compression",
+      "Un algorithme de chiffrement symétrique basé sur AES",
+      "Un format de fichier"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Où est stockée la clé privée RSA dans le scénario d'attaque ?",
+    "options": [
+      "Sur la machine victime",
+      "Dans le cloud",
+      "Chez l'attaquant uniquement",
+      "Nulle part, elle est générée à la volée"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Que contient le fichier EMAIL_ME.txt ?",
+    "options": [
+      "Les fichiers chiffrés",
+      "La clé Fernet chiffrée avec RSA public",
+      "La clé privée RSA",
+      "Les instructions de paiement"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment la victime peut-elle déchiffrer ses fichiers ?",
+    "options": [
+      "En utilisant un antivirus",
+      "En recevant PUT_ME_ON_DESKTOP.txt contenant la clé Fernet déchiffrée",
+      "En réinstallant le système",
+      "En contactant la police"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel script génère les clés RSA ?",
+    "options": [
+      "ransomware.py",
+      "rsa_key_generator.py",
+      "fernet_decryptor.py",
+      "decrypt.py"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel script l'attaquant utilise pour déchiffrer la clé Fernet ?",
+    "options": [
+      "ransomware.py",
+      "rsa_key_generator.py",
+      "fernet_decryptor.py",
+      "victim_decrypt.py"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quelle extension de fichier est ciblée dans l'exemple ?",
+    "options": [
+      "Tous les fichiers",
+      ".txt uniquement",
+      ".exe uniquement",
+      ".pdf uniquement"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle est la meilleure protection contre les ransomwares ?",
+    "options": [
+      "Antivirus seul",
+      "Sauvegardes 3-2-1 + EDR + sensibilisation",
+      "Firewall seul",
+      "Chiffrement des fichiers"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Que signifie la règle de sauvegarde 3-2-1 ?",
+    "options": [
+      "3 copies, 2 supports différents, 1 hors-site",
+      "3 serveurs, 2 datacenters, 1 cloud",
+      "Sauvegarder 3 fois par jour",
+      "3 versions, 2 mois, 1 an"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel IOC (Indicateur de Compromission) peut révéler une infection ransomware ?",
+    "options": [
+      "Utilisation CPU normale",
+      "Activité cryptographique élevée et extensions modifiées",
+      "Connexion réseau stable",
+      "Espace disque libre"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Pourquoi le tutoriel YouTube accompagne ce projet ?",
+    "options": [
+      "Pour promouvoir les attaques",
+      "Pour expliquer le fonctionnement interne à des fins éducatives",
+      "Pour vendre le ransomware",
+      "Pour le divertissement"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Que fait la segmentation réseau contre les ransomwares ?",
+    "options": [
+      "Empêche l'infection initiale",
+      "Limite la propagation en isolant les segments",
+      "Déchiffre les fichiers",
+      "Bloque les emails de phishing"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que No More Ransom ?",
+    "options": [
+      "Un ransomware",
+      "Une initiative fournissant des décrypteurs gratuits",
+      "Un antivirus payant",
+      "Un service de paiement Bitcoin"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le double extortion ransomware ?",
+    "options": [
+      "Chiffrement deux fois",
+      "Chiffrement + menace de publication des données volées",
+      "Demande de deux paiements",
+      "Attaque sur deux systèmes"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment les ransomwares se propagent-ils généralement ?",
+    "options": [
+      "Phishing, RDP exposé, vulnérabilités non patchées",
+      "USB uniquement",
+      "WiFi direct",
+      "Bluetooth"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le Ransomware-as-a-Service (RaaS) ?",
+    "options": [
+      "Service cloud légitime",
+      "Modèle où des affiliés utilisent des ransomwares développés par d'autres",
+      "Antivirus en ligne",
+      "Sauvegarde cloud"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Pourquoi les attaquants demandent-ils souvent des cryptomonnaies ?",
+    "options": [
+      "C'est plus rapide",
+      "Pseudo-anonymat et difficulté de traçage des transactions",
+      "C'est moins cher",
+      "Par préférence personnelle"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment un EDR peut-il détecter un ransomware ?",
+    "options": [
+      "Par signature uniquement",
+      "Détection comportementale: chiffrement massif, modifications de fichiers",
+      "Par analyse DNS",
+      "Par scan de ports"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le living-off-the-land dans le contexte ransomware ?",
+    "options": [
+      "Utiliser des outils légitimes du système pour l'attaque",
+      "Attaquer des systèmes agricoles",
+      "Utiliser des serveurs locaux",
+      "Cibler des zones rurales"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Pourquoi ne pas payer la rançon ?",
+    "options": [
+      "Finance les criminels, pas de garantie de récupération, encourage plus d'attaques",
+      "C'est trop cher",
+      "C'est légal partout",
+      "Les fichiers sont déjà perdus"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le canary file dans la détection de ransomware ?",
+    "options": [
+      "Fichier leurre surveillé dont la modification déclenche une alerte",
+      "Fichier de configuration",
+      "Fichier de log",
+      "Fichier système"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment le principe du moindre privilège protège contre les ransomwares ?",
+    "options": [
+      "Limite les fichiers accessibles et donc chiffrables par un compte compromis",
+      "Bloque tous les fichiers",
+      "Chiffre les données",
+      "Désactive le réseau"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le Shadow Copy et son rôle face aux ransomwares ?",
+    "options": [
+      "Copie fantôme Windows pouvant permettre la récupération (souvent supprimée par les ransomwares)",
+      "Sauvegarde cloud",
+      "Chiffrement automatique",
+      "Antivirus intégré"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle CVE a été exploitée par WannaCry pour se propager ?",
+    "options": [
+      "CVE-2017-0144 (EternalBlue - SMBv1)",
+      "CVE-2020-1234",
+      "CVE-2019-0001",
+      "CVE-2021-9999"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le chiffrement intermittent utilisé par certains ransomwares modernes ?",
+    "options": [
+      "Chiffrer seulement des portions de fichiers pour accélérer l'attaque",
+      "Chiffrer de manière aléatoire",
+      "Utiliser plusieurs clés",
+      "Chiffrer pendant les heures creuses"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment fonctionne le ransomware LockBit ?",
+    "options": [
+      "RaaS avec auto-propagation, chiffrement rapide et exfiltration de données",
+      "Simple chiffrement XOR",
+      "Uniquement suppression de fichiers",
+      "Attaque DDoS"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le triple extortion ransomware ?",
+    "options": [
+      "Chiffrement + vol de données + menace DDoS ou contact des clients/partenaires",
+      "Trois paiements",
+      "Trois algorithmes de chiffrement",
+      "Attaque sur trois systèmes"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment les ransomwares désactivent-ils souvent les protections Windows ?",
+    "options": [
+      "Suppression des Shadow Copies, désactivation de Windows Defender via PowerShell",
+      "Formatage du disque",
+      "Modification du BIOS",
+      "Désinstallation de l'OS"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que l'ANSSI recommande en cas d'attaque ransomware ?",
+    "options": [
+      "Isoler les systèmes, préserver les preuves, ne pas payer, contacter les autorités",
+      "Payer immédiatement",
+      "Formater tous les systèmes",
+      "Ignorer l'attaque"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment le ransomware Conti a-t-il été neutralisé ?",
+    "options": [
+      "Fuite de ses outils internes et dissolution suite aux sanctions liées à la guerre en Ukraine",
+      "Arrestation de tous les membres",
+      "Patch Microsoft",
+      "Antivirus universel"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le dwell time en contexte ransomware ?",
+    "options": [
+      "Temps entre l'intrusion initiale et le déploiement du ransomware",
+      "Temps de chiffrement",
+      "Temps de négociation",
+      "Temps de paiement"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Pourquoi les hôpitaux sont-ils des cibles privilégiées des ransomwares ?",
+    "options": [
+      "Données critiques, systèmes souvent obsolètes, pression pour payer rapidement",
+      "Meilleure connexion internet",
+      "Plus d'argent disponible",
+      "Moins de personnel IT"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment fonctionne la technique de chiffrement de Ryuk ?",
+    "options": [
+      "Combinaison RSA-4096 et AES-256 avec clé unique par fichier",
+      "Simple XOR",
+      "MD5 hash",
+      "Base64 encoding"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que l'air-gapped backup et pourquoi est-il important ?",
+    "options": [
+      "Sauvegarde déconnectée du réseau, inaccessible aux ransomwares qui se propagent",
+      "Sauvegarde compressée",
+      "Sauvegarde chiffrée",
+      "Sauvegarde dans le cloud"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment les Initial Accèss Brokers (IAB) facilitent-ils les attaques ransomware ?",
+    "options": [
+      "Ils vendent des accès compromis aux opérateurs de ransomware",
+      "Ils développent les ransomwares",
+      "Ils négocient les rançons",
+      "Ils blanchissent l'argent"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le killswitch découvert dans WannaCry ?",
+    "options": [
+      "Un domaine non enregistré dont l'enregistrement à stoppé la propagation",
+      "Un bouton d'arrêt dans l'interface",
+      "Une clé de déchiffrement",
+      "Un antivirus"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment implémenter une stratégie de sauvegarde immuable ?",
+    "options": [
+      "Sauvegardes WORM (Write Once Read Many) non modifiables pendant une période définie",
+      "Sauvegardes quotidiennes",
+      "Sauvegardes chiffrées",
+      "Sauvegardes compressées"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le ransomware fileless et pourquoi est-il difficile à détecter ?",
+    "options": [
+      "Ransomware s'exécutant uniquement en mémoire sans écrire de fichier sur le disque",
+      "Ransomware sans demande de rançon",
+      "Ransomware qui ne chiffre pas les fichiers",
+      "Ransomware transmis par email"
+    ],
+    "answer": 0
+  }
+]
+---

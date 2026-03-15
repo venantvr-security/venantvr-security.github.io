@@ -1,0 +1,410 @@
+---
+layout: qcm
+title: "QCM - Python.Tor.Proxy"
+repo_name: "Python.Tor.Proxy"
+description: "Proxy TOR avec interface GTK"
+readme_url: "../"
+generated_at: "2026-03-14 10:54:37"
+questions: [
+  {
+    "question": "Quelle bibliothèque Python contrôle Tor ?",
+    "options": [
+      "torpy",
+      "pytorctl",
+      "stem",
+      "tor-python"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel port utilise Tor pour le contrôle ?",
+    "options": [
+      "9051",
+      "9050",
+      "9150",
+      "9001"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel port utilise Tor pour le proxy SOCKS ?",
+    "options": [
+      "8080",
+      "9051",
+      "1080",
+      "9050"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel module Python liste les interfaces réseau ?",
+    "options": [
+      "netinfo",
+      "netifaces",
+      "interfaces",
+      "pynet"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment désactiver une interface réseau en Python ?",
+    "options": [
+      "socket.close_interface()",
+      "subprocess + ip link set down",
+      "os.disable_interface()",
+      "netifaces.disable()"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel fichier configure Tor ?",
+    "options": [
+      "/etc/tor/config",
+      "~/.tor/torrc",
+      "/etc/tor/torrc",
+      "/var/tor/config"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment changer le circuit Tor avec stem ?",
+    "options": [
+      "controller.signal(Signal.NEWNYM)",
+      "controller.new_circuit()",
+      "controller.rotate()",
+      "tor.change_ip()"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle interface loopback est toujours exclue ?",
+    "options": [
+      "docker0",
+      "wlan0",
+      "eth0",
+      "lo"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment vérifier si Tor est actif ?",
+    "options": [
+      "ping tor",
+      "Controller.from_port() + authenticate()",
+      "ps aux | grep tor",
+      "netstat | grep tor"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel GUI toolkit est mentionné ?",
+    "options": [
+      "Tkinter",
+      "Qt",
+      "wxWidgets",
+      "GTK"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment trouver la route par défaut ?",
+    "options": [
+      "netstat -r",
+      "route -n",
+      "Toutes les réponses",
+      "ip route | grep default"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel paramètre torrc définit l'interface sortante ?",
+    "options": [
+      "BindAddress",
+      "OutboundBindInterface",
+      "ExitInterface",
+      "SocksBindAddress"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment obtenir l'IP actuelle via Tor ?",
+    "options": [
+      "tor --show-ip",
+      "controller.get_info('ip')",
+      "stem.get_external_ip()",
+      "Requête vers un service check IP"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quelle commande installe stem ?",
+    "options": [
+      "apt install python3-stem",
+      "pip install tor-stem",
+      "pip install stem",
+      "pip install python-stem"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment authentifier le controller Tor ?",
+    "options": [
+      "Controller.auth()",
+      "controller.login()",
+      "controller.authenticate(password=...)",
+      "stem.connect()"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel signal demande un nouveau circuit ?",
+    "options": [
+      "NEWNYM",
+      "ROTATE",
+      "REFRESH",
+      "RELOAD"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment lister les circuits actifs ?",
+    "options": [
+      "controller.get_circuits()",
+      "tor.circuits",
+      "controller.list_circuits()",
+      "stem.get_circuits()"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel système d'exploitation est ciblé principalement ?",
+    "options": [
+      "Windows",
+      "Linux",
+      "BSD",
+      "macOS"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Pourquoi désactiver les interfaces non-Tor ?",
+    "options": [
+      "Libérer de la bande passante",
+      "Simplifier la configuration",
+      "Améliorer les performances",
+      "Prévenir les fuites de trafic hors Tor"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment réactiver une interface ?",
+    "options": [
+      "ifconfig <iface> up",
+      "ip link set <iface> up",
+      "Toutes les réponses",
+      "netctl start <iface>"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel type de proxy Tor utilise-t-il ?",
+    "options": [
+      "SOCKS4",
+      "HTTPS",
+      "HTTP",
+      "SOCKS5"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment configurer Firefox pour Tor ?",
+    "options": [
+      "PAC file",
+      "TorBrowser uniquement",
+      "Proxy SOCKS5 localhost:9050",
+      "Extension Tor"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quelle distribution Linux intègre Tor nativement ?",
+    "options": [
+      "Tails",
+      "Ubuntu",
+      "Arch",
+      "Fedora"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment vérifier la version de Tor ?",
+    "options": [
+      "torctl version",
+      "tor --version",
+      "stem --tor-version",
+      "apt show tor"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel projet VM est mentionné pour Tor ?",
+    "options": [
+      "VirtualBox",
+      "QubesOS",
+      "Whonix",
+      "VMware"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment démarrer Tor en service ?",
+    "options": [
+      "/etc/init.d/tor start",
+      "systemctl start tor",
+      "tor start",
+      "service tor on"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle information stem peut récupérer ?",
+    "options": [
+      "Les logs seulement",
+      "Uniquement l'IP",
+      "Rien via API",
+      "Circuits, bandwidth, relays"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment gérer les erreurs de connexion Tor ?",
+    "options": [
+      "Pas de gestion",
+      "Retry infini",
+      "try/except avec stem.SocketError",
+      "Ignorer les erreurs"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quel est l'objectif de la rotation d'IP ?",
+    "options": [
+      "Toutes les réponses",
+      "Contourner les limits",
+      "Meilleure vitesse",
+      "Anonymat renforcé"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment implémenter un system tray en GTK ?",
+    "options": [
+      "gi.repository.AppIndicator ou StatusIcon",
+      "Notification.tray()",
+      "systray.add()",
+      "gtk.tray()"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce qu'un guard node dans Tor ?",
+    "options": [
+      "Noeud de sortie",
+      "Premier noeud d'entrée persistant pour protéger l'anonymat",
+      "Relais du milieu",
+      "Serveur DNS"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Pourquoi utiliser un bridge Tor ?",
+    "options": [
+      "Plus rapide",
+      "Contourner le blocage des relais publics",
+      "Meilleure sécurité",
+      "Plus de bande passante"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un pluggable transport ?",
+    "options": [
+      "USB portable",
+      "Protocole pour masquer le trafic Tor",
+      "VPN intégré",
+      "Compression"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment Tor protège-t-il contre l'analyse de trafic ?",
+    "options": [
+      "Chiffrement multicouche et relais multiples",
+      "VPN simple",
+      "Compression",
+      "Changement de port"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce que le DNS leak ?",
+    "options": [
+      "Fuite de données",
+      "Requêtes DNS passant hors du tunnel Tor",
+      "Erreur DNS",
+      "Cache DNS"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment prévenir les DNS leaks avec Tor ?",
+    "options": [
+      "Ignorer",
+      "Forcer le DNS via SOCKS5 ou resolver via Tor",
+      "Changer de serveur",
+      "Désactiver DNS"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le rôle du noeud du milieu (middle relay) ?",
+    "options": [
+      "Voir le contenu",
+      "Transmettre le trafic chiffré entre guard et exit",
+      "Déchiffrer",
+      "Logger"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce que le hidden service (.onion) ?",
+    "options": [
+      "VPN cache",
+      "Service accessible uniquement via Tor avec anonymat bidirectionnel",
+      "Proxy",
+      "CDN"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment générer une adresse .onion v3 ?",
+    "options": [
+      "Aléatoire",
+      "Configuration HiddenServiceDir dans torrc",
+      "Achat de domaine",
+      "DNS"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle attaque cible les noeuds de sortie malveillants ?",
+    "options": [
+      "DDoS",
+      "Interception du trafic non-HTTPS",
+      "Brute force",
+      "Phishing"
+    ],
+    "answer": 1
+  }
+]
+---

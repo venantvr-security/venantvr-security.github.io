@@ -1,0 +1,410 @@
+---
+layout: qcm
+title: "QCM - Nmap.Strategies"
+repo_name: "Nmap.Strategies"
+description: "Scripts NSE pour évasion IDS"
+readme_url: "../"
+generated_at: "2026-03-14 10:54:37"
+questions: [
+  {
+    "question": "Que signifie NSE dans Nmap ?",
+    "options": [
+      "Network Security Engine",
+      "Nmap Scan Extension",
+      "Network Script Executor",
+      "Nmap Scripting Engine"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quel langage utilise NSE ?",
+    "options": [
+      "Perl",
+      "Ruby",
+      "Python",
+      "Lua"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quelle option Nmap active la fragmentation ?",
+    "options": [
+      "--fragment",
+      "-sF",
+      "-F",
+      "-f"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quelle technique utilise des adresses IP leurres ?",
+    "options": [
+      "Bouncing (-B)",
+      "Decoys (-D)",
+      "Tunneling (-T)",
+      "Spoofing (-S)"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel timing Nmap est 'Insane' ?",
+    "options": [
+      "-T4",
+      "-T6",
+      "-T3",
+      "-T5"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment spécifier un port source ?",
+    "options": [
+      "--from-port",
+      "--source-port ou -g",
+      "-p source:",
+      "--sport"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle catégorie de scripts inclut la reconnaissance ?",
+    "options": [
+      "enum",
+      "recon",
+      "scan",
+      "discovery"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment exécuter tous les scripts d'une catégorie ?",
+    "options": [
+      "--script=category",
+      "-sC category",
+      "--run-scripts category",
+      "--scripts category"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle option Nmap effectue un scan SYN ?",
+    "options": [
+      "-sS",
+      "-sU",
+      "-sN",
+      "-sT"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment scanner en UDP ?",
+    "options": [
+      "-sU",
+      "--udp",
+      "-U",
+      "-sP"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle technique utilise le MTU pour fragmenter ?",
+    "options": [
+      "--ip-mtu",
+      "--fragment-mtu",
+      "-f --mtu",
+      "--mtu"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment éviter le ping avant le scan ?",
+    "options": [
+      "--no-ping",
+      "-sP",
+      "-P0",
+      "-Pn"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quelle option randomise l'ordre des hôtes ?",
+    "options": [
+      "--shuffle",
+      "--randomize-hosts",
+      "--random",
+      "-r"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment spécifier un fichier de sortie XML ?",
+    "options": [
+      "-oX",
+      "--xml",
+      "-x",
+      "-output-xml"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle catégorie NSE inclut le bruteforce ?",
+    "options": [
+      "crack",
+      "auth",
+      "attack",
+      "brute"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment scanner les 1000 ports les plus courants ?",
+    "options": [
+      "-p1-1000",
+      "Par défaut (sans option)",
+      "-sV",
+      "--top-ports 1000"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle option détecte la version des services ?",
+    "options": [
+      "-V",
+      "--version",
+      "-v",
+      "-sV"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment spécifier une plage de ports ?",
+    "options": [
+      "-ports 1-1024",
+      "-p 1-1024",
+      "-P 1-1024",
+      "--range 1-1024"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle option effectue une détection d'OS ?",
+    "options": [
+      "-O",
+      "-sO",
+      "--détéct-os",
+      "--os"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment utiliser un script personnalisé ?",
+    "options": [
+      "--nse /path/script",
+      "--custom-script",
+      "-sC /path/script",
+      "--script /path/script.nse"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quelle technique de scan utilise FIN ?",
+    "options": [
+      "-sT",
+      "-sN",
+      "-sF",
+      "-sS"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment sauvegarder dans tous les formats ?",
+    "options": [
+      "-o*",
+      "-oXNG",
+      "--all-formats",
+      "-oA"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quelle option active le mode verbose ?",
+    "options": [
+      "--verbose",
+      "-V",
+      "-v",
+      "-d"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Comment scanner IPv6 ?",
+    "options": [
+      "-v6",
+      "--ipv6",
+      "-6",
+      "--ip6"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quelle technique utilise des paquets NULL ?",
+    "options": [
+      "-sN",
+      "-s0",
+      "-sZ",
+      "-sE"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment limiter le nombre de paquets par seconde ?",
+    "options": [
+      "--pps",
+      "--max-rate",
+      "-r",
+      "--rate-limit"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle option trace la route vers l'hôte ?",
+    "options": [
+      "--path",
+      "-tr",
+      "--route",
+      "--traceroute"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Comment scanner depuis un fichier d'hôtes ?",
+    "options": [
+      "-f",
+      "-iL",
+      "--input-list",
+      "--hosts-file"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle catégorie NSE inclut les vulnérabilités ?",
+    "options": [
+      "cve",
+      "vuln",
+      "exploit",
+      "security"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment exclure des hôtes du scan ?",
+    "options": [
+      "-e",
+      "--exclude",
+      "--skip",
+      "--ignore"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle CVE Nmap peut-il détecter avec le script smb-vuln-ms17-010 ?",
+    "options": [
+      "EternalBlue (CVE-2017-0144)",
+      "Heartbleed",
+      "Shellshock",
+      "Log4Shell"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment détecter Heartbleed avec Nmap ?",
+    "options": [
+      "--script ssl-heartbleed",
+      "--heartbleed",
+      "-sH",
+      "--vuln-check"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle technique d'évasion IDS utilise des paquets fragmentés ?",
+    "options": [
+      "IP fragmentation pour contourner les signatures",
+      "Encryption",
+      "Tunneling VPN",
+      "Proxy HTTP"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment éviter la détection en ralentissant le scan ?",
+    "options": [
+      "Timing template -T0 (paranoid) ou -T1 (sneaky)",
+      "-T5",
+      "--fast",
+      "--aggressive"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle bonne pratique limite l'impact d'un scan sur le réseau ?",
+    "options": [
+      "Utiliser --max-rate et --scan-delay",
+      "Scanner tous les ports simultanément",
+      "Ignorer les timeouts",
+      "Désactiver les retries"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel script NSE détecte les vulnérabilités SSH ?",
+    "options": [
+      "ssh-auth-methods, ssh-hostkey",
+      "http-vuln",
+      "smb-enum",
+      "dns-zone-transfer"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment Nmap détecte-t-il les pare-feux avec le scan ACK ?",
+    "options": [
+      "-sÀ révèle les ports filtrés vs non-filtrés",
+      "Ping ICMP",
+      "DNS lookup",
+      "Traceroute"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle option permet de spoofer l'adresse MAC source ?",
+    "options": [
+      "--spoof-mac",
+      "-sM",
+      "--mac",
+      "--fake-mac"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment détecter les versions SSL/TLS vulnérables ?",
+    "options": [
+      "--script ssl-enum-ciphers",
+      "-sS",
+      "--tls-check",
+      "-sV"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel mécanisme de défense détecte les scans Nmap ?",
+    "options": [
+      "IDS/IPS comme Snort ou Suricata",
+      "Antivirus",
+      "Firewall applicatif",
+      "WAF"
+    ],
+    "answer": 0
+  }
+]
+---
