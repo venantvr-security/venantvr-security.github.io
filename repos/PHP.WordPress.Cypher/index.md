@@ -103,18 +103,26 @@ Chaque type de hash a une structure spécifique. Savoir les reconnaître permet 
 
 <div class="mermaid">
 flowchart LR
-    subgraph Portable["Format PHPass (Portable Hash)"]
-        P1["$P$<br/><i>Identifiant</i>"]
-        P2["B<br/><i>Indicateur itérations<br/>(8192 tours)</i>"]
-        P3["xxxxxxxx<br/><i>Sel (8 chars)</i>"]
-        P4["xxxxxxxxxxxxxxxxxxxxx<br/><i>Hash (22 chars)</i>"]
+    subgraph Portable["Format PHPass"]
+        P1["$P$"]
+        P1_note>"Identifiant"]
+        P2["B"]
+        P2_note>"8192 tours"]
+        P3["xxxxxxxx"]
+        P3_note>"Sel 8 chars"]
+        P4["xxxx...xxxx"]
+        P4_note>"Hash 22 chars"]
     end
 
-    subgraph Bcrypt["Format bcrypt (Moderne)"]
-        B1["$2y$<br/><i>Identifiant</i>"]
-        B2["10<br/><i>Coût (2^10 tours)</i>"]
-        B3["xxxxxxxxxxxxxxxxxxxxxx<br/><i>Sel (22 chars)</i>"]
-        B4["xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br/><i>Hash (31 chars)</i>"]
+    subgraph Bcrypt["Format bcrypt"]
+        B1["$2y$"]
+        B1_note>"Identifiant"]
+        B2["10"]
+        B2_note>"2^10 tours"]
+        B3["xxxx...xxxx"]
+        B3_note>"Sel 22 chars"]
+        B4["xxxx...xxxx"]
+        B4_note>"Hash 31 chars"]
     end
 
     P1 --> P2 --> P3 --> P4

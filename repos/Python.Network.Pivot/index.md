@@ -341,17 +341,25 @@ Il existe plusieurs façons de réaliser un pivot réseau. Chacune a ses avantag
 <div class="mermaid">
 flowchart LR
     subgraph Techniques["🔧 Techniques de Pivot"]
-        T1["<b>Socket Relay</b><br/><i>Relais TCP simple</i>"]
-        T2["<b>SSH Tunnel</b><br/><i>-L / -R / -D</i>"]
-        T3["<b>SOCKS Proxy</b><br/><i>Proxy dynamique</i>"]
-        T4["<b>Port Forwarding</b><br/><i>Redirection ciblée</i>"]
+        T1["Socket Relay"]
+        T1_note>"<i>Relais TCP simple</i>"]
+        T2["SSH Tunnel"]
+        T2_note>"<i>-L / -R / -D</i>"]
+        T3["SOCKS Proxy"]
+        T3_note>"<i>Proxy dynamique</i>"]
+        T4["Port Forwarding"]
+        T4_note>"<i>Redirection ciblée</i>"]
     end
 
-    subgraph Outils["🛠️ Implémentation Python"]
-        O1["socket<br/><i>Bibliothèque standard</i>"]
-        O2["paramiko<br/><i>SSH en Python</i>"]
-        O3["PySocks<br/><i>Client SOCKS</i>"]
-        O4["subprocess<br/><i>Commandes système</i>"]
+    subgraph Outils["🛠️ Python"]
+        O1["socket"]
+        O1_note>"<i>Bibliothèque standard</i>"]
+        O2["paramiko"]
+        O2_note>"<i>SSH en Python</i>"]
+        O3["PySocks"]
+        O3_note>"<i>Client SOCKS</i>"]
+        O4["subprocess"]
+        O4_note>"<i>Commandes système</i>"]
     end
 
     T1 --> O1

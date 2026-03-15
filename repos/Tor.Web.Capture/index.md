@@ -56,37 +56,45 @@ L'architecture est conçue pour garantir l'anonymat à chaque étape. Le diagram
 <div class="mermaid">
 flowchart TB
     subgraph UI["🖥️ Interface Utilisateur"]
-        HTMX["Dashboard HTMX<br/>Port :8080<br/><i>Interface moderne et réactive</i>"]
+        HTMX["Dashboard HTMX"]
+        HTMX_note>":8080<br/><i>Interface moderne</i>"]
     end
 
     subgraph CORE["⚙️ Cœur Rust"]
-        API["API REST<br/><i>Gestion des requêtes</i>"]
-        SCHED["Scheduler<br/><i>Planification cron</i>"]
-        CAP["Capture Engine<br/><i>Orchestrateur principal</i>"]
+        API["API REST"]
+        API_note>"<i>Gestion des requêtes</i>"]
+        SCHED["Scheduler"]
+        SCHED_note>"<i>Planification cron</i>"]
+        CAP["Capture Engine"]
+        CAP_note>"<i>Orchestrateur principal</i>"]
     end
-    
+
     subgraph TOR["🧅 Réseau TOR"]
-        ARTI["Arti Client<br/><i>TOR natif en Rust</i>"]
-        G["Guard Node<br/><i>Point d'entrée</i>"]
-        M["Middle Relay<br/><i>Relais intermédiaire</i>"]
-        E["Exit Node<br/><i>Sortie vers Internet</i>"]
+        ARTI["Arti Client"]
+        ARTI_note>"<i>TOR natif en Rust</i>"]
+        G["Guard Node"]
+        M["Middle Relay"]
+        E["Exit Node"]
         G --> M --> E
     end
-    
+
     subgraph BROWSER["🌐 Navigateur"]
-        CHROME["Headless Chrome<br/><i>Rendu et capture</i>"]
+        CHROME["Headless Chrome"]
+        CHROME_note>"<i>Rendu et capture</i>"]
     end
-    
+
     subgraph TARGET["🎯 Cible"]
         WEB["Site web cible"]
     end
-    
+
     subgraph STORAGE["💾 Stockage"]
-        DB[(SQLite<br/><i>Métadonnées</i>)]
-        FS["Fichiers locaux<br/><i>Screenshots, HTML</i>"]
-        GD["☁️ Google Drive<br/><i>Backup cloud</i>"]
+        DB[(SQLite)]
+        FS["Fichiers locaux"]
+        FS_note>"<i>Screenshots, HTML</i>"]
+        GD["☁️ Google Drive"]
+        GD_note>"<i>Backup cloud</i>"]
     end
-    
+
     HTMX --> API
     API --> CAP
     SCHED --> CAP
@@ -95,7 +103,7 @@ flowchart TB
     E --> CHROME
     CHROME --> WEB
     CAP --> DB & FS & GD
-    
+
     style ARTI fill:#9b59b6,fill-opacity:0.15
     style CAP fill:#3498db,fill-opacity:0.15
     style CHROME fill:#e74c3c,fill-opacity:0.15
