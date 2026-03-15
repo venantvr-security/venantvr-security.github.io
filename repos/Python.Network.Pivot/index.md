@@ -54,35 +54,44 @@ Avant de plonger dans le code, visualisons l'infrastructure que nous allons cré
 Le diagramme ci-dessous montre les trois réseaux et les machines qui les composent. Remarquez que l'attaquant (en rouge) ne peut **pas** accéder directement au serveur interne (en vert) : il doit passer par la DMZ.
 
 <div class="mermaid">
-%%{init: {'flowchart': {'nodeSpacing': 30, 'rankSpacing': 60, 'subGraphTitleMargin': {'top': 10, 'bottom': 10}}}}%%
 flowchart TB
-    subgraph INTERNET["🌐 RÉSEAU INTERNET<br/><i>Zone externe - accessible à tous</i>"]
-        ATK["🔴 Attaquant<br/>172.18.0.2<br/><i>Point de départ</i>"]
+    subgraph INTERNET["🌐 RÉSEAU INTERNET"]
+        ATK["🔴 Attaquant"]
+        ATK_note>"172.18.0.2<br/><i>Point de départ</i>"]
     end
 
-    subgraph DMZ["🟡 DMZ (Zone Démilitarisée)<br/><i>Services exposés - partiellement protégés</i>"]
-        V1["🎯 Victim1<br/>172.19.0.3<br/>Serveur web :8000<br/>Backdoor :4444<br/><i>Notre point d'entrée</i>"]
+    subgraph DMZ["🟡 DMZ"]
+        V1["🎯 Victim1"]
+        V1_note>"172.19.0.3<br/>:8000 / :4444<br/><i>Point d'entrée</i>"]
     end
 
-    subgraph INTERNAL["🔒 RÉSEAU INTERNE<br/><i>Zone sécurisée - normalement inaccessible</i>"]
-        V2["💎 Victim2<br/>172.20.0.3<br/>Serveur secret :8000<br/><i>Notre cible finale</i>"]
+    subgraph INTERNAL["🔒 RÉSEAU INTERNE"]
+        V2["💎 Victim2"]
+        V2_note>"172.20.0.3<br/>:8000<br/><i>Cible finale</i>"]
     end
 
-    R1["🔀 Router1<br/>172.18.0.3 ↔ 172.19.0.2<br/><i>Passerelle Internet/DMZ</i>"]
-    R2["🔀 Router2<br/>172.19.0.4 ↔ 172.20.0.2<br/><i>Passerelle DMZ/Interne</i>"]
+    R1["🔀 Router1"]
+    R1_note>"172.18.0.3 ↔ 172.19.0.2"]
+    R2["🔀 Router2"]
+    R2_note>"172.19.0.4 ↔ 172.20.0.2"]
 
     ATK <-->|"Réseau internet"| R1
     R1 <-->|"Réseau dmz"| V1
     V1 <-->|"Réseau dmz"| R2
     R2 <-->|"Réseau internal"| V2
 
-    ATK -.->|"❌ Accès direct IMPOSSIBLE<br/>(pas de route)"| V2
+    ATK -.->|"❌ Accès direct IMPOSSIBLE"| V2
 
     style ATK fill:#e74c3c,fill-opacity:0.15
     style V1 fill:#f39c12,fill-opacity:0.15
     style V2 fill:#2ecc71,fill-opacity:0.15
     style R1 fill:#9b59b6,fill-opacity:0.15
     style R2 fill:#9b59b6,fill-opacity:0.15
+    style ATK_note fill:#e74c3c,fill-opacity:0.1
+    style V1_note fill:#f39c12,fill-opacity:0.1
+    style V2_note fill:#2ecc71,fill-opacity:0.1
+    style R1_note fill:#9b59b6,fill-opacity:0.1
+    style R2_note fill:#9b59b6,fill-opacity:0.1
     style INTERNET fill:#808080,fill-opacity:0.15
     style DMZ fill:#808080,fill-opacity:0.15
     style INTERNAL fill:#808080,fill-opacity:0.15
